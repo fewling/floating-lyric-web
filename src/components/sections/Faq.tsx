@@ -10,7 +10,7 @@ export function Faq() {
       <div className="bg-surface/30 mx-auto mt-12 max-w-3xl divide-y divide-white/10 rounded-2xl border border-white/10">
         {faq.map((item) => (
           <details key={item.q} className="group p-6">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium">
+            <summary className="focus-visible:ring-accent focus-visible:ring-offset-surface flex cursor-pointer list-none items-center justify-between gap-4 rounded font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none">
               {item.q}
               <Icon
                 name="chevron"

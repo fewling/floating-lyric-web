@@ -13,9 +13,14 @@ export function Features() {
         title="Everything you need to sing along"
         subtitle="A focused set of tools that do one thing brilliantly: keep the right lyrics in front of you."
       />
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Flex-wrap + center so the trailing row (5 cards → 3 + 2) is balanced
+          instead of leaving a dangling empty cell in a fixed 3-col grid. */}
+      <div className="mx-auto mt-12 flex max-w-5xl flex-wrap justify-center gap-6">
         {features.map((feature) => (
-          <Reveal key={feature.title}>
+          <Reveal
+            key={feature.title}
+            className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+          >
             <Card className="h-full">
               <div className="text-accent mb-3">
                 <Icon name={feature.icon} />

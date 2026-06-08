@@ -4,7 +4,7 @@ export const hero = {
   headlineLead: "Lyrics that float over any app — synced to your music,",
   headlineAccent: "translated by AI.",
   subhead:
-    "See the words to every song while you use Spotify, YouTube Music, a game, or anything else. Lyrics float on top, stay in sync automatically, and translate instantly — so you finally understand the song you love.",
+    "Synced lyrics float on top of Spotify, YouTube Music, games — anything. They translate instantly, so you finally understand the song you love.",
   secondary: { label: "See how it works", href: "#how" },
 } as const;
 

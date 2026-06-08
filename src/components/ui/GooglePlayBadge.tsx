@@ -1,26 +1,51 @@
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
-import { Button, type ButtonVariant } from "./Button";
-import { Icon } from "./icons";
+import type { ButtonVariant } from "./Button";
+
+// Official "Get it on Google Play" badge (generic English web badge), fetched
+// from Google's brand asset host into public/. The transparent margin baked
+// into the PNG provides the guideline-mandated clear space; the asset's native
+// 646×250 ratio is preserved via `h-auto`, and the minimum height keeps it
+// above Google's legibility floor (~40px tall).
+const BADGE_SRC = "/google-play-badge.png";
+const BADGE_RATIO = "646 / 250";
 
 /**
- * Primary conversion CTA. Replace with the official Google Play badge asset
- * before launch (brand guidelines); this is a styled stand-in for the prototype.
+ * Primary conversion CTA, rendering the official Google Play badge.
+ *
+ * The `variant` prop is retained for API compatibility (callers still pass it),
+ * but the official badge has fixed branding per Google's guidelines and must not
+ * be recolored, so it does not change the visual. Use `className` to control
+ * layout/size (e.g. `w-full` inside a card, responsive visibility utilities).
  */
 export function GooglePlayBadge({
   className,
-  variant = "primary",
 }: {
   className?: string;
+  /** Retained for API compatibility; the official badge branding is fixed and ignored. */
   variant?: ButtonVariant;
 }) {
+  const external = siteConfig.playStoreUrl.startsWith("http");
   return (
-    <Button href={siteConfig.playStoreUrl} variant={variant} className={cn("px-5", className)}>
-      <Icon name="play" className="size-5" />
-      <span className="flex flex-col items-start leading-none">
-        <span className="text-[0.6rem] font-normal opacity-80">GET IT ON</span>
-        <span className="text-sm font-semibold">Google Play</span>
-      </span>
-    </Button>
+    <a
+      href={siteConfig.playStoreUrl}
+      aria-label="Get Floating Lyrics on Google Play"
+      className={cn(
+        "focus-visible:ring-accent focus-visible:ring-offset-ink inline-flex h-[52px] items-center justify-center rounded-lg transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+        className,
+      )}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element -- static brand asset; Image optimization is disabled for export. */}
+      <img
+        src={BADGE_SRC}
+        alt="Get it on Google Play"
+        width={646}
+        height={250}
+        className="h-full w-auto object-contain"
+        style={{ aspectRatio: BADGE_RATIO }}
+        decoding="async"
+      />
+    </a>
   );
 }

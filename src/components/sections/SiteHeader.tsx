@@ -12,7 +12,10 @@ export function SiteHeader() {
   return (
     <header className="bg-ink/70 sticky top-0 z-50 border-b border-white/10 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-4">
-        <a href="#main" className="font-display flex items-center gap-2 text-lg font-semibold">
+        <a
+          href="#main"
+          className="font-display focus-visible:ring-accent focus-visible:ring-offset-ink flex items-center gap-2 rounded text-lg font-semibold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+        >
           <span className="bg-accent/15 text-accent grid size-8 place-items-center rounded-lg">
             <Icon name="play" className="size-4" />
           </span>
@@ -24,7 +27,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-fg-muted hover:text-fg text-sm transition"
+              className="text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded text-sm transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {link.label}
             </a>
@@ -35,7 +38,7 @@ export function SiteHeader() {
           <GooglePlayBadge className="hidden sm:inline-flex" />
           <button
             type="button"
-            className="text-fg grid size-10 place-items-center rounded-lg border border-white/10 md:hidden"
+            className="text-fg focus-visible:ring-accent focus-visible:ring-offset-ink grid size-11 place-items-center rounded-lg border border-white/10 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -52,7 +55,7 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-fg-muted hover:text-fg rounded-lg px-2 py-2 hover:bg-white/5"
+              className="text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded-lg px-2 py-2 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {link.label}
             </a>

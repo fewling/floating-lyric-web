@@ -7,6 +7,7 @@ import { Pillars } from "@/components/sections/Pillars";
 import { Pricing } from "@/components/sections/Pricing";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 import { SiteHeader } from "@/components/sections/SiteHeader";
+import { StickyMobileCta } from "@/components/sections/StickyMobileCta";
 import { softwareAppJsonLd } from "@/lib/structured-data";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <Faq />
       </main>
       <SiteFooter />
+      <StickyMobileCta sentinelId="hero-end" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd()) }}
