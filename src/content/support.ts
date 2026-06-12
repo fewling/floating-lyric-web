@@ -21,6 +21,15 @@ export const supportContent: ProsePage = {
       links: [{ label: "Open the issue tracker", href: `${siteConfig.github}/issues` }],
     },
     {
+      heading: "Account & data deletion",
+      paragraphs: [
+        "Want your account and its data gone? Email us from the address you signed up with and we'll delete it.",
+      ],
+      links: [
+        { label: `Email ${siteConfig.supportEmail}`, href: `mailto:${siteConfig.supportEmail}` },
+      ],
+    },
+    {
       heading: "Common questions",
       paragraphs: [
         "Pricing, supported music apps, the overlay permission, and privacy are all covered in the FAQ.",
