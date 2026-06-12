@@ -11,12 +11,13 @@ export const siteConfig = {
   tagline: "Lyrics that float over any app.",
   description:
     "See synced, AI-translated song lyrics in a floating overlay on top of any app on Android — Spotify, YouTube Music, games, anything. Free core, no account, low battery.",
-  playStoreUrl: "https://play.google.com/store/apps/details?id=com.floating.lyrics",
+  playStoreUrl:
+    "https://play.google.com/store/apps/details?id=com.floating.lyrics&utm_source=website&utm_medium=landing",
   github: "https://github.com/fewling/flutter-floating-lyric",
+  supportEmail: "blueinnotaiwan@gmail.com",
   nav: [
-    { label: "Features", href: "#features" },
     { label: "How it works", href: "#how" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Features", href: "#features" },
     { label: "FAQ", href: "#faq" },
   ] satisfies NavLink[],
 } as const;
