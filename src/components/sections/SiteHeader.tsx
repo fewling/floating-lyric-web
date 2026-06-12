@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { GooglePlayBadge } from "@/components/ui/GooglePlayBadge";
@@ -12,16 +13,22 @@ export function SiteHeader() {
 
   return (
     <header className="bg-ink/70 border-edge sticky top-0 z-50 border-b backdrop-blur">
+      <a
+        href="#main"
+        className="focus-visible:ring-accent focus-visible:ring-offset-ink bg-ink sr-only absolute top-4 left-4 z-50 rounded px-3 py-1.5 text-sm font-medium focus:not-sr-only focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+      >
+        Skip to content
+      </a>
       <Container className="flex h-16 items-center justify-between gap-4">
-        <a
-          href="#main"
+        <Link
+          href="/"
           className="font-display focus-visible:ring-accent focus-visible:ring-offset-ink flex items-center gap-2 rounded text-lg font-semibold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
           <span className="bg-accent/15 text-accent grid size-8 place-items-center rounded-lg">
             <Icon name="play" className="size-4" />
           </span>
           {siteConfig.name}
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {siteConfig.nav.map((link) => (

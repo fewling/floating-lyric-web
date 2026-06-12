@@ -159,7 +159,7 @@ pnpm format       # prettier --write .
       Performance/Accessibility/SEO ≥95. (Local pre-launch run already at
       100/100/100 a11y/BP/SEO, LCP 136 ms, CLS 0.)
 - [ ] Post-launch sweep candidate: `icons.tsx` retains glyphs only deleted
-      sections used (`layers`, `languages`, `shield`).
+      sections used (`layers`, `languages`, `shield`, `file`, `check`, `github`).
 
 ## Deploy (Firebase Hosting)
 

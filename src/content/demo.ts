@@ -37,7 +37,6 @@ export const demoLines: readonly DemoLine[] = [
 ];
 
 export const demoTrack = {
-  appName: "Now playing",
   title: "Starlight (별빛)",
   artist: "Mirae",
   caption: "Synced via media session",

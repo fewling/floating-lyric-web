@@ -42,6 +42,7 @@ export function StickyMobileCta({ sentinelId }: { sentinelId: string }) {
     <div
       data-testid="sticky-mobile-cta"
       aria-hidden={!visible}
+      inert={!visible}
       className={[
         "bg-ink/85 border-edge fixed inset-x-0 bottom-0 z-40 border-t p-3 backdrop-blur sm:hidden",
         "motion-safe:transition-transform motion-safe:duration-300",

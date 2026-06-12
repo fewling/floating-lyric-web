@@ -60,7 +60,7 @@ export const faq: FaqItem[] = [
   },
   {
     q: "Do I need an account?",
-    a: "No. The core app works with no sign-up.",
+    a: "No for everything core — the overlay, auto-sync, search, and LRC import work without sign-up. A free account is only needed for AI translation.",
   },
   {
     q: "Which languages can it translate?",
@@ -72,6 +72,6 @@ export const faq: FaqItem[] = [
   },
   {
     q: "Is my data private?",
-    a: "No account is required and your imported LRC files stay on your device. Translation requests are processed securely to return results — the app doesn’t build a profile of you.",
+    a: "Your imported LRC files stay on your device. Translation requests are processed securely to return results — the app doesn’t build a profile of you.",
   },
 ];

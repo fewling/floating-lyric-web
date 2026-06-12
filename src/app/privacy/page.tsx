@@ -6,7 +6,8 @@ import { privacyContent } from "@/content/privacy";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How Floating Lyrics handles your data: no account, on-device lyrics, no profiling.",
+  description:
+    "How Floating Lyrics handles your data: optional account for AI translation, on-device lyrics, no profiling.",
   alternates: { canonical: "/privacy/" },
 };
 
