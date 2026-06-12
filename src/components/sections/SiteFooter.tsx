@@ -14,26 +14,28 @@ export function SiteFooter() {
           <p className="text-fg-muted mt-1 text-sm">{siteConfig.tagline}</p>
         </div>
         <div className="text-fg-muted flex flex-wrap items-center gap-6 text-sm">
-          <Link
-            href="/privacy"
-            className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            Privacy
-          </Link>
-          <Link
-            href="/support"
-            className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            Support
-          </Link>
-          <a
-            href={siteConfig.github}
-            className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
+          <nav aria-label="Footer" className="flex flex-wrap items-center gap-6">
+            <Link
+              href="/privacy"
+              className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/support"
+              className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            >
+              Support
+            </Link>
+            <a
+              href={siteConfig.github}
+              className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </nav>
           <GooglePlayBadge />
         </div>
       </Container>
