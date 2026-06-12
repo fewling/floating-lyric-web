@@ -35,3 +35,14 @@ export interface FaqItem {
   q: string;
   a: string;
 }
+
+export type DemoLang = "EN" | "ES" | "JA" | "ZH";
+
+export interface DemoLine {
+  /** Original (Korean) lyric line — INVENTED text, never from a real song. */
+  source: string;
+  /** Pre-baked translations per target language. */
+  translations: Record<DemoLang, string>;
+  /** How long this line stays active, in ms. */
+  durationMs: number;
+}
