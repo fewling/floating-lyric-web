@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site";
+import { themeInit } from "@/lib/theme";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,8 +58,6 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "#f5f4ef" },
   ],
 };
-
-const themeInit = `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="dark"}})();`;
 
 export default function RootLayout({
   children,

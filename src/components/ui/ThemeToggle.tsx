@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+import { THEME_STORAGE_KEY } from "@/lib/theme";
 
 type Theme = "dark" | "light";
 
@@ -8,12 +9,16 @@ function currentTheme(): Theme {
   return document.documentElement.dataset.theme === "light" ? "light" : "dark";
 }
 
+function subscribe(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, { attributeFilter: ["data-theme"] });
+  return () => observer.disconnect();
+}
+
 /** Flips [data-theme] on <html> and persists to localStorage.
  *  Initial paint is handled by the inline script in layout.tsx. */
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => setTheme(currentTheme()), []);
+  const theme = useSyncExternalStore<Theme>(subscribe, currentTheme, () => "dark");
 
   const next: Theme = theme === "dark" ? "light" : "dark";
 
@@ -21,15 +26,14 @@ export function ThemeToggle() {
     <button
       type="button"
       aria-label={`Switch to ${next} theme`}
-      className="border-edge text-fg-muted hover:text-fg rounded-full border p-2 transition-colors"
+      className="border-edge text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded-full border p-2 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
       onClick={() => {
         document.documentElement.dataset.theme = next;
         try {
-          localStorage.setItem("theme", next);
+          localStorage.setItem(THEME_STORAGE_KEY, next);
         } catch {
           /* private mode: non-fatal */
         }
-        setTheme(next);
       }}
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}

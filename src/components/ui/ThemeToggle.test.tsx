@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it } from "vitest";
+import { THEME_STORAGE_KEY, themeInit } from "@/lib/theme";
 import { ThemeToggle } from "./ThemeToggle";
 
 describe("ThemeToggle", () => {
@@ -18,8 +19,9 @@ describe("ThemeToggle", () => {
   });
 
   it("restores a persisted theme on a fresh mount (jsdom stand-in for reload)", () => {
-    localStorage.setItem("theme", "light");
-    document.documentElement.dataset.theme = "light";
+    localStorage.setItem(THEME_STORAGE_KEY, "light");
+    // run the real pre-hydration bootstrap from layout.tsx: localStorage -> data-theme
+    eval(themeInit);
     render(<ThemeToggle />);
     // fresh mount reflects the persisted state: it offers the way back to dark
     expect(screen.getByRole("button", { name: /switch to dark theme/i })).toBeInTheDocument();
