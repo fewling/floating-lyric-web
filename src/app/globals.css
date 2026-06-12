@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-/* ── Design tokens (from docs/marketing-site/DESIGN.md) ───────────────── */
-@theme {
-  --color-ink: #0f1115;
-  --color-surface: #15171c;
-  --color-surface-2: #1e212a;
-  --color-accent: #15e085;
-  --color-accent-soft: rgba(21, 224, 133, 0.14);
-  --color-fg: #f3f5f4;
-  --color-fg-muted: #9aa4b2;
-  --color-muted: #7c8ba0;
-  --color-light: #f5f6f3;
-}
-
-/* Map next/font CSS variables to Tailwind font utilities (font-sans, font-display). */
+/* ── Dual-palette tokens (spec §4) ─────────────────────────────────────
+   Identity is "Night Player" (dark). Light is a palette translation only:
+   same fonts, layout, components. Runtime-switchable via [data-theme],
+   so Tailwind tokens must resolve through CSS variables (`@theme inline`). */
 @theme inline {
+  --color-ink: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-edge: var(--edge);
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
 }
 
-:root {
+:root,
+[data-theme="dark"] {
   color-scheme: dark;
+  --bg: #0f1115;
+  --surface: #15171c;
+  --surface-2: #1e212a;
+  --accent: #15e085;
+  --accent-soft: rgba(21, 224, 133, 0.14);
+  --fg: #f3f5f4;
+  --fg-muted: #9aa4b2;
+  --edge: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f4ef;
+  --surface: #ffffff;
+  --surface-2: #ecebe4;
+  --accent: #0fae6d; /* green tuned for ≥4.5:1 on paper */
+  --accent-soft: rgba(15, 174, 109, 0.14);
+  --fg: #13150f;
+  --fg-muted: #5d6157;
+  --edge: rgba(19, 21, 15, 0.12);
 }
 
 body {
