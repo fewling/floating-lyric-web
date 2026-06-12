@@ -15,13 +15,13 @@ export const privacyContent: ProsePage = {
       heading: "Your lyrics stay on your device",
       paragraphs: [
         "Imported .LRC files are stored locally on your device and never uploaded.",
-        "To detect what's playing, the app reads Android's media session on-device. When no matching local lyric exists, the app automatically queries the public LRCLIB service (lrclib.net) with the track's title and artist to find synced lyrics.",
+        "To detect what's playing, the app reads Android's media session on-device. When no matching local lyric exists, the app automatically queries the public LRCLIB service (lrclib.net) with the track's title, artist and album to find synced lyrics.",
       ],
     },
     {
       heading: "AI translation requests",
       paragraphs: [
-        "When you translate a lyric line, the line text is sent securely to Google Cloud's AI services (via Firebase) to return the result. We keep a per-account usage counter for rate limiting — not the lyrics you translate. Translation requests aren't used to build a profile of you.",
+        "When you translate a lyric line, the line text is sent securely to our AI providers — Google Cloud services (via Firebase) and DeepSeek — to return the result. We keep a per-account usage counter for rate limiting — not the lyrics you translate. Translation requests aren't used to build a profile of you.",
       ],
     },
     {
