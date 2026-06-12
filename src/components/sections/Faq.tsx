@@ -7,7 +7,7 @@ export function Faq() {
   return (
     <Section id="faq">
       <SectionHeading eyebrow="FAQ" title="Questions, answered" />
-      <div className="bg-surface/30 mx-auto mt-12 max-w-3xl divide-y divide-edge rounded-2xl border border-edge">
+      <div className="bg-surface/30 divide-edge border-edge mx-auto mt-12 max-w-3xl divide-y rounded-2xl border">
         {faq.map((item) => (
           <details key={item.q} className="group p-6">
             <summary className="focus-visible:ring-accent focus-visible:ring-offset-surface flex cursor-pointer list-none items-center justify-between gap-4 rounded font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none">

@@ -6,15 +6,15 @@ whole thing exports to static HTML.
 
 ## Stack
 
-| Concern    | Choice                                  |
-| ---------- | --------------------------------------- |
-| Framework  | Next.js 16 (App Router), `output: export` |
-| Language   | TypeScript (strict)                     |
-| Styling    | Tailwind CSS v4 (CSS-first `@theme`)    |
-| Fonts      | `next/font` — Inter (body), Space Grotesk (display) |
-| Tests      | Vitest + Testing Library (jsdom)        |
-| Quality    | ESLint (next), Prettier                 |
-| Hosting    | Firebase Hosting (`out/`)               |
+| Concern   | Choice                                              |
+| --------- | --------------------------------------------------- |
+| Framework | Next.js 16 (App Router), `output: export`           |
+| Language  | TypeScript (strict)                                 |
+| Styling   | Tailwind CSS v4 (CSS-first `@theme`)                |
+| Fonts     | `next/font` — Inter (body), Space Grotesk (display) |
+| Tests     | Vitest + Testing Library (jsdom)                    |
+| Quality   | ESLint (next), Prettier                             |
+| Hosting   | Firebase Hosting (`out/`)                           |
 
 ## Layers
 

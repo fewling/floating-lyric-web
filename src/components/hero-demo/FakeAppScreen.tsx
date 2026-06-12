@@ -11,7 +11,9 @@ export function FakeAppScreen() {
         <div className="bg-surface-2 h-3 w-1/2 rounded" />
       </div>
       <div className="text-fg-muted mt-4 px-3 pb-4 text-[10px]">
-        <div>▶ {demoTrack.title} — {demoTrack.artist}</div>
+        <div>
+          ▶ {demoTrack.title} — {demoTrack.artist}
+        </div>
         <div>{demoTrack.caption}</div>
       </div>
     </div>

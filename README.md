@@ -14,14 +14,14 @@ pnpm dev          # http://localhost:3000
 
 ## Scripts
 
-| Script           | Does                              |
-| ---------------- | -------------------------------- |
-| `pnpm dev`       | Local dev server                 |
-| `pnpm build`     | Static export → `out/`           |
-| `pnpm typecheck` | `tsc --noEmit`                   |
-| `pnpm lint`      | ESLint                           |
-| `pnpm test`      | Vitest (unit/component)          |
-| `pnpm format`    | Prettier write                   |
+| Script           | Does                    |
+| ---------------- | ----------------------- |
+| `pnpm dev`       | Local dev server        |
+| `pnpm build`     | Static export → `out/`  |
+| `pnpm typecheck` | `tsc --noEmit`          |
+| `pnpm lint`      | ESLint                  |
+| `pnpm test`      | Vitest (unit/component) |
+| `pnpm format`    | Prettier write          |
 
 ## Editing content
 

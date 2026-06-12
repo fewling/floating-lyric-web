@@ -30,10 +30,10 @@ export function StickyMobileCta({ sentinelId }: { sentinelId: string }) {
       return () => cancelAnimationFrame(raf);
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { rootMargin: "0px", threshold: 0 },
-    );
+    const observer = new IntersectionObserver(([entry]) => setVisible(!entry.isIntersecting), {
+      rootMargin: "0px",
+      threshold: 0,
+    });
     observer.observe(sentinel);
     return () => observer.disconnect();
   }, [sentinelId]);
@@ -43,7 +43,7 @@ export function StickyMobileCta({ sentinelId }: { sentinelId: string }) {
       data-testid="sticky-mobile-cta"
       aria-hidden={!visible}
       className={[
-        "bg-ink/85 fixed inset-x-0 bottom-0 z-40 border-t border-edge p-3 backdrop-blur sm:hidden",
+        "bg-ink/85 border-edge fixed inset-x-0 bottom-0 z-40 border-t p-3 backdrop-blur sm:hidden",
         "motion-safe:transition-transform motion-safe:duration-300",
         visible ? "translate-y-0" : "pointer-events-none translate-y-full opacity-0",
       ].join(" ")}

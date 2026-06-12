@@ -7,7 +7,10 @@ import { useEffect, useState } from "react";
  *  prefers-reduced-motion case). Index loops forever.
  *  Pass a referentially stable `lines` array; an inline literal restarts the
  *  active line's timer on every consumer render. */
-export function useDemoTimeline(lines: ReadonlyArray<{ durationMs: number }>, paused: boolean): number {
+export function useDemoTimeline(
+  lines: ReadonlyArray<{ durationMs: number }>,
+  paused: boolean,
+): number {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

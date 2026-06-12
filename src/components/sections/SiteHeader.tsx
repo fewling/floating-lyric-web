@@ -11,7 +11,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-ink/70 sticky top-0 z-50 border-b border-edge backdrop-blur">
+    <header className="bg-ink/70 border-edge sticky top-0 z-50 border-b backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-4">
         <a
           href="#main"
@@ -40,7 +40,7 @@ export function SiteHeader() {
           <GooglePlayBadge className="hidden sm:inline-flex" />
           <button
             type="button"
-            className="text-fg focus-visible:ring-accent focus-visible:ring-offset-ink grid size-11 place-items-center rounded-lg border border-edge focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
+            className="text-fg focus-visible:ring-accent focus-visible:ring-offset-ink border-edge grid size-11 place-items-center rounded-lg border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -57,7 +57,7 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded-lg px-2 py-2 hover:bg-fg/5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink hover:bg-fg/5 rounded-lg px-2 py-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {link.label}
             </a>

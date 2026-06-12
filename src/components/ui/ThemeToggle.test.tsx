@@ -16,7 +16,9 @@ describe("ThemeToggle", () => {
     await user.click(screen.getByRole("button", { name: /switch to light theme/i }));
     expect(document.documentElement.dataset.theme).toBe("light");
     expect(localStorage.getItem("theme")).toBe("light");
-    expect(await screen.findByRole("button", { name: /switch to dark theme/i })).toBeInTheDocument();
+    expect(
+      await screen.findByRole("button", { name: /switch to dark theme/i }),
+    ).toBeInTheDocument();
   });
 
   it("restores a persisted theme on a fresh mount (jsdom stand-in for reload)", () => {
