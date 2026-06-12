@@ -88,4 +88,24 @@ describe("StickyMobileCta", () => {
     // Fallback visibility is scheduled on the next animation frame.
     await waitFor(() => expect(bar).toHaveAttribute("aria-hidden", "false"));
   });
+
+  it("is visible on page load when the sentinel is off-screen (below the fold)", () => {
+    // On mobile the sentinel sits below the full hero grid. At load the grid
+    // overflows the fold, so the sentinel is not intersecting — the bar should
+    // be visible immediately. Simulating: sentinel present, observer fires with
+    // isIntersecting=false (off-screen).
+    const sentinel = document.createElement("div");
+    sentinel.id = "hero-end";
+    document.body.appendChild(sentinel);
+
+    render(<StickyMobileCta sentinelId="hero-end" />);
+    const bar = screen.getByTestId("sticky-mobile-cta");
+
+    // Sentinel off-screen at load.
+    emit(false);
+    expect(bar).toHaveAttribute("aria-hidden", "false");
+    expect(bar.className).toContain("translate-y-0");
+
+    sentinel.remove();
+  });
 });

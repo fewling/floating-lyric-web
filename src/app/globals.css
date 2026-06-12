@@ -28,6 +28,7 @@
   --fg: #f3f5f4;
   --fg-muted: #9aa4b2;
   --edge: rgba(255, 255, 255, 0.08);
+  --glow: color-mix(in oklab, var(--accent) 45%, transparent);
 }
 
 [data-theme="light"] {
@@ -40,6 +41,7 @@
   --fg: #13150f;
   --fg-muted: #5d6157;
   --edge: rgba(19, 21, 15, 0.12);
+  --glow: transparent;
 }
 
 body {

@@ -24,7 +24,7 @@ export function Hero() {
           <div className="reveal lg:col-start-1 lg:row-start-1 lg:self-end">
             <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               {hero.headlineLead}{" "}
-              <span className="text-accent [text-shadow:0_0_28px_color-mix(in_oklab,var(--accent)_45%,transparent)]">
+              <span className="text-accent [text-shadow:0_0_28px_var(--glow)]">
                 {hero.headlineAccent}
               </span>
             </h1>
@@ -43,7 +43,7 @@ export function Hero() {
             <GooglePlayBadge />
             <a
               href={hero.secondary.href}
-              className="text-fg-muted hover:text-fg inline-flex items-center gap-1.5 text-sm font-medium transition-colors"
+              className="text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink inline-flex items-center gap-1.5 rounded text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {hero.secondary.label}
               <span aria-hidden>↓</span>

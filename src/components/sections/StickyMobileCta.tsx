@@ -6,15 +6,17 @@ import { GooglePlayBadge } from "@/components/ui/GooglePlayBadge";
 /**
  * Persistent conversion CTA for mobile. This is an Android app, so most traffic
  * is on phones where the sticky header drops the Play badge (`hidden sm:...`).
- * Once the hero scrolls out of view, this bar slides up at the bottom so the
- * Play CTA stays one tap away without permanently covering content.
  *
  * - Mobile only (`sm:hidden`); on ≥640px the header badge is always visible.
- * - Watches a sentinel inside the hero via IntersectionObserver. While the hero
- *   is on screen the bar is hidden (the hero already shows the badge).
+ * - The sentinel (id="hero-end") sits below the entire hero grid. On mobile the
+ *   hero CTA row is below the fold at load, so the sentinel is also below the
+ *   fold — meaning this bar is VISIBLE FROM PAGE LOAD (the in-flow badge is not
+ *   yet visible). The bar hides once the user scrolls the in-flow badge into
+ *   view (sentinel becomes intersecting). This is the intended behavior: the bar
+ *   ensures the Play CTA is always one tap away on the initial screen.
  * - Respects prefers-reduced-motion: no slide transition, just show/hide.
- * - Does not cover content permanently — it only appears after the hero and
- *   sits in normal stacking below the header; page padding is unaffected.
+ * - Does not cover content permanently — sits in normal stacking below the
+ *   header; page padding is unaffected.
  */
 export function StickyMobileCta({ sentinelId }: { sentinelId: string }) {
   const [visible, setVisible] = useState(false);

@@ -32,4 +32,18 @@ describe("Hero", () => {
     // StickyMobileCta observes this id; page.tsx passes sentinelId="hero-end".
     expect(document.getElementById("hero-end")).toBeInTheDocument();
   });
+
+  it("demo precedes the Play CTA in document order (mobile-first DOM layout)", () => {
+    render(<Hero />);
+    // On the default (mobile) layout the demo renders before the CTA row in
+    // DOM order so it stays near the top of the fold when the grid stacks.
+    const demoText = screen.getByText(demoLines[0].source);
+    const playLink = screen.getAllByRole("link").find(
+      (link) => link.getAttribute("href") === siteConfig.playStoreUrl,
+    );
+    if (!playLink) throw new Error("Play Store link not found");
+    expect(
+      demoText.compareDocumentPosition(playLink) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
+  });
 });
