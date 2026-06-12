@@ -32,3 +32,21 @@ export interface DemoLine {
   /** How long this line stays active, in ms. */
   durationMs: number;
 }
+
+export interface ProseLink {
+  label: string;
+  href: string; // internal ("/..."), mailto:, or https:
+}
+
+export interface ProseSection {
+  heading: string;
+  paragraphs: string[];
+  /** Optional action links rendered as a list after the paragraphs. */
+  links?: ProseLink[];
+}
+
+export interface ProsePage {
+  title: string;
+  updated?: string;
+  sections: ProseSection[];
+}
