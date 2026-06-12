@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
  *  aria-hidden-focus audit and breaks spec §6's keyboard requirement. */
 export function PhoneFrame({ screen, overlay }: { screen: ReactNode; overlay?: ReactNode }) {
   return (
-    <div className="border-edge bg-surface-2 relative mx-auto aspect-[9/19] w-full max-w-[300px] overflow-hidden rounded-[2rem] border shadow-2xl">
+    <div className="border-edge bg-surface-2 relative mx-auto aspect-[9/19.5] w-full max-w-[300px] overflow-hidden rounded-[2rem] border shadow-2xl">
       <div className="absolute inset-[3px] overflow-hidden rounded-[1.8rem]">
         <div aria-hidden className="h-full">
           {screen}

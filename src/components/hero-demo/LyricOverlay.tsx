@@ -16,8 +16,10 @@ export function LyricOverlay({ activeIndex }: { activeIndex: number }) {
       <p className="text-accent text-sm font-semibold" lang="ko">
         {line.source}
       </p>
-      <p className="text-fg-muted mt-1 text-xs">{line.translations[lang]}</p>
-      <div className="mt-2 flex gap-1" role="group" aria-label="Translation language">
+      <p className="text-fg-muted mt-1 text-xs" lang={lang.toLowerCase()}>
+        {line.translations[lang]}
+      </p>
+      <div className="mt-2 flex gap-2" role="group" aria-label="Translation language">
         {demoLangs.map((l) => (
           <button
             key={l}
@@ -26,8 +28,8 @@ export function LyricOverlay({ activeIndex }: { activeIndex: number }) {
             onClick={() => setLang(l)}
             className={
               l === lang
-                ? "bg-accent text-ink rounded-full px-2 py-0.5 text-[10px] font-semibold"
-                : "bg-surface-2 text-fg-muted hover:text-fg rounded-full px-2 py-0.5 text-[10px]"
+                ? "bg-accent text-ink focus-visible:ring-accent focus-visible:ring-offset-surface rounded-full px-2.5 py-1.5 text-[10px] font-semibold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                : "bg-surface-2 text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-surface rounded-full px-2.5 py-1.5 text-[10px] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             }
           >
             {l}
