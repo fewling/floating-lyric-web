@@ -7,7 +7,7 @@ import { LyricOverlay } from "./LyricOverlay";
 import { PhoneFrame } from "./PhoneFrame";
 import { useDemoTimeline } from "./useDemoTimeline";
 
-// Module-level media query reference — created once, never on every render.
+// Resolved fresh per call; cheap, and caching would break test stubbing.
 function getMediaQuery(): MediaQueryList | null {
   if (typeof window === "undefined" || typeof window.matchMedia !== "function") return null;
   return window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -41,5 +41,7 @@ export function HeroDemo() {
   const reduced = usePrefersReducedMotion();
   const activeIndex = useDemoTimeline(demoLines, reduced);
 
-  return <PhoneFrame screen={<FakeAppScreen />} overlay={<LyricOverlay activeIndex={activeIndex} />} />;
+  return (
+    <PhoneFrame screen={<FakeAppScreen />} overlay={<LyricOverlay activeIndex={activeIndex} />} />
+  );
 }

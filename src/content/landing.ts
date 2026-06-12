@@ -1,11 +1,11 @@
 import type { FaqItem, Feature, Pillar, PricingTier, Step } from "@/types/content";
 
 export const hero = {
-  headlineLead: "Lyrics that float over any app — synced to your music,",
-  headlineAccent: "translated by AI.",
+  headlineLead: "Lyrics that float over",
+  headlineAccent: "any app.",
   subhead:
-    "Synced lyrics float on top of Spotify, YouTube Music, games — anything. They translate instantly, so you finally understand the song you love.",
-  secondary: { label: "See how it works", href: "#how" },
+    "Synced to whatever's playing, translated by AI. Spotify, YouTube Music, games — the words follow you everywhere.",
+  secondary: { label: "How it works", href: "#how" },
 } as const;
 
 export const pillars: Pillar[] = [

@@ -24,6 +24,7 @@ describe("HeroDemo", () => {
     mockReducedMotion(false);
     render(<HeroDemo />);
     expect(screen.getByText(demoLines[0].source)).toBeInTheDocument();
+    expect(screen.getByText(demoLines[0].translations.EN)).toBeInTheDocument();
   });
 
   it("stays on line 0 under prefers-reduced-motion, with chips still functional (spec §3)", () => {
