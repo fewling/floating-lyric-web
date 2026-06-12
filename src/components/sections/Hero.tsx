@@ -51,8 +51,11 @@ export function Hero() {
           </div>
         </div>
         {/* Sentinel for the sticky mobile CTA: StickyMobileCta (page.tsx passes
-            sentinelId="hero-end") shows its bottom bar only once this line has
-            scrolled out of view — i.e. once the hero's own Play badge is gone. */}
+            sentinelId="hero-end") shows its bottom bar while this line is
+            off-screen. It sits below the whole hero grid, so on mobile it is
+            below the fold at load — the bar is visible from page load and hides
+            once the user scrolls the in-flow Play badge (and this line) into
+            view. */}
         <div id="hero-end" aria-hidden className="h-px w-full" />
       </Container>
     </section>

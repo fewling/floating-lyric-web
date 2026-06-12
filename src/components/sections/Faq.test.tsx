@@ -5,6 +5,8 @@ import { Faq } from "./Faq";
 
 describe("Faq", () => {
   it("renders all six questions", () => {
+    // Six Q&As are contractual (spec §2) — the loop alone passes for any count.
+    expect(faq).toHaveLength(6);
     render(<Faq />);
     for (const item of faq) {
       expect(screen.getByText(item.q)).toBeInTheDocument();
