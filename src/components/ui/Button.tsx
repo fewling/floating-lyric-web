@@ -15,7 +15,7 @@ function classes(variant: ButtonVariant, className?: string): string {
   return cn(
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition focus-visible:ring-accent focus-visible:ring-offset-ink focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:text-base",
     variant === "primary"
-      ? "bg-accent text-ink hover:-translate-y-0.5 hover:shadow-[0_0_28px_-6px_#15e085]"
+      ? "bg-accent text-ink hover:-translate-y-0.5 hover:shadow-[0_0_28px_-6px_var(--accent)]"
       : "text-fg border border-white/15 hover:border-white/30 hover:bg-white/5",
     className,
   );

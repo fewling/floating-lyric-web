@@ -35,8 +35,8 @@
   --bg: #f5f4ef;
   --surface: #ffffff;
   --surface-2: #ecebe4;
-  --accent: #0fae6d; /* green tuned for ≥4.5:1 on paper */
-  --accent-soft: rgba(15, 174, 109, 0.14);
+  --accent: #0b7d4d; /* 4.7:1 on paper — AA for normal text */
+  --accent-soft: rgba(11, 125, 77, 0.14);
   --fg: #13150f;
   --fg-muted: #5d6157;
   --edge: rgba(19, 21, 15, 0.12);
