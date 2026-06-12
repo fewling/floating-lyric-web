@@ -21,7 +21,7 @@ export function Hero() {
       />
       <Container className="py-24 sm:py-32">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-x-16 lg:gap-y-10">
-          <div className="reveal lg:col-start-1 lg:row-start-1 lg:self-end">
+          <div className="reveal-load lg:col-start-1 lg:row-start-1 lg:self-end">
             <h1 className="font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               {hero.headlineLead}{" "}
               <span className="text-accent [text-shadow:0_0_28px_var(--glow)]">
@@ -39,7 +39,7 @@ export function Hero() {
               <HeroDemo />
             </div>
           </div>
-          <div className="reveal flex flex-wrap items-center gap-x-6 gap-y-4 lg:col-start-1 lg:row-start-2 lg:self-start">
+          <div className="reveal-load flex flex-wrap items-center gap-x-6 gap-y-4 lg:col-start-1 lg:row-start-2 lg:self-start">
             <GooglePlayBadge />
             <a
               href={hero.secondary.href}

@@ -79,6 +79,13 @@ summary::-webkit-details-marker {
       animation-range: entry 0% cover 18%;
     }
   }
+
+  /* Above-the-fold variant: time-based, completes on load instead of
+     parking mid-opacity the way a view() timeline does for elements
+     already in the viewport. */
+  .reveal-load {
+    animation: reveal-in 0.5s ease-out both;
+  }
 }
 
 /* ── Hero phone float: gentle idle drift, motion-safe only ────────────── */
