@@ -1,6 +1,5 @@
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
-import type { ButtonVariant } from "./Button";
 
 // Official "Get it on Google Play" badge (generic English web badge), fetched
 // from Google's brand asset host into public/. The transparent margin baked
@@ -13,18 +12,10 @@ const BADGE_RATIO = "646 / 250";
 /**
  * Primary conversion CTA, rendering the official Google Play badge.
  *
- * The `variant` prop is retained for API compatibility (callers still pass it),
- * but the official badge has fixed branding per Google's guidelines and must not
- * be recolored, so it does not change the visual. Use `className` to control
- * layout/size (e.g. `w-full` inside a card, responsive visibility utilities).
+ * Use `className` to control layout/size (e.g. `w-full` inside a card,
+ * responsive visibility utilities).
  */
-export function GooglePlayBadge({
-  className,
-}: {
-  className?: string;
-  /** Retained for API compatibility; the official badge branding is fixed and ignored. */
-  variant?: ButtonVariant;
-}) {
+export function GooglePlayBadge({ className }: { className?: string }) {
   const external = siteConfig.playStoreUrl.startsWith("http");
   return (
     <a
