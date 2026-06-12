@@ -1,4 +1,4 @@
-import type { FaqItem, Feature, Pillar, PricingTier, Step } from "@/types/content";
+import type { FaqItem, Feature, Step } from "@/types/content";
 
 export const hero = {
   headlineLead: "Lyrics that float over",
@@ -7,24 +7,6 @@ export const hero = {
     "Synced to whatever's playing, translated by AI. Spotify, YouTube Music, games — the words follow you everywhere.",
   secondary: { label: "How it works", href: "#how" },
 } as const;
-
-export const pillars: Pillar[] = [
-  {
-    icon: "layers",
-    title: "Over anything",
-    body: "Lyrics stay on top of Spotify, YouTube Music, games, your browser — any app, no switching back and forth.",
-  },
-  {
-    icon: "languages",
-    title: "Understand any language",
-    body: "Instant AI translation while you listen. K-pop, J-pop, Latin, anime — read along and actually get it.",
-  },
-  {
-    icon: "shield",
-    title: "Yours & private",
-    body: "Bring your own .LRC files, no account required, light on battery. Your lyrics, your way.",
-  },
-];
 
 export const steps: Step[] = [
   {
@@ -52,13 +34,8 @@ export const features: Feature[] = [
   },
   {
     icon: "search",
-    title: "Online lyric search",
-    body: "Find lyrics for the track you’re listening to.",
-  },
-  {
-    icon: "file",
-    title: "Local LRC import",
-    body: "Load and manage your own synced lyric files offline.",
+    title: "Find or bring your lyrics",
+    body: "Search online for the track you’re hearing, or import your own .LRC files and keep them offline.",
   },
   {
     icon: "sparkles",
@@ -71,42 +48,6 @@ export const features: Feature[] = [
     body: "Customize fonts, colors, transparency, and alignment.",
   },
 ];
-
-export const fandoms: string[] = [
-  "POV: you finally understand your bias’s lyrics — line by line.",
-  "Anime openings hit different when you can read along.",
-  "Sing the Spanish chorus AND know what it means.",
-];
-
-export const pricing: { note: string; tiers: PricingTier[] } = {
-  note: "The whole experience is free. Pro just removes the daily cap on AI translation — one payment, yours for good.",
-  tiers: [
-    {
-      name: "Free",
-      price: "Free",
-      tagline: "Everything you need, forever.",
-      features: [
-        "Floating lyric overlay",
-        "Auto-sync with any app",
-        "Online lyric search",
-        "Local LRC import",
-        "Full customization",
-      ],
-    },
-    {
-      name: "Pro",
-      price: "One-time",
-      tagline: "Unlimited AI translation. No subscription, ever.",
-      highlight: true,
-      features: [
-        "Everything in Free",
-        "Unlimited AI translation",
-        "No daily translation cap",
-        "Support ongoing development",
-      ],
-    },
-  ],
-};
 
 export const faq: FaqItem[] = [
   {

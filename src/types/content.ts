@@ -5,12 +5,6 @@ export interface NavLink {
   href: string;
 }
 
-export interface Pillar {
-  icon: IconName;
-  title: string;
-  body: string;
-}
-
 export interface Step {
   n: number;
   title: string;
@@ -21,14 +15,6 @@ export interface Feature {
   icon: IconName;
   title: string;
   body: string;
-}
-
-export interface PricingTier {
-  name: string;
-  price: string;
-  tagline: string;
-  features: string[];
-  highlight?: boolean;
 }
 
 export interface FaqItem {
