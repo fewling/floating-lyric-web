@@ -24,4 +24,15 @@ describe("useDemoTimeline", () => {
     act(() => vi.advanceTimersByTime(10_000));
     expect(result.current).toBe(0);
   });
+
+  it("resumes advancing after unpausing", () => {
+    const { result, rerender } = renderHook(({ paused }) => useDemoTimeline(lines, paused), {
+      initialProps: { paused: true },
+    });
+    act(() => vi.advanceTimersByTime(10_000));
+    expect(result.current).toBe(0);
+    rerender({ paused: false });
+    act(() => vi.advanceTimersByTime(1000));
+    expect(result.current).toBe(1);
+  });
 });

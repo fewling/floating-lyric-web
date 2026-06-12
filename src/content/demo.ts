@@ -1,9 +1,9 @@
 import type { DemoLang, DemoLine } from "@/types/content";
 
-export const demoLangs: DemoLang[] = ["EN", "ES", "JA", "ZH"];
+export const demoLangs: readonly DemoLang[] = ["EN", "ES", "JA", "ZH"];
 
 /** Invented lyric — written in-house for this demo. Do NOT replace with real song lines. */
-export const demoLines: DemoLine[] = [
+export const demoLines: readonly DemoLine[] = [
   {
     source: "별빛처럼 내려와 줘",
     translations: {
@@ -28,7 +28,7 @@ export const demoLines: DemoLine[] = [
     source: "이 노래만은 잊지 말아 줘",
     translations: {
       EN: "Just don't forget this song",
-      ES: "No olvides esta canción",
+      ES: "Al menos, no olvides esta canción",
       JA: "この歌だけは忘れないで",
       ZH: "唯独别忘了这首歌",
     },
@@ -39,5 +39,6 @@ export const demoLines: DemoLine[] = [
 export const demoTrack = {
   appName: "Now playing",
   title: "Starlight (별빛)",
-  artist: "Demo · synced via media session",
+  artist: "Mirae",
+  caption: "Synced via media session",
 } as const;
