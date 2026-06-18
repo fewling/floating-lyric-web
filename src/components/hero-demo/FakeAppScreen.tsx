@@ -12,7 +12,7 @@ export function FakeAppScreen() {
       </div>
       <div className="text-fg-muted mt-4 px-3 pb-4 text-[10px]">
         <div>
-          ▶ {demoTrack.title} — {demoTrack.artist}
+          ▶ {demoTrack.title} · {demoTrack.artist}
         </div>
         <div>{demoTrack.caption}</div>
       </div>

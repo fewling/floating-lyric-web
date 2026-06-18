@@ -6,7 +6,7 @@ import { faq } from "@/content/landing";
 export function Faq() {
   return (
     <Section id="faq">
-      <SectionHeading eyebrow="FAQ" title="Questions, answered" />
+      <SectionHeading title="Questions, answered" />
       <div className="bg-surface/30 divide-edge border-edge mx-auto mt-12 max-w-3xl divide-y rounded-2xl border">
         {faq.map((item) => (
           <details key={item.q} className="group p-6">

@@ -8,7 +8,6 @@ export function Features() {
   return (
     <Section id="features" className="bg-surface/30">
       <SectionHeading
-        eyebrow="Features"
         title="Everything you need to sing along"
         subtitle="A focused set of tools that do one thing brilliantly: keep the right lyrics in front of you."
       />

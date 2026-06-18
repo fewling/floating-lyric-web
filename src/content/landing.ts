@@ -4,7 +4,7 @@ export const hero = {
   headlineLead: "Lyrics that float over",
   headlineAccent: "any app.",
   subhead:
-    "Synced to whatever's playing, translated by AI. Spotify, YouTube Music, games — the words follow you everywhere.",
+    "Synced to whatever's playing, translated by AI. Spotify, YouTube Music, games: the words follow you everywhere.",
   secondary: { label: "How it works", href: "#how" },
 } as const;
 
@@ -52,7 +52,7 @@ export const features: Feature[] = [
 export const faq: FaqItem[] = [
   {
     q: "Is it free?",
-    a: "Yes. The lyric overlay, auto-sync, search, and local LRC import are free forever. Unlimited AI translation is an optional one-time Pro unlock — no subscription.",
+    a: "Yes. The lyric overlay, auto-sync, search, and local LRC import are free forever. Unlimited AI translation is an optional one-time Pro unlock, no subscription.",
   },
   {
     q: "Does it work with Spotify or YouTube Music?",
@@ -60,11 +60,11 @@ export const faq: FaqItem[] = [
   },
   {
     q: "Do I need an account?",
-    a: "No for everything core — the overlay, auto-sync, search, and LRC import work without sign-up. A free account is only needed for AI translation.",
+    a: "No for everything core. The overlay, auto-sync, search, and LRC import work without sign-up. A free account is only needed for AI translation.",
   },
   {
     q: "Which languages can it translate?",
-    a: "A wide range, powered by AI — great for K-pop, J-pop, Latin, anime, C-pop, Bollywood and more.",
+    a: "A wide range, powered by AI. Great for K-pop, J-pop, Latin, anime, C-pop, Bollywood and more.",
   },
   {
     q: "Why does it need the overlay permission?",
@@ -72,6 +72,6 @@ export const faq: FaqItem[] = [
   },
   {
     q: "Is my data private?",
-    a: "Your imported LRC files stay on your device. Translation requests are processed securely to return results — the app doesn’t build a profile of you.",
+    a: "Your imported LRC files stay on your device. Translation requests are processed securely to return results, and the app doesn’t build a profile of you.",
   },
 ];

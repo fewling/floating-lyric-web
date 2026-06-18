@@ -8,7 +8,7 @@ export const privacyContent: ProsePage = {
     {
       heading: "Accounts are optional",
       paragraphs: [
-        "The core app — floating overlay, auto-sync, lyric search, and LRC import — works without sign-up. Creating an account (email and password) is only needed for AI translation; we store your email for sign-in and a per-account usage counter for rate limiting. We don't build advertising or interest profiles.",
+        "The core app (floating overlay, auto-sync, lyric search, and LRC import) works without sign-up. Creating an account (email and password) is only needed for AI translation; we store your email for sign-in and a per-account usage counter for rate limiting. We don't build advertising or interest profiles.",
       ],
     },
     {
@@ -21,7 +21,7 @@ export const privacyContent: ProsePage = {
     {
       heading: "AI translation requests",
       paragraphs: [
-        "When you translate a lyric line, the line text is sent securely to our AI providers — Google Cloud services (via Firebase) and DeepSeek — to return the result. We keep a per-account usage counter for rate limiting — not the lyrics you translate. Translation requests aren't used to build a profile of you.",
+        "When you translate a lyric line, the line text is sent securely to our AI providers (Google Cloud services via Firebase, and DeepSeek) to return the result. We keep a per-account usage counter for rate limiting, not the lyrics you translate. Translation requests aren't used to build a profile of you.",
       ],
     },
     {

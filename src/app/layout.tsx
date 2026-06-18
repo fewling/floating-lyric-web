@@ -19,8 +19,8 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s — ${siteConfig.name}`,
+    default: `${siteConfig.name} - ${siteConfig.tagline}`,
+    template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: `${siteConfig.name} - ${siteConfig.tagline}`,
     description: siteConfig.description,
     // static asset; pre-launch checklist item
     images: [
@@ -48,20 +48,20 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Floating Lyrics — lyrics that float over any app, synced and translated.",
+        alt: "Floating Lyrics: lyrics that float over any app, synced and translated.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: `${siteConfig.name} - ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Floating Lyrics — lyrics that float over any app, synced and translated.",
+        alt: "Floating Lyrics: lyrics that float over any app, synced and translated.",
       },
     ],
   },

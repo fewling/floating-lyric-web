@@ -7,7 +7,7 @@ export const supportContent: ProsePage = {
     {
       heading: "Get help",
       paragraphs: [
-        "Something not working? Email us and describe what happened — your Android version and a screenshot help a lot. You'll normally hear back within a few days.",
+        "Something not working? Email us and describe what happened. Your Android version and a screenshot help a lot. You'll normally hear back within a few days.",
       ],
       links: [
         { label: `Email ${siteConfig.supportEmail}`, href: `mailto:${siteConfig.supportEmail}` },

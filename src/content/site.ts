@@ -10,7 +10,7 @@ export const siteConfig = {
   url: "https://floatinglyrics.app",
   tagline: "Lyrics that float over any app.",
   description:
-    "See synced, AI-translated song lyrics in a floating overlay on top of any app on Android — Spotify, YouTube Music, games, anything. Free core — no sign-up needed for the overlay. Optional Pro for unlimited AI translation.",
+    "See synced, AI-translated song lyrics in a floating overlay on top of any app on Android: Spotify, YouTube Music, games, anything. Free core, no sign-up needed for the overlay. Optional Pro for unlimited AI translation.",
   playStoreUrl:
     "https://play.google.com/store/apps/details?id=com.floating.lyrics&utm_source=website&utm_medium=landing",
   github: "https://github.com/fewling/flutter-floating-lyric",
