@@ -24,9 +24,7 @@ test('every intent cross-link references an existing intent slug', () => {
 })
 
 test('intent slugs are unique', () => {
-  expect(new Set(intentPages.map((p) => p.slug)).size).toBe(
-    intentPages.length,
-  )
+  expect(new Set(intentPages.map((p) => p.slug)).size).toBe(intentPages.length)
 })
 
 test('slugs are valid URL segments and UTM values', () => {

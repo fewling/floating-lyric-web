@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { bricolage, figtree, jetbrains } from './fonts'
+import { bricolage, figtree, jetbrains, notoKr } from './fonts'
 import { SITE_NAME, SITE_ORIGIN } from '@/lib/site'
 import './globals.css'
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${figtree.variable} ${jetbrains.variable}`}
+      className={`${bricolage.variable} ${figtree.variable} ${jetbrains.variable} ${notoKr.variable}`}
     >
       <body>{children}</body>
     </html>
