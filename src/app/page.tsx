@@ -1,12 +1,38 @@
-import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
+import { CtaBand } from '@/components/sections/cta-band'
+import { FaqTeaser } from '@/components/sections/faq-teaser'
+import { FeatureGrid } from '@/components/sections/feature-grid'
+import { Footer } from '@/components/sections/footer'
+import { Hero } from '@/components/sections/hero'
+import { HowItWorks } from '@/components/sections/how-it-works'
+import { Nav } from '@/components/sections/nav'
+import { Pillars } from '@/components/sections/pillars'
+import { ProofStrip } from '@/components/sections/proof-strip'
+import { canonical } from '@/lib/site'
 
-export default async function Home() {
-  const t = await getTranslations('nav')
+export const metadata: Metadata = {
+  alternates: {
+    canonical: canonical('/'),
+    languages: { en: canonical('/'), 'x-default': canonical('/') },
+  },
+}
 
+const CAMPAIGN = 'home'
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-2">
-      <h1 className="font-display text-4xl font-extrabold">Floating Lyrics</h1>
-      <p className="text-sm text-muted">{t('features')}</p>
-    </main>
+    <>
+      <Nav campaign={CAMPAIGN} />
+      <main>
+        <Hero campaign={CAMPAIGN} />
+        <ProofStrip />
+        <Pillars />
+        <HowItWorks />
+        <FeatureGrid />
+        <FaqTeaser />
+        <CtaBand campaign={CAMPAIGN} />
+      </main>
+      <Footer />
+    </>
   )
 }
