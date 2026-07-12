@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "features": "Features",
+    "worksWith": "Works with",
+    "faq": "FAQ",
+    "getApp": "Get the app"
+  },
+  "cta": {
+    "playBadgeAlt": "Get it on Google Play",
+    "tryDemo": "Try the demo"
+  },
+  "demo": {
+    "regionLabel": "Interactive demo of the floating lyrics overlay",
+    "dragHandle": "Drag the overlay (arrow keys also move it)",
+    "translateToggle": "Show translation",
+    "liveBadge": "it's live — drag it"
+  },
+  "footer": {
+    "tagline": "Lyrics that float over any app.",
+    "alsoWorksOver": "Also works over",
+    "privacy": "Privacy",
+    "github": "GitHub"
+  }
+}
