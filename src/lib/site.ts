@@ -1,5 +1,8 @@
-export const SITE_ORIGIN =
+// NEXT_PUBLIC_ vars are inlined into the client/server bundle at build time —
+// changing the env requires a rebuild, not just a redeploy of the same build.
+export const SITE_ORIGIN = (
   process.env.NEXT_PUBLIC_SITE_ORIGIN ?? 'https://floatinglyrics.app'
+).replace(/\/+$/, '')
 
 export const PLAY_PACKAGE_ID = 'com.floating.lyrics'
 
@@ -16,6 +19,6 @@ export function playStoreUrl(campaign: string): string {
   return `https://play.google.com/store/apps/details?${params.toString()}`
 }
 
-export function canonical(path: string): string {
+export function canonical(path: '/' | `/${string}`): string {
   return path === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${path}`
 }

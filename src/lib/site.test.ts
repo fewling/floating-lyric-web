@@ -25,4 +25,14 @@ describe('playStoreUrl', () => {
 describe('canonical', () => {
   test('root', () => expect(canonical('/')).toBe(`${SITE_ORIGIN}/`))
   test('path', () => expect(canonical('/faq')).toBe(`${SITE_ORIGIN}/faq`))
+  test('nested path', () =>
+    expect(canonical('/spotify-lyrics-overlay')).toBe(
+      `${SITE_ORIGIN}/spotify-lyrics-overlay`,
+    ))
+})
+
+describe('SITE_ORIGIN', () => {
+  test('has no trailing slash', () => {
+    expect(SITE_ORIGIN.endsWith('/')).toBe(false)
+  })
 })
