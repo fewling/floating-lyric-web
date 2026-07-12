@@ -12,7 +12,7 @@
   "demo": {
     "regionLabel": "Interactive demo of the floating lyrics overlay",
     "dragHandle": "Drag the overlay (arrow keys also move it)",
-    "translateToggle": "Show translation",
+    "translateToggle": "Translate lyrics",
     "liveBadge": "it's live — drag it"
   },
   "footer": {
