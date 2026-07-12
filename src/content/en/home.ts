@@ -1,4 +1,4 @@
-import type { FaqEntry, Feature, Step } from '../types'
+import type { Feature, Step } from '../types'
 
 export const home = {
   h1: 'Floating lyrics over any app — synced, translated, in your words.',
