@@ -1,14 +1,25 @@
+import { useId } from 'react'
 import { DEMO_DURATION_MS, DEMO_LINES, DEMO_TRACK_TITLE } from './demo-track'
 
 export const PHONE_W = 280
 export const PHONE_H = 560
 
+/*
+ * Shared seam constants. The static snapshot and the live island must agree
+ * on these exactly, or the placeholder-to-island swap becomes visible.
+ */
 /** The frozen moment the snapshot depicts — the island hydrates from the same line. */
-const SNAP_LINE = DEMO_LINES[4]
+export const SNAP_LINE_INDEX = 4
+export const CARD_X = 24
+export const CARD_Y = 180
+export const OVERLAY_W = 232
+export const OVERLAY_H = 96
+
+const SNAP_LINE = DEMO_LINES[SNAP_LINE_INDEX]
 
 function trackTime(tMs: number): string {
-  const s = Math.floor((tMs % DEMO_DURATION_MS) / 1000)
-  return `0:${String(s).padStart(2, '0')}`
+  const s = Math.floor(tMs / 1000)
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 }
 
 /**
@@ -24,11 +35,15 @@ export function Scene({
   contextLabel?: string
   tMs?: number
 }) {
-  const barW = Math.round(232 * ((tMs % DEMO_DURATION_MS) / DEMO_DURATION_MS))
+  // Several snapshots can share a page (intent pages), so the gradient id
+  // must be unique per instance. useId output is sanitized for url(#...) use.
+  const glowId = `demo-glow-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`
+  const t = tMs % DEMO_DURATION_MS
+  const barW = Math.round(232 * (t / DEMO_DURATION_MS))
   return (
     <>
       <defs>
-        <radialGradient id="demo-glow">
+        <radialGradient id={glowId}>
           <stop offset="0" stopColor="#22C55E" stopOpacity=".14" />
           <stop offset="1" stopColor="#22C55E" stopOpacity="0" />
         </radialGradient>
@@ -55,7 +70,7 @@ export function Scene({
         fill="#000000"
         opacity=".3"
       />
-      <circle cx="140" cy="452" r="150" fill="url(#demo-glow)" />
+      <circle cx="140" cy="452" r="150" fill={`url(#${glowId})`} />
       {/* status bar + punch-hole camera */}
       <text
         x="28"
@@ -163,7 +178,7 @@ export function Scene({
         fill="#DFE8D4"
         fillOpacity=".55"
       >
-        {trackTime(tMs)}
+        {trackTime(t)}
       </text>
       <text
         x="256"
@@ -174,7 +189,7 @@ export function Scene({
         fill="#DFE8D4"
         fillOpacity=".55"
       >
-        0:42
+        {trackTime(DEMO_DURATION_MS)}
       </text>
       {/* transport controls */}
       <g fill="#FFFFFF" fillOpacity=".75">
@@ -204,39 +219,46 @@ export function Scene({
  * no LCP candidate; same footprint as the island (PHONE_W x PHONE_H) so the
  * swap causes zero layout shift.
  */
-export function DemoSnapshot({ contextLabel }: { contextLabel?: string }) {
+export function DemoSnapshot({
+  contextLabel,
+  label = 'Preview of the floating lyrics overlay above a music player',
+}: {
+  contextLabel?: string
+  label?: string
+}) {
+  const cardCenterX = CARD_X + OVERLAY_W / 2
   return (
     <svg
       width={PHONE_W}
       height={PHONE_H}
       viewBox={`0 0 ${PHONE_W} ${PHONE_H}`}
       role="img"
-      aria-label="Preview of the floating lyrics overlay above a music player"
+      aria-label={label}
       className="block"
     >
       <Scene contextLabel={contextLabel} />
       {/* overlay card — frozen at the line + position the island hydrates with */}
       <rect
-        x="24"
-        y="180"
-        width="232"
-        height="96"
+        x={CARD_X}
+        y={CARD_Y}
+        width={OVERLAY_W}
+        height={OVERLAY_H}
         rx="16"
         fill="#000000"
         opacity=".55"
       />
       <rect
-        x="24.5"
-        y="180.5"
-        width="231"
-        height="95"
+        x={CARD_X + 0.5}
+        y={CARD_Y + 0.5}
+        width={OVERLAY_W - 1}
+        height={OVERLAY_H - 1}
         rx="15.5"
         fill="none"
         stroke="#FFFFFF"
         strokeOpacity=".14"
       />
       <text
-        x="140"
+        x={cardCenterX}
         y="205"
         textAnchor="middle"
         fontSize="11"
@@ -247,7 +269,7 @@ export function DemoSnapshot({ contextLabel }: { contextLabel?: string }) {
         {SNAP_LINE.kr}
       </text>
       <text
-        x="140"
+        x={cardCenterX}
         y="224"
         textAnchor="middle"
         fontSize="11.5"

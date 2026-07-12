@@ -3,10 +3,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { clampToBounds, lyricIndexAt } from './engine'
 import { DEMO_DURATION_MS, DEMO_LINES } from './demo-track'
-import { PHONE_H, PHONE_W, Scene } from './snapshot'
+import {
+  CARD_X,
+  CARD_Y,
+  OVERLAY_H,
+  OVERLAY_W,
+  PHONE_H,
+  PHONE_W,
+  SNAP_LINE_INDEX,
+  Scene,
+} from './snapshot'
 
-const OVERLAY_W = 232
-const OVERLAY_H = 96
 const KEY_STEP = 8
 /** The overlay card stays inside the phone's screen, not the bezel. */
 const SCREEN_INSET = 10
@@ -35,16 +42,20 @@ export interface DemoLabels {
 }
 
 export default function OverlayDemoIsland({ labels }: { labels: DemoLabels }) {
-  const [pos, setPos] = useState({ x: 24, y: 180 })
+  const [pos, setPos] = useState({ x: CARD_X, y: CARD_Y })
   const [showTranslation, setShowTranslation] = useState(true)
   // Seeded with the exact moment the static snapshot depicts, so the island
   // continues seamlessly from the line already on screen.
-  const [tMs, setTMs] = useState(DEMO_LINES[4].atMs)
+  const [tMs, setTMs] = useState(DEMO_LINES[SNAP_LINE_INDEX].atMs)
   const [dragging, setDragging] = useState(false)
   const rootRef = useRef<HTMLDivElement>(null)
-  const dragFrom = useRef<{ px: number; py: number; x: number; y: number }>(
-    null,
-  )
+  const dragFrom = useRef<{
+    id: number
+    px: number
+    py: number
+    x: number
+    y: number
+  }>(null)
   // False on the very first client render so the line sweep never plays at
   // the snapshot-to-island swap; true on every render after mount.
   const hydratedRef = useRef(false)
@@ -90,16 +101,31 @@ export default function OverlayDemoIsland({ labels }: { labels: DemoLabels }) {
   }, [])
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    e.currentTarget.setPointerCapture(e.pointerId)
-    dragFrom.current = { px: e.clientX, py: e.clientY, x: pos.x, y: pos.y }
+    // Primary pointer + main button only: no right-click ghost-drags, no
+    // second-finger delta mixing.
+    if (e.button !== 0 || !e.isPrimary) return
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId)
+    } catch {
+      // Synthetic or already-inactive pointer — drag still works, just
+      // without capture.
+    }
+    dragFrom.current = {
+      id: e.pointerId,
+      px: e.clientX,
+      py: e.clientY,
+      x: pos.x,
+      y: pos.y,
+    }
     setDragging(true)
   }
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     const f = dragFrom.current
-    if (!f) return
+    if (!f || e.pointerId !== f.id) return
     setPos(clampToScreen(f.x + e.clientX - f.px, f.y + e.clientY - f.py))
   }
-  const endDrag = () => {
+  const endDrag = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (dragFrom.current && e.pointerId !== dragFrom.current.id) return
     dragFrom.current = null
     setDragging(false)
   }
@@ -147,7 +173,7 @@ export default function OverlayDemoIsland({ labels }: { labels: DemoLabels }) {
           height: OVERLAY_H,
           transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
         }}
-        className={`absolute top-0 left-0 touch-none rounded-2xl bg-black/55 pt-[12px] ring-1 ring-white/14 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hilite ${
+        className={`absolute top-0 left-0 touch-none overflow-hidden rounded-2xl bg-black/55 pt-[12px] ring-1 ring-white/14 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hilite ${
           dragging
             ? 'cursor-grabbing'
             : 'cursor-grab motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out'
@@ -183,13 +209,14 @@ export default function OverlayDemoIsland({ labels }: { labels: DemoLabels }) {
             type="button"
             data-testid="translate-toggle"
             aria-pressed={showTranslation}
+            aria-label={labels.translateToggle}
             onPointerDown={(e) => e.stopPropagation()}
             onClick={() => setShowTranslation((v) => !v)}
             className={`flex h-5 w-[88px] cursor-pointer items-center justify-center rounded-full border border-white/12 bg-white/8 focus-visible:outline-2 focus-visible:outline-hilite motion-safe:transition-opacity ${
               showTranslation ? '' : 'opacity-55'
             }`}
           >
-            <span aria-hidden="true">文A</span>&nbsp;{labels.translateToggle}
+            文A translate
           </button>
           <span
             aria-hidden="true"
