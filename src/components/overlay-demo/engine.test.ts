@@ -17,6 +17,10 @@ describe('lyricIndexAt', () => {
     expect(
       lyricIndexAt(DEMO_DURATION_MS + 4_500, DEMO_LINES, DEMO_DURATION_MS),
     ).toBe(1))
+  test('negative time wraps to the tail of the loop', () =>
+    expect(lyricIndexAt(-500, DEMO_LINES, DEMO_DURATION_MS)).toBe(
+      DEMO_LINES.length - 1,
+    ))
 })
 
 describe('clampToBounds', () => {
@@ -30,5 +34,15 @@ describe('clampToBounds', () => {
     expect(clampToBounds(999, 999, overlay, bounds)).toEqual({
       x: 200,
       y: 460,
+    }))
+  test('float input passes through unrounded', () =>
+    expect(clampToBounds(10.5, 20.25, overlay, bounds)).toEqual({
+      x: 10.5,
+      y: 20.25,
+    }))
+  test('overlay larger than bounds clamps to origin', () =>
+    expect(clampToBounds(50, 50, { w: 400, h: 600 }, bounds)).toEqual({
+      x: 0,
+      y: 0,
     }))
 })
