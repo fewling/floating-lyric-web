@@ -4,7 +4,7 @@ import { faq } from '@/content/en/faq'
 import { home } from '@/content/en/home'
 
 export async function FaqTeaser() {
-  const t = await getTranslations('nav')
+  const t = await getTranslations()
   // faq.ts stays the single source; the teaser picks entries in
   // faqTeaserIds order.
   const entries = home.faqTeaserIds
@@ -12,12 +12,12 @@ export async function FaqTeaser() {
     .filter((entry) => entry !== undefined)
   return (
     <section className="mx-auto w-full max-w-6xl px-6 pb-20 sm:px-8 lg:pb-28">
-      <h2 className="sr-only">{t('faq')}</h2>
+      <h2 className="sr-only">{t('nav.faq')}</h2>
       <div className="grid gap-4">
         {entries.map((entry) => (
           <details
             key={entry.id}
-            className="group rounded-[1.25rem] bg-surface px-6 py-5 ring-1 ring-ink/8"
+            className="group rounded-card bg-surface px-6 py-5 ring-1 ring-ink/8 transition-shadow hover:ring-ink/25"
           >
             <summary className="flex cursor-pointer list-none items-baseline justify-between gap-4 font-semibold [&::-webkit-details-marker]:hidden">
               {entry.question}
@@ -39,7 +39,7 @@ export async function FaqTeaser() {
         href="/faq"
         className="mt-8 inline-block text-sm underline underline-offset-4 transition-colors hover:text-muted"
       >
-        All questions →
+        {t('faqTeaser.allQuestions')} <span aria-hidden="true">→</span>
       </Link>
     </section>
   )

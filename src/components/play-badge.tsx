@@ -27,7 +27,7 @@ export function PlayPill({
     <a
       href={playStoreUrl(campaign)}
       rel="noopener"
-      className="rounded-chip bg-ink px-5 py-2.5 text-sm font-medium text-canvas transition-opacity hover:opacity-85"
+      className="rounded-chip bg-ink px-4 py-2.5 text-sm font-medium whitespace-nowrap text-canvas transition-opacity hover:opacity-85 sm:px-5"
     >
       {label}
     </a>

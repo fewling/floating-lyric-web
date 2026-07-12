@@ -1,6 +1,6 @@
 import type { FaqEntry } from '../types'
 
-export const faq: FaqEntry[] = [
+export const faq: readonly FaqEntry[] = [
   {
     id: 'really-free',
     question: 'Is Floating Lyrics free?',

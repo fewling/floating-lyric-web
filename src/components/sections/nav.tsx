@@ -34,12 +34,14 @@ export async function Nav({ campaign }: { campaign: string }) {
   const t = await getTranslations('nav')
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-canvas/90 backdrop-blur">
-      <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 sm:px-8">
-        <Link href="/" className="flex items-center gap-2">
+      <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-8">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <NoteMark />
-          <span className="font-display text-lg font-bold">{SITE_NAME}</span>
+          <span className="font-display text-base font-bold whitespace-nowrap sm:text-lg">
+            {SITE_NAME}
+          </span>
         </Link>
-        <div className="flex items-center gap-5 sm:gap-7">
+        <div className="flex items-center gap-4 sm:gap-7">
           <Link
             href="/#features"
             className="hidden text-sm text-muted transition-colors hover:text-ink sm:block"

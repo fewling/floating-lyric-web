@@ -1,8 +1,10 @@
 import { getTranslations } from 'next-intl/server'
 import { home } from '@/content/en/home'
+import { BILINGUAL_CARD_TITLE } from './copy-slices'
 
-/** The card that carries the site's recurring bilingual-pair motif. */
-const BILINGUAL_CARD_TITLE = 'AI translation'
+// The card that carries the site's recurring bilingual-pair motif.
+// content-integrity.test.ts guards that the title still exists in content.
+export { BILINGUAL_CARD_TITLE }
 
 export async function FeatureGrid() {
   const t = await getTranslations('nav')
@@ -16,7 +18,7 @@ export async function FeatureGrid() {
         {home.features.map((feature) => (
           <div
             key={feature.title}
-            className="rounded-[1.25rem] bg-surface p-5 ring-1 ring-ink/8"
+            className="rounded-card bg-surface p-5 ring-1 ring-ink/8"
           >
             <h3 className="font-semibold">{feature.title}</h3>
             <p className="mt-1.5 text-sm text-muted">{feature.detail}</p>

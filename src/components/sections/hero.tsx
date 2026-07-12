@@ -2,13 +2,13 @@ import { getTranslations } from 'next-intl/server'
 import { OverlayDemoLoader } from '@/components/overlay-demo/loader'
 import { PlayBadge } from '@/components/play-badge'
 import { home } from '@/content/en/home'
+import { HIGHLIGHT } from './copy-slices'
 
-/**
- * The highlighted slice of home.h1. Splitting the content string (instead of
- * hardcoding the surrounding copy) guarantees the rendered h1 always equals
- * home.h1 textually — screen readers read it as one uninterrupted sentence.
- */
-const HIGHLIGHT = 'synced, translated,'
+// Splitting the content string (instead of hardcoding the surrounding copy)
+// guarantees the rendered h1 always equals home.h1 textually — screen
+// readers read it as one uninterrupted sentence. Guarded by
+// content-integrity.test.ts.
+export { HIGHLIGHT }
 
 export async function Hero({ campaign }: { campaign: string }) {
   const t = await getTranslations()
@@ -31,7 +31,7 @@ export async function Hero({ campaign }: { campaign: string }) {
               href="#demo"
               className="text-sm underline underline-offset-4 transition-colors hover:text-muted"
             >
-              {t('cta.tryDemo')} ↓
+              {t('cta.tryDemo')} <span aria-hidden="true">↓</span>
             </a>
           </div>
         </div>

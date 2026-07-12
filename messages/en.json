@@ -3,7 +3,17 @@
     "features": "Features",
     "worksWith": "Works with",
     "faq": "FAQ",
-    "getApp": "Get the app"
+    "getApp": "Get the app",
+    "skipToContent": "Skip to content"
+  },
+  "proofStrip": {
+    "label": "Works with"
+  },
+  "pillars": {
+    "heading": "Why Floating Lyrics"
+  },
+  "faqTeaser": {
+    "allQuestions": "All questions"
   },
   "cta": {
     "playBadgeAlt": "Get it on Google Play",

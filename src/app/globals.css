@@ -15,6 +15,7 @@
   --font-kr: var(--font-noto-kr);
 
   --radius-card: 1.25rem; /* 20px — spec: large radii 16–28px */
+  --radius-band: 1.75rem; /* 28px — full-bleed bands (CTA) */
   --radius-chip: 999px;
 }
 

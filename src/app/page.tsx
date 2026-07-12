@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Nav campaign={CAMPAIGN} />
-      <main>
+      <main id="main">
         <Hero campaign={CAMPAIGN} />
         <ProofStrip />
         <Pillars />
