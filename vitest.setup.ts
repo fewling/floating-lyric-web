@@ -10,6 +10,13 @@ class MockIntersectionObserver {
   takeRecords = vi.fn(() => []);
 }
 vi.stubGlobal("IntersectionObserver", MockIntersectionObserver);
+vi.stubGlobal(
+  "ResizeObserver",
+  class {
+    observe() {}
+    disconnect() {}
+  },
+);
 
 afterEach(() => {
   cleanup();

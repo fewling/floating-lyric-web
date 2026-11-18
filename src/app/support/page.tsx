@@ -1,21 +1,12 @@
-import type { Metadata } from "next";
-import { SiteFooter } from "@/components/sections/SiteFooter";
-import { SiteHeader } from "@/components/sections/SiteHeader";
-import { Prose } from "@/components/ui/Prose";
-import { supportContent } from "@/content/support";
+import { ArticlePage } from "@/components/ArticlePage";
+import { supportArticle } from "@/content/articles";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Support",
-  description: "Get help with Floating Lyrics: contact email, bug reports, and FAQ.",
-  alternates: { canonical: "/support/" },
-};
-
-export default function SupportPage() {
-  return (
-    <>
-      <SiteHeader />
-      <Prose {...supportContent} />
-      <SiteFooter />
-    </>
-  );
+export const metadata = pageMetadata(
+  "/support",
+  "Floating Lyrics support and account deletion",
+  supportArticle.description,
+);
+export default function Page() {
+  return <ArticlePage article={supportArticle} />;
 }

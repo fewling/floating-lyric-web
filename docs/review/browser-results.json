@@ -1,0 +1,102 @@
+[
+  {
+    "width": 1440,
+    "route": "/",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/setup/",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/lrc/",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/privacy/",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/support/",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/setup/",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/lrc/",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/privacy/",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/support/",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/setup/",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/lrc/",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/privacy/",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/support/",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/setup/",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/lrc/",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/privacy/",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/support/",
+    "violations": []
+  }
+]

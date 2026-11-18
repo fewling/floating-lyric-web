@@ -1,12 +1,6 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/content/site";
-
-// Emit a static robots.txt during `output: export`.
+import { SITE } from "@/content/site";
 export const dynamic = "force-static";
-
 export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: { userAgent: "*", allow: "/" },
-    sitemap: `${siteConfig.url}/sitemap.xml`,
-  };
+  return { rules: { userAgent: "*", allow: "/" }, sitemap: SITE.url + "/sitemap.xml" };
 }

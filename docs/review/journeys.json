@@ -1,0 +1,16 @@
+{
+  "source": "0344eadd94eb92b9860114199fd25445b6e3ad1f",
+  "checks": [
+    "All5route Play destinations match literal package; passive browsing has no thirdpartyrequests",
+    "Original LRC actual download succeeds with correct filename",
+    "Reduced motion/transparency and increased contrast signals use solid unblurred materials",
+    "NoJavaScript: all5core explanations and download/help routes remain available"
+  ],
+  "preferences": {
+    "motion": true,
+    "transparency": true,
+    "contrast": true,
+    "headerBlur": "none",
+    "panelBlur": "none"
+  }
+}

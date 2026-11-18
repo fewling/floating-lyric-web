@@ -1,23 +1,25 @@
-import type { NavLink } from "@/types/content";
-
-/**
- * Global site configuration. Update `url` to the real domain before deploying,
- * and confirm `playStoreUrl` points to YOUR listing (there is a name-collision
- * app at com.ai.lyrics.floating).
- */
-export const siteConfig = {
+export const SITE = {
   name: "Floating Lyrics",
-  url: "https://floatinglyrics.app",
-  tagline: "Lyrics that float over any app.",
+  navigationLabel: "Navigation menu",
+  mobileNavigationLabel: "Mobile",
+  downloadLabel: "Get the app",
+  footerNote: "An Android companion. Your music app plays the audio.",
   description:
-    "See synced, AI-translated song lyrics in a floating overlay on top of any app on Android: Spotify, YouTube Music, games, anything. Free core, no sign-up needed for the overlay. Optional Pro for unlimited AI translation.",
-  playStoreUrl:
-    "https://play.google.com/store/apps/details?id=com.floating.lyrics&utm_source=website&utm_medium=landing",
-  github: "https://github.com/fewling/flutter-floating-lyric",
-  supportEmail: "blueinnotaiwan@gmail.com",
+    "An Android companion that keeps synchronized lyrics visible while you use another app.",
+  socialAlt: "Floating Lyrics. Stay in the song. Keep doing your thing.",
+
+  url: "https://floating-lyrics.web.app",
+  play: "https://play.google.com/store/apps/details?id=com.floating.lyrics",
+  support: "floatinglyricsapp@gmail.com",
   nav: [
-    { label: "How it works", href: "/#how" },
-    { label: "Features", href: "/#features" },
-    { label: "FAQ", href: "/#faq" },
-  ] satisfies NavLink[],
+    { label: "Overview", href: "/" },
+    { label: "Setup", href: "/setup/" },
+    { label: "LRC guide", href: "/lrc/" },
+  ],
+  footer: [
+    { label: "Setup guide", href: "/setup/" },
+    { label: "LRC import", href: "/lrc/" },
+    { label: "Privacy", href: "/privacy/" },
+    { label: "Support & account deletion", href: "/support/" },
+  ],
 } as const;

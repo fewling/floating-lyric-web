@@ -1,90 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/content/site";
-import { themeInit } from "@/lib/theme";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
+import { home } from "@/content/home";
+import { SITE } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
+import { Header, Footer } from "@/components/SiteChrome";
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: `${siteConfig.name} - ${siteConfig.tagline}`,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  applicationName: siteConfig.name,
-  keywords: [
-    "floating lyrics",
-    "lyrics overlay",
-    "translate song lyrics",
-    "LRC lyrics player",
-    "lyrics for Spotify",
-    "Android lyrics app",
-    "AI lyric translation",
-  ],
-  authors: [{ name: siteConfig.name }],
-  alternates: { canonical: "/" },
+  ...pageMetadata("/", home.seoTitle, home.seoDescription),
+  metadataBase: new URL(SITE.url),
+  applicationName: SITE.name,
   robots: { index: true, follow: true },
-  openGraph: {
-    type: "website",
-    url: "/",
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} - ${siteConfig.tagline}`,
-    description: siteConfig.description,
-    // static asset; pre-launch checklist item
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Floating Lyrics: lyrics that float over any app, synced and translated.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${siteConfig.name} - ${siteConfig.tagline}`,
-    description: siteConfig.description,
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Floating Lyrics: lyrics that float over any app, synced and translated.",
-      },
-    ],
-  },
 };
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0f1115" },
-    { media: "(prefers-color-scheme: light)", color: "#f5f4ef" },
-  ],
-};
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export const viewport: Viewport = { themeColor: "#fafaf8" };
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} h-full`}
-      suppressHydrationWarning
-    >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
-      </head>
-      <body className="bg-ink text-fg flex min-h-full flex-col antialiased">{children}</body>
+    <html lang="en">
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
