@@ -1,4 +1,9 @@
 export const home = {
+  seoTitle: "Floating Lyrics — Stay in the song",
+  seoDescription:
+    "Keep synchronized lyrics visible while using another Android app. Bring LRC files, explore window styles, and learn how to get started.",
+  helpLink: "Get more help",
+
   eyebrow: "Floating Lyrics for Android",
   title: ["Stay in the song.", "Keep doing your thing."],
   intro:
@@ -21,7 +26,11 @@ export const home = {
     contexts: ["Reading", "Browsing", "Listening"],
     windowTitle: "Floating Lyrics",
     lines: ["The world can wait a little", "Somewhere in the quiet,", "I find a little light."],
+    appLabels: ["Journal", "Discover", "Your music"],
+    leftNote: ["Your music.", "Still playing."],
+    rightNote: ["Your words.", "Right here."],
     track: "A Little Light",
+
     artist: "Original demo lyrics",
     context: [
       {
@@ -53,6 +62,7 @@ export const home = {
     text: "Have synchronized LRC files? Bring them along. Match your lyrics to the recording you love, then keep reading while your music app handles the sound.",
     link: "Explore LRC import",
     filename: "A Little Light.lrc",
+    footer: "Plain text. Perfect timing.",
     lines: [
       "[00:00.00] The world can wait a little",
       "[00:05.00] Somewhere in the quiet,",
@@ -66,6 +76,10 @@ export const home = {
     text: "Change lyric colours and background transparency to make a little space that feels like yours. Try the light and dark treatments in the illustration above.",
     link: "Try the window styles",
     label: "Illustrative colour and transparency treatments",
+    light: "Light lyrics · translucent background",
+    dark: "Green lyrics · dark background",
+    caption: "Appearance illustrations · original lyrics",
+    lines: ["Somewhere in the quiet,", "I find a little light."],
   },
   translation: {
     title: "A different language.\nThe same feeling.",

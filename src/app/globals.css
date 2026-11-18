@@ -352,8 +352,8 @@ h1 span {
   left: 50%;
   top: 11px;
   transform: translateX(-50%);
-  width: 68px;
-  height: 18px;
+  width: 10px;
+  height: 10px;
   border-radius: 20px;
   background: #151a1a;
   z-index: 2;
@@ -1048,12 +1048,13 @@ h1 span {
   margin-top: 45px;
   padding-top: 35px;
   border-top: 1px solid #d7d7d3;
-  max-width: 350px;
+  max-width: 410px;
 }
 .qr-handoff img {
   border-radius: 7px;
-  width: 84px;
-  height: 84px;
+  width: 144px;
+  height: 144px;
+  flex-shrink: 0;
 }
 .qr-handoff strong {
   font-size: 12px;
@@ -1386,8 +1387,8 @@ h1 span {
     font-size: 8px;
   }
   .phone-camera {
-    width: 60px;
-    height: 16px;
+    width: 9px;
+    height: 9px;
     top: 10px;
   }
   .phone-app-bar {
@@ -1408,7 +1409,7 @@ h1 span {
   }
   .floating-window {
     width: 275px;
-    left: calc(50% - 95px);
+    left: calc(50% - 117px);
     top: 181px;
     border-radius: 17px;
   }
@@ -1730,7 +1731,7 @@ h1 span {
     height: 510px;
   }
   .floating-window {
-    left: calc(50% - 119px);
+    left: calc(50% - 131px);
     width: 262px;
   }
   .scene-controls {
@@ -1793,5 +1794,38 @@ h1 span {
   .personal-copy > p:not(.eyebrow),
   .article-section p {
     color: #44444a;
+  }
+}
+
+.article-toc > p {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.article-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.article-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 18px;
+}
+@media (max-width: 760px) {
+  .article-toc > p {
+    display: none;
+  }
+  .article-toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .article-toc a {
+    padding: 7px 11px;
+  }
+  .article-links {
+    gap: 12px 20px;
   }
 }

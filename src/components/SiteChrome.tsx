@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SITE } from "@/content/site";
+import { home } from "@/content/home";
 export function AppIcon({ size = 28 }: { size?: number }) {
   return <Image src="/app-icon.png" width={size} height={size} alt="" className="app-icon" />;
 }
@@ -27,7 +28,7 @@ export function Header() {
           ))}
         </nav>
         <a className="nav-download pressable" href={SITE.play}>
-          Get the app <Arrow diagonal />
+          {SITE.downloadLabel} <Arrow diagonal />
         </a>
         <details className="mobile-nav">
           <summary aria-label="Navigation menu">
@@ -62,7 +63,7 @@ export function Footer() {
           ))}
         </nav>
         <p>© {new Date().getFullYear()} Floating Lyrics</p>
-        <p className="footer-note">An Android companion. Your music app plays the audio.</p>
+        <p className="footer-note">{SITE.footerNote}</p>
       </div>
     </footer>
   );
@@ -70,13 +71,13 @@ export function Footer() {
 export function Download({ className = "" }: { className?: string }) {
   return (
     <a className={`download-button pressable ${className}`} href={SITE.play}>
-      <svg viewBox="0 0 22 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="m2 1 12 11L2 23zm13 12 4 2-4 3-5-4zm0-2-5-1 5-4 4 3zM4 1l9 8-3 2zm0 22 6-10 3 2z"
-        />
+      <svg viewBox="0 0 20 22" aria-hidden="true">
+        <path fill="#59a8fb" d="M2 1.4 11.8 11 2 20.6Z" />
+        <path fill="#72d9a1" d="m2 1.4 12.4 7.2-2.6 2.4Z" />
+        <path fill="#ff7b80" d="m11.8 11 2.6 2.4L2 20.6Z" />
+        <path fill="#ffd26b" d="m14.4 8.6 4 2.3v.2l-4 2.3-2.6-2.4Z" />
       </svg>
-      Get it on Google Play <Arrow diagonal />
+      {home.download} <Arrow diagonal />
     </a>
   );
 }

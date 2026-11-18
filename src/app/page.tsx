@@ -65,7 +65,7 @@ export default function Home() {
               ))}
             </div>
             <div className="file-bottom">
-              <span>Plain text. Perfect timing.</span>
+              <span>{home.library.footer}</span>
               <span aria-hidden="true">↗</span>
             </div>
           </div>
@@ -74,20 +74,22 @@ export default function Home() {
       <section className="personal-band section-wrap">
         <div className="personal-art" role="img" aria-label={home.personal.label}>
           <div className="sample-window sample-light">
-            <span className="sample-label">Light lyrics · translucent background</span>
+            <span className="sample-label">{home.personal.light}</span>
             <p>
-              Somewhere in the quiet,
-              <br />I find a little light.
+              {home.personal.lines[0]}
+              <br />
+              {home.personal.lines[1]}
             </p>
           </div>
           <div className="sample-window sample-dark">
-            <span className="sample-label">Green lyrics · dark background</span>
+            <span className="sample-label">{home.personal.dark}</span>
             <p>
-              Somewhere in the quiet,
-              <br />I find a little light.
+              {home.personal.lines[0]}
+              <br />
+              {home.personal.lines[1]}
             </p>
           </div>
-          <span className="art-caption">Appearance illustrations · original lyrics</span>
+          <span className="art-caption">{home.personal.caption}</span>
         </div>
         <div className="personal-copy">
           <p className="eyebrow">{home.personal.eyebrow}</p>
@@ -138,7 +140,7 @@ export default function Home() {
             </details>
           ))}
           <Link href="/support/" className="text-link">
-            Get more help
+            {home.helpLink}
             <Arrow />
           </Link>
         </div>
@@ -170,8 +172,7 @@ export default function Home() {
             applicationCategory: "MultimediaApplication",
             url: SITE.url,
             downloadUrl: SITE.play,
-            description:
-              "An Android companion that keeps synchronized lyrics visible while you use another app.",
+            description: SITE.description,
           }),
         }}
       />

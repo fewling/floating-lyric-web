@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type PointerEvent, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type PointerEvent, type KeyboardEvent } from "react";
 import { home } from "@/content/home";
 import { AppIcon } from "./SiteChrome";
 
@@ -19,22 +19,33 @@ export function ProductScene() {
     startY: number;
   } | null>(null);
   const animation = useRef<number | null>(null);
+  useEffect(
+    () => () => {
+      if (animation.current !== null) cancelAnimationFrame(animation.current);
+    },
+    [],
+  );
   function paint(x: number, y: number) {
     offset.current = { x, y };
     if (window.current) window.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
   }
   function bounds(x: number, y: number) {
-    const width = stage.current?.clientWidth ?? 600;
+    const frame = stage.current?.getBoundingClientRect();
+    const panel = window.current?.getBoundingClientRect();
+    if (!frame || !panel) return { x, y };
+    const left = panel.left - frame.left - offset.current.x;
+    const top = panel.top - frame.top - offset.current.y;
     return {
-      x: Math.max(-width * 0.19, Math.min(width * 0.15, x)),
-      y: Math.max(-95, Math.min(120, y)),
+      x: Math.max(12 - left, Math.min(frame.width - panel.width - 12 - left, x)),
+      y: Math.max(20 - top, Math.min(frame.height - panel.height - 82 - top, y)),
     };
   }
   function stop() {
     if (animation.current !== null) cancelAnimationFrame(animation.current);
+    animation.current = null;
   }
   function reset() {
-    stop();
+    if (animation.current !== null) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
       paint(0, 0);
       return;
@@ -107,15 +118,15 @@ export function ProductScene() {
         <div className="stage-grain" aria-hidden="true" />
         <div className="scene-note scene-note-left" aria-hidden="true">
           <span className="note-line" />
-          Your music.
+          {copy.leftNote[0]}
           <br />
-          <strong>Still playing.</strong>
+          <strong>{copy.leftNote[1]}</strong>
         </div>
         <div className="scene-note scene-note-right" aria-hidden="true">
           <span className="note-line" />
-          Your words.
+          {copy.rightNote[0]}
           <br />
-          <strong>Right here.</strong>
+          <strong>{copy.rightNote[1]}</strong>
         </div>
         <div className="phone" aria-label={copy.label} role="img">
           <div className="phone-hardware">
@@ -126,7 +137,7 @@ export function ProductScene() {
             </div>
             <div className="phone-app" key={context}>
               <div className="phone-app-bar">
-                <span>{context === 0 ? "Journal" : context === 1 ? "Discover" : "Your music"}</span>
+                <span>{copy.appLabels[context]}</span>
                 <span aria-hidden="true">◌</span>
               </div>
               <div className="cover-art" aria-hidden="true">

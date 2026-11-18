@@ -16,7 +16,7 @@ export function pageMetadata(path: string, title: string, description: string): 
           url: "/og.png",
           width: 1200,
           height: 630,
-          alt: "Floating Lyrics. Stay in the song. Keep doing your thing.",
+          alt: SITE.socialAlt,
         },
       ],
     },

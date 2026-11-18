@@ -14,10 +14,12 @@ describe("Product experience", () => {
     }
     expect(screen.getByText(/companion to your music app, not a music player/)).toBeInTheDocument();
     expect(screen.getByText(/not app footage/)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Read the setup guide" })).toHaveAttribute(
-      "href",
-      "/setup/",
-    );
+    expect(
+      new URL(
+        screen.getByRole("link", { name: "Read the setup guide" }).getAttribute("href")!,
+        "https://example.test",
+      ).pathname.replace(/\/$/, ""),
+    ).toBe("/setup");
   });
   it("lets visitors change app context and window appearance without starting playback", () => {
     render(<Home />);
