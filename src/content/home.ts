@@ -15,7 +15,15 @@ export const home = {
   scene: {
     label: "An interactive illustration of a lyrics window over another app",
     notice: "Interactive illustration. Original example lyrics, not app footage.",
-    hint: "A little window. A little more freedom.",
+    hint: "Drag the lyrics window to move it.",
+    tapSummary: "Move without dragging",
+    tapLabel: "Move lyrics window with taps",
+    directions: [
+      { label: "Move lyrics window up", symbol: "↑", x: 0, y: -20 },
+      { label: "Move lyrics window left", symbol: "←", x: -20, y: 0 },
+      { label: "Move lyrics window down", symbol: "↓", x: 0, y: 20 },
+      { label: "Move lyrics window right", symbol: "→", x: 20, y: 0 },
+    ],
     help: "Drag the lyrics window to move it. Or focus its handle and use the arrow keys. Home resets its position.",
     move: "Move illustrative lyrics window",
     reset: "Reset lyrics window position",

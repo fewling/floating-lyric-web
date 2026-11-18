@@ -39,3 +39,18 @@ new design. The actual Google Play package remains `com.floating.lyrics`.
 
 Source-guided help copy remains a candidate until release observations confirm
 it. No final owner acceptance of this replacement is recorded.
+
+## Review corrections
+
+The interactive illustration now reclamps its presented position when the stage,
+window, or controls resize. A secondary native disclosure offers 44px tap controls
+for movement, alongside the visible drag hint and described keyboard commands.
+Mobile navigation remains a server-rendered native disclosure with a small client
+boundary that closes it on link selection and Escape. Text uses relative font
+sizes; the scene toolbar wraps when text grows.
+
+Public setup language now names Window Configs > Show, switches to another app,
+and explains the APK-to-Play redirect without bypass instructions. The pinned
+6.9 source supports the Window Configs, Show and notification-listener recovery
+labels; installed public-release observations remain a launch gate. Source
+verification belongs in this handoff rather than visitor-facing instructions.

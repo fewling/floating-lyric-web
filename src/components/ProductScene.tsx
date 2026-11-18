@@ -10,6 +10,7 @@ export function ProductScene() {
   const [dark, setDark] = useState(true);
   const stage = useRef<HTMLDivElement>(null);
   const window = useRef<HTMLDivElement>(null);
+  const controls = useRef<HTMLDivElement>(null);
   const offset = useRef({ x: 0, y: 0 });
   const drag = useRef<{
     pointer: number;
@@ -37,17 +38,45 @@ export function ProductScene() {
     const top = panel.top - frame.top - offset.current.y;
     return {
       x: Math.max(12 - left, Math.min(frame.width - panel.width - 12 - left, x)),
-      y: Math.max(20 - top, Math.min(frame.height - panel.height - 82 - top, y)),
+      y: Math.max(
+        20 - top,
+        Math.min(
+          frame.height -
+            panel.height -
+            Math.max(82, (controls.current?.getBoundingClientRect().height ?? 0) + 38) -
+            top,
+          y,
+        ),
+      ),
     };
   }
   function stop() {
     if (animation.current !== null) cancelAnimationFrame(animation.current);
     animation.current = null;
   }
+  useEffect(() => {
+    const reclamp = () => {
+      stop();
+      drag.current = null;
+      const next = bounds(offset.current.x, offset.current.y);
+      paint(next.x, next.y);
+    };
+    const observer = new ResizeObserver(reclamp);
+    if (stage.current) observer.observe(stage.current);
+    if (window.current) observer.observe(window.current);
+    if (controls.current) observer.observe(controls.current);
+    return () => observer.disconnect();
+  }, []);
+  function shift(x: number, y: number) {
+    stop();
+    const next = bounds(offset.current.x + x, offset.current.y + y);
+    paint(next.x, next.y);
+  }
   function reset() {
     if (animation.current !== null) return;
+    const target = bounds(0, 0);
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      paint(0, 0);
+      paint(target.x, target.y);
       return;
     }
     let vx = 0,
@@ -58,14 +87,17 @@ export function ProductScene() {
       last = now;
       // Critical damping; retarget from the currently presented position.
       const { x, y } = offset.current;
-      vx += (-x * 225 - 30 * vx) * dt;
-      vy += (-y * 225 - 30 * vy) * dt;
+      vx += ((target.x - x) * 225 - 30 * vx) * dt;
+      vy += ((target.y - y) * 225 - 30 * vy) * dt;
       paint(x + vx * dt, y + vy * dt);
       if (
-        Math.abs(offset.current.x) + Math.abs(offset.current.y) + Math.abs(vx) + Math.abs(vy) <
+        Math.abs(offset.current.x - target.x) +
+          Math.abs(offset.current.y - target.y) +
+          Math.abs(vx) +
+          Math.abs(vy) <
         0.12
       ) {
-        paint(0, 0);
+        paint(target.x, target.y);
         animation.current = null;
       } else animation.current = requestAnimationFrame(frame);
     };
@@ -107,9 +139,7 @@ export function ProductScene() {
     const d = delta[e.key];
     if (!d) return;
     e.preventDefault();
-    stop();
-    const p = bounds(offset.current.x + d[0], offset.current.y + d[1]);
-    paint(p.x, p.y);
+    shift(d[0], d[1]);
   }
   const current = copy.context[context];
   return (
@@ -210,7 +240,7 @@ export function ProductScene() {
             <span className="window-dot" />
           </div>
         </div>
-        <div className="scene-controls">
+        <div className="scene-controls" ref={controls}>
           <div className="context-tabs" role="group" aria-label={copy.contextLabel}>
             {copy.contexts.map((name, i) => (
               <button key={name} aria-pressed={i === context} onClick={() => setContext(i)}>
@@ -250,6 +280,16 @@ export function ProductScene() {
       <div className="scene-caption">
         <p>{copy.hint}</p>
         <span>{copy.notice}</span>
+        <details className="movement-options">
+          <summary>{copy.tapSummary}</summary>
+          <div className="movement-pad" role="group" aria-label={copy.tapLabel}>
+            {copy.directions.map(({ label, symbol, x, y }) => (
+              <button key={label} aria-label={label} onClick={() => shift(x, y)}>
+                <span aria-hidden="true">{symbol}</span>
+              </button>
+            ))}
+          </div>
+        </details>
         <p className="sr-only" id="window-instructions">
           {copy.help}
         </p>

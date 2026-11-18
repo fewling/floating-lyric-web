@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import Home from "./page";
 
 describe("Product experience", () => {
@@ -35,5 +35,42 @@ describe("Product experience", () => {
       "true",
     );
     expect(document.querySelector("audio,video")).toBeNull();
+  });
+  it("lets visitors move the window with taps and keeps it inside a resized stage", () => {
+    let resized = () => {};
+    vi.stubGlobal(
+      "ResizeObserver",
+      class {
+        constructor(callback: () => void) {
+          resized = callback;
+        }
+        observe() {}
+        disconnect() {}
+      },
+    );
+    render(<Home />);
+    const handle = screen.getByRole("button", { name: "Move illustrative lyrics window" });
+    const panel = handle.parentElement!;
+    const stage = panel.parentElement!;
+    let width = 800;
+    vi.spyOn(stage, "getBoundingClientRect").mockImplementation(
+      () => ({ left: 0, top: 0, width, height: 700 }) as DOMRect,
+    );
+    vi.spyOn(panel, "getBoundingClientRect").mockImplementation(
+      () =>
+        ({
+          left: 200 + (parseFloat(panel.style.transform.slice(12)) || 0),
+          top: 200,
+          width: 250,
+          height: 150,
+        }) as DOMRect,
+    );
+    fireEvent.click(screen.getByText("Move without dragging"));
+    screen.getByText("Move without dragging").parentElement!.setAttribute("open", "");
+    fireEvent.click(screen.getByRole("button", { name: "Move lyrics window right" }));
+    expect(panel.style.transform).toBe("translate3d(20px, 0px, 0)");
+    width = 320;
+    resized();
+    expect(panel.style.transform).toBe("translate3d(-142px, 0px, 0)");
   });
 });

@@ -1,5 +1,7 @@
 export const SITE = {
   name: "Floating Lyrics",
+  navigationLabel: "Navigation menu",
+  mobileNavigationLabel: "Mobile",
   downloadLabel: "Get the app",
   footerNote: "An Android companion. Your music app plays the audio.",
   description:

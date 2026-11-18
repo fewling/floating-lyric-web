@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NavigationMenu } from "./NavigationMenu";
 import Image from "next/image";
 import { SITE } from "@/content/site";
 import { home } from "@/content/home";
@@ -30,19 +31,7 @@ export function Header() {
         <a className="nav-download pressable" href={SITE.play}>
           {SITE.downloadLabel} <Arrow diagonal />
         </a>
-        <details className="mobile-nav">
-          <summary aria-label="Navigation menu">
-            <span />
-            <span />
-          </summary>
-          <nav aria-label="Mobile">
-            {SITE.nav.map((x) => (
-              <Link href={x.href} key={x.href}>
-                {x.label}
-              </Link>
-            ))}
-          </nav>
-        </details>
+        <NavigationMenu />
       </div>
     </header>
   );

@@ -47,6 +47,7 @@ export const setupArticle: Article = {
       title: "Start with a song you know.",
       paragraphs: [
         "Start playback in your music app, then return to Floating Lyrics. Check that the detected song title and artist match what is playing. Floating Lyrics is a companion to your music app; playback stays in that app.",
+        "Open Window Configs and choose Show, then switch to another app to keep the lyrics window alongside it. Labels can differ in your installed version.",
         "Synchronized lyrics use timestamps to follow playback position. The highlighted line represents the current lyric line, rather than a word-by-word karaoke effect. A matching timed lyric file is needed for the song and recording.",
         "The Play listing describes online lyric lookup as experimental. A song may have no available lyrics, or a result may belong to a different recording. Import an LRC file when you have your own timed lyrics.",
       ],
@@ -56,8 +57,8 @@ export const setupArticle: Article = {
       id: "troubleshooting",
       title: "When something is missing.",
       items: [
-        "No music detected: confirm playback is active and your music app exposes playback information through Android. Recheck notification access. The source includes a Not detecting active music player? option to re-enable the notification listener.",
-        "No lyrics window: recheck display-over-other-apps permission. Look for the window controls in Floating Lyrics.",
+        "No music detected: confirm playback is active and your music app exposes playback information through Android. Recheck notification access. If your installed version offers Not detecting active music player?, use it to re-enable notification access.",
+        "No lyrics window: recheck display-over-other-apps permission. Open Window Configs and choose Show, then switch to another app.",
         "Wrong or missing lyrics: check the detected title and artist, then try a matching LRC file. Lyric availability and player compatibility vary; every track and music app is not guaranteed to work.",
         "Lyrics ahead or behind: check that the file matches the exact recording, including live versions, remasters and introductory silence. Timestamps for a different recording will not align reliably.",
         "Stops in the background: review your phone’s battery and background-app restrictions. Manufacturer customizations can interrupt music detection even after permissions are granted. Settings differ by phone.",
@@ -68,7 +69,7 @@ export const setupArticle: Article = {
       id: "appearance",
       title: "Make room for the words.",
       paragraphs: [
-        "The Play listing describes lyric colour and transparency controls. The source groups window settings under Window Configs. Choose a readable contrast against the apps you use, then check the window while music is playing.",
+        "Open Window Configs in versions that offer it to adjust lyric colour and background transparency. Choose a readable contrast against the apps you use, then check the window while music is playing.",
       ],
       links: [{ label: "Back to Floating Lyrics", href: "/" }],
     },
@@ -246,7 +247,7 @@ export const supportArticle: Article = {
       id: "downloads",
       title: "Another way to download.",
       paragraphs: [
-        "Google Play is the primary installation route. An official GitHub release mirror is available if you need an alternative. Check the release notes and Android installation requirements before choosing an APK.",
+        "Google Play is the primary installation route. An official GitHub release mirror is available if you need an alternative. Check the release notes and Android installation requirements before choosing an APK. If an APK redirects you to Google Play, install from the Play listing or contact support for help.",
       ],
       links: [
         {
