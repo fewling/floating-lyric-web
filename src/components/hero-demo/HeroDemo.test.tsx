@@ -1,47 +1,54 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { demoLines } from "@/content/demo";
+import { afterEach, describe, expect, it } from "vitest";
+import Home from "@/app/page";
 import { HeroDemo } from "./HeroDemo";
 
-function mockReducedMotion(matches: boolean) {
-  vi.stubGlobal(
-    "matchMedia",
-    vi.fn().mockReturnValue({
-      matches,
-      addEventListener: vi.fn(),
-      removeEventListener: vi.fn(),
-    }),
-  );
-}
-
-describe("HeroDemo", () => {
+describe("Homepage demonstration", () => {
+  const originalMatchMedia = window.matchMedia;
   afterEach(() => {
-    vi.unstubAllGlobals();
-    vi.useRealTimers(); // even if an assertion failed mid-test
+    window.matchMedia = originalMatchMedia;
   });
 
-  it("renders line 0 and its translation on first paint (no-JS/SSR baseline)", () => {
-    mockReducedMotion(false);
-    render(<HeroDemo />);
-    expect(screen.getByText(demoLines[0].source)).toBeInTheDocument();
-    expect(screen.getByText(demoLines[0].translations.EN)).toBeInTheDocument();
+  it("labels the static illustration honestly and preserves the explanation and install route with reduced motion", () => {
+    window.matchMedia = () => ({ matches: true }) as MediaQueryList;
+    render(<Home />);
+    expect(
+      screen.getByRole("img", { name: "Illustration of a lyrics window over another app" }),
+    ).toBeVisible();
+    expect(screen.getByText("Illustration — not app footage")).toBeVisible();
+    expect(
+      screen.getByText(/highlighted lyric line follows the music app’s playback position/i),
+    ).toBeVisible();
+    expect(
+      screen.getAllByRole("link", { name: /get floating lyrics on google play/i })[0],
+    ).toHaveAttribute("href", "https://play.google.com/store/apps/details?id=com.floating.lyrics");
   });
-
-  it("stays on line 0 under prefers-reduced-motion, with chips still functional (spec §3)", () => {
-    mockReducedMotion(true);
-    vi.useFakeTimers();
-    render(<HeroDemo />);
-    vi.advanceTimersByTime(15_000);
-    expect(screen.getByText(demoLines[0].source)).toBeInTheDocument();
-    // fireEvent (not user-event) to avoid fake-timer interplay
-    fireEvent.click(screen.getByRole("button", { name: "ES" }));
-    expect(screen.getByText(demoLines[0].translations.ES)).toBeInTheDocument();
-  });
-
-  it("keeps chips outside any aria-hidden ancestor (PhoneFrame contract)", () => {
-    mockReducedMotion(false);
-    render(<HeroDemo />);
-    const chip = screen.getByRole("button", { name: "EN" }); // getByRole excludes aria-hidden subtrees
-    expect(chip.closest("[aria-hidden]")).toBeNull();
+  it("keeps optional footage user-controlled with text and a still image if playback fails", () => {
+    render(
+      <HeroDemo
+        media={{
+          video: "/test-fixtures/demo.mp4",
+          poster: "/test-fixtures/demo.jpg",
+          width: 1080,
+          height: 2340,
+        }}
+      />,
+    );
+    const demo = screen.getByLabelText("Floating Lyrics Android demonstration");
+    expect(demo.tagName).toBe("VIDEO");
+    expect(demo).toHaveAttribute("controls");
+    expect((demo as HTMLVideoElement).muted).toBe(true);
+    expect(demo).not.toHaveAttribute("autoplay");
+    expect(demo).not.toHaveAttribute("loop");
+    expect(demo).toHaveAttribute("preload", "none");
+    expect(demo).toHaveAttribute("poster", "/test-fixtures/demo.jpg");
+    fireEvent.error(demo);
+    expect(screen.getByRole("link", { name: "View the still image" })).toHaveAttribute(
+      "href",
+      "/test-fixtures/demo.jpg",
+    );
+    expect(
+      screen.getByText(/highlighted lyric line follows the music app’s playback position/i),
+    ).toBeVisible();
   });
 });
