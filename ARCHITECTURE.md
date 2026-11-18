@@ -55,10 +55,13 @@ A `StickyMobileCta` floats above the fold after the hero scrolls out of view.
 
 ### Prose routes
 
+- `/setup/` — Setup and troubleshooting; `src/content/setup.ts`.
+- `/lrc/` — Synchronized lyric import; `src/content/lrc.ts`.
+
 - `/privacy` — Privacy policy; content in `src/content/privacy.ts`.
 - `/support` — Support & account-deletion; content in `src/content/support.ts`.
 
-Both routes use the `Prose` UI primitive for consistent typography.
+These routes use the `Prose` UI primitive for consistent typography.
 
 ### Hero-demo module (`src/components/hero-demo/`)
 
@@ -127,11 +130,13 @@ pnpm format       # prettier --write .
 
 ## Before launch
 
-- [ ] Real domain in `src/content/site.ts` (placeholder `floatinglyrics.app`).
+- [ ] Owner confirms final origin. `src/content/site.ts` proposes the verified existing
+      Firebase origin `https://floating-lyrics.web.app` (currently 404); `SITE_ORIGIN`
+      overrides it at build time. No deployment is claimed.
 - [ ] Verify Play URL is the real listing `com.floating.lyrics` (NOT name-collision
       `com.ai.lyrics.floating`).
-- [ ] Create `public/og.png` 1200×630, dark theme (metadata already points at it;
-      link previews show no image until it exists).
+- [x] `public/og.png` 1200×630 original typographic social card, with editable
+      `public/design/social-card.svg`. Inspect previews live after deployment.
 - [ ] Record real overlay footage — portrait ≥1080×2340 (19.5:9, matching the
       frame's aspect), 10–20 s loop-friendly, clean status bar,
       recognizable-but-brandless underlying app, non-English lyric with visible
@@ -172,3 +177,11 @@ firebase deploy --only hosting
 `firebase.json` serves `out/`. To avoid clashing with the app's existing Firebase
 config, run this from THIS repo (it has no `.firebaserc`, so you pick the project
 explicitly), or wire it as a named hosting target in the main project.
+
+## Search and reporting
+
+All five routes use canonical and social metadata, a complete sitemap, and shared
+help discovery links. `scripts/check-search-output.mjs` checks exported HTML or a
+served static preview; it is not evidence of live indexing. The maintained origin,
+report-access gaps and 30/90-day owner review procedure are in
+[`docs/discovery-and-reporting.md`](docs/discovery-and-reporting.md).

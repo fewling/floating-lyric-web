@@ -8,25 +8,22 @@ export function SiteFooter() {
 
   return (
     <footer className="border-edge border-t">
-      <Container className="flex flex-col gap-8 py-12 md:flex-row md:items-center md:justify-between">
+      <Container className="flex flex-col gap-8 py-12 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <p className="font-display text-lg font-semibold">{siteConfig.name}</p>
           <p className="text-fg-muted mt-1 text-sm">{siteConfig.tagline}</p>
         </div>
         <div className="text-fg-muted flex flex-wrap items-center gap-6 text-sm">
-          <nav aria-label="Footer" className="flex flex-wrap items-center gap-6">
-            <Link
-              href="/privacy"
-              className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-            >
-              Privacy
-            </Link>
-            <Link
-              href="/support"
-              className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-            >
-              Support
-            </Link>
+          <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-6 gap-y-3">
+            {siteConfig.footerNav.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              >
+                {link.label}
+              </Link>
+            ))}
             <a
               href={siteConfig.github}
               className="hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink rounded transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"

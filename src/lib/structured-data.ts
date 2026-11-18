@@ -15,10 +15,5 @@ export function softwareAppJsonLd() {
     description: siteConfig.description,
     url: siteConfig.url,
     downloadUrl: siteConfig.playStoreUrl,
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
   } as const;
 }

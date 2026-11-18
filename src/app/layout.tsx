@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site";
+import { pageMetadata } from "@/lib/metadata";
 import { themeInit } from "@/lib/theme";
 
 const inter = Inter({
@@ -17,54 +18,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  ...pageMetadata("/", `${siteConfig.name} - ${siteConfig.tagline}`, siteConfig.description),
   metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} - ${siteConfig.tagline}`,
     template: `%s - ${siteConfig.name}`,
   },
-  description: siteConfig.description,
   applicationName: siteConfig.name,
-  keywords: [
-    "floating lyrics",
-    "lyrics overlay",
-    "translate song lyrics",
-    "LRC lyrics player",
-    "lyrics for Spotify",
-    "Android lyrics app",
-    "AI lyric translation",
-  ],
-  authors: [{ name: siteConfig.name }],
-  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
-  openGraph: {
-    type: "website",
-    url: "/",
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} - ${siteConfig.tagline}`,
-    description: siteConfig.description,
-    // static asset; pre-launch checklist item
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Floating Lyrics: lyrics that float over any app, synced and translated.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${siteConfig.name} - ${siteConfig.tagline}`,
-    description: siteConfig.description,
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Floating Lyrics: lyrics that float over any app, synced and translated.",
-      },
-    ],
-  },
 };
 
 export const viewport: Viewport = {

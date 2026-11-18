@@ -30,7 +30,7 @@ export function SiteHeader() {
           {siteConfig.name}
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Main" className="hidden items-center gap-6 lg:flex">
           {siteConfig.nav.map((link) => (
             <a
               key={link.href}
@@ -47,7 +47,7 @@ export function SiteHeader() {
           <GooglePlayBadge className="hidden sm:inline-flex" />
           <button
             type="button"
-            className="text-fg focus-visible:ring-accent focus-visible:ring-offset-ink border-edge grid size-11 place-items-center rounded-lg border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:hidden"
+            className="text-fg focus-visible:ring-accent focus-visible:ring-offset-ink border-edge grid size-11 place-items-center rounded-lg border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -58,7 +58,7 @@ export function SiteHeader() {
       </Container>
 
       {open && (
-        <Container className="flex flex-col gap-1 pb-4 md:hidden">
+        <Container className="flex flex-col gap-1 pb-4 lg:hidden">
           {siteConfig.nav.map((link) => (
             <a
               key={link.href}
