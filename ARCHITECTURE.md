@@ -56,7 +56,8 @@ src/
 
 `SiteHeader` → `Hero` (with static illustration or verified media) → `HowItWorks` → `Features` → `Faq` → `SiteFooter`
 
-A `StickyMobileCta` floats above the fold after the hero scrolls out of view.
+A `StickyMobileCta` keeps a direct Play link visible on mobile while the hero-end
+marker is offscreen.
 
 ### Prose routes
 

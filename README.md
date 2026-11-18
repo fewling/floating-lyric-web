@@ -7,6 +7,8 @@ in the listener’s music app.
 Static Next.js site exported to plain HTML, configured for Firebase Hosting.
 See [discovery and reporting handoff](docs/discovery-and-reporting.md) for the
 proposed canonical origin, launch gates, public-output checks and owner reviews.
+See [implementation review evidence](docs/verification/launch-review.md) for the
+tested build, screenshots, measured results and remaining release checks.
 
 ## Quick start
 
