@@ -25,7 +25,7 @@ export const home = {
       { label: "Move lyrics window right", symbol: "→", x: 20, y: 0 },
     ],
     help: "Drag the lyrics window to move it. Or focus its handle and use the arrow keys. Home resets its position.",
-    move: "Move illustrative lyrics window",
+    move: "Move Floating Lyrics window",
     reset: "Reset lyrics window position",
     themes: "Lyrics window appearance",
     light: "Light",

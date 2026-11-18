@@ -177,7 +177,7 @@ export function ProductScene() {
                 <div className="cover-hill hill-front" />
               </div>
               <p className="phone-kicker">{current.eyebrow}</p>
-              <h3>{current.title}</h3>
+              <p className="phone-title">{current.title}</p>
               <p className="phone-description">{current.text}</p>
               {context === 2 ? (
                 <div className="phone-playback" aria-hidden="true">

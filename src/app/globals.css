@@ -421,7 +421,9 @@ h1 span {
   font-weight: 650;
   color: #66635d;
 }
-.phone h3 {
+.phone .phone-title {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
   font-family: Georgia, serif;
   font-size: 1.8125rem;
   line-height: 1.06;
@@ -1399,7 +1401,7 @@ h1 span {
   .cover-art {
     height: 151px;
   }
-  .phone h3 {
+  .phone .phone-title {
     font-size: 1.625rem;
   }
   .phone-kicker {

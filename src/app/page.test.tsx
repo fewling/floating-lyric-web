@@ -24,7 +24,7 @@ describe("Product experience", () => {
   it("lets visitors change app context and window appearance without starting playback", () => {
     render(<Home />);
     fireEvent.click(screen.getByRole("button", { name: "Browsing" }));
-    expect(screen.getByRole("heading", { name: "Follow your curiosity." })).toBeInTheDocument();
+    expect(screen.getByText("Follow your curiosity.")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Browsing" })).toHaveAttribute(
       "aria-pressed",
       "true",
@@ -46,7 +46,7 @@ describe("Product experience", () => {
       },
     );
     render(<Home />);
-    const handle = screen.getByRole("button", { name: "Move illustrative lyrics window" });
+    const handle = screen.getByRole("button", { name: "Move Floating Lyrics window" });
     const panel = handle.parentElement!;
     const stage = panel.parentElement!;
     let width = 800;
