@@ -1,9 +1,12 @@
 # Floating Lyrics — Website
 
-Marketing site for the **Floating Lyrics** Android app
-(lyrics that float over any app, synced to your music, translated by AI).
+Product-and-help site for the **Floating Lyrics** Android app.
+Keep synchronized lyrics visible while using another app; music playback stays
+in the listener’s music app.
 
-Static Next.js site, exported to plain HTML, hosted on Firebase Hosting.
+Static Next.js site exported to plain HTML, configured for Firebase Hosting.
+See [discovery and reporting handoff](docs/discovery-and-reporting.md) for the
+proposed canonical origin, launch gates, public-output checks and owner reviews.
 
 ## Quick start
 
@@ -40,7 +43,7 @@ visual exploration; this repo is the production implementation.
 This repo is one of several that make up Floating Lyric:
 
 - 📱 App — [flutter-floating-lyric](https://github.com/fewling/flutter-floating-lyric)
-- 🌐 Landing — [floating-lyric-web](https://github.com/fewling/floating-lyric-web)  ← this repo
+- 🌐 Landing — [floating-lyric-web](https://github.com/fewling/floating-lyric-web) ← this repo
 - 🔥 Firebase backend — [flutter-floating-lyric-firebase-cloud-function](https://github.com/fewling/flutter-floating-lyric-firebase-cloud-function)
 - 🌱 Spring Boot backend — [floating-lyric-spring-boot](https://github.com/fewling/floating-lyric-spring-boot)
 - 📄 API contract — [flutter-floating-lyric-openapi](https://github.com/fewling/flutter-floating-lyric-openapi)

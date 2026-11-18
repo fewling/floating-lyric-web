@@ -1,13 +1,23 @@
 import type { NavLink } from "@/types/content";
 
-/**
- * Global site configuration. Update `url` to the real domain before deploying,
- * and confirm `playStoreUrl` points to YOUR listing (there is a name-collision
- * app at com.ai.lyrics.floating).
+/** Existing Firebase Hosting origin; owner must approve it before deployment.
+ * Set SITE_ORIGIN at build time for an approved custom origin.
  */
+const origin = new URL(process.env.SITE_ORIGIN || "https://floating-lyrics.web.app");
+if (
+  origin.protocol !== "https:" ||
+  origin.pathname !== "/" ||
+  origin.search ||
+  origin.hash ||
+  origin.username ||
+  origin.password
+) {
+  throw new Error("SITE_ORIGIN must be an HTTPS origin without a path, query, or credentials");
+}
+
 export const siteConfig = {
   name: "Floating Lyrics",
-  url: "https://floatinglyrics.app",
+  url: origin.origin,
   tagline: "Keep lyrics visible while using another app.",
   description:
     "Keep synchronized lyrics visible in a lyrics window while using another Android app. Learn about permissions, compatibility, and bringing your LRC collection.",
@@ -16,7 +26,14 @@ export const siteConfig = {
   supportEmail: "floatinglyricsapp@gmail.com",
   nav: [
     { label: "How it works", href: "/#how" },
-    { label: "Features", href: "/#features" },
-    { label: "FAQ", href: "/#faq" },
+    { label: "Setup help", href: "/setup/" },
+    { label: "LRC guide", href: "/lrc/" },
+  ] satisfies NavLink[],
+  footerNav: [
+    { label: "Home", href: "/" },
+    { label: "Setup & troubleshooting", href: "/setup/" },
+    { label: "LRC import guide", href: "/lrc/" },
+    { label: "Privacy", href: "/privacy/" },
+    { label: "Support", href: "/support/" },
   ] satisfies NavLink[],
 } as const;
