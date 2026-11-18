@@ -3,6 +3,8 @@ export interface ArticleLink {
   href: string;
   download?: boolean;
 }
+export type ArticleText = string | (string | { emphasis: string })[];
+
 export interface Article {
   eyebrow: string;
   title: string;
@@ -12,9 +14,9 @@ export interface Article {
   sections: {
     id: string;
     title: string;
-    paragraphs?: string[];
-    steps?: string[];
-    items?: string[];
+    paragraphs?: ArticleText[];
+    steps?: ArticleText[];
+    items?: ArticleText[];
     code?: string;
     links?: ArticleLink[];
   }[];
@@ -31,23 +33,45 @@ export const setupArticle: Article = {
   sections: [
     {
       id: "permissions",
-      title: "Give the window a place to work.",
+      title: "Permissions",
       paragraphs: [
         "Notification access lets Floating Lyrics detect your music app and follow its playback information. It is a separate Android setting from permission to send notifications.",
         "Display over other apps allows the lyrics window to appear while another app is on screen. Android may use a different name for this permission on your phone.",
       ],
       steps: [
-        "Open Floating Lyrics and choose Grant Access for notification access. Select Floating Lyrics in Android settings and enable Allow notification access.",
-        "Return to Floating Lyrics. Choose Grant Access for the overlay permission, then enable Allow display over other apps for Floating Lyrics.",
-        "Return to the app and choose Done once both permissions are enabled.",
+        [
+          "Open Floating Lyrics and choose ",
+          { emphasis: "Grant Access" },
+          " for notification access. Select Floating Lyrics in Android settings and enable ",
+          { emphasis: "Allow notification access" },
+          ".",
+        ],
+        [
+          "Return to Floating Lyrics. Choose ",
+          { emphasis: "Grant Access" },
+          " for the overlay permission, then enable ",
+          { emphasis: "Allow display over other apps" },
+          " for Floating Lyrics.",
+        ],
+        [
+          "Return to the app and choose ",
+          { emphasis: "Done" },
+          " once both permissions are enabled.",
+        ],
       ],
     },
     {
       id: "playback",
-      title: "Start with a song you know.",
+      title: "Show the lyrics window",
       paragraphs: [
         "Start playback in your music app, then return to Floating Lyrics. Check that the detected song title and artist match what is playing. Floating Lyrics is a companion to your music app; playback stays in that app.",
-        "Open Window Configs and choose Show, then switch to another app to keep the lyrics window alongside it. Labels can differ in your installed version.",
+        [
+          "Open ",
+          { emphasis: "Window Configs" },
+          " and choose ",
+          { emphasis: "Show" },
+          ", then switch to another app to keep the lyrics window alongside it. Labels can differ in your installed version.",
+        ],
         "Synchronized lyrics use timestamps to follow playback position. The highlighted line represents the current lyric line, rather than a word-by-word karaoke effect. A matching timed lyric file is needed for the song and recording.",
         "The Play listing describes online lyric lookup as experimental. A song may have no available lyrics, or a result may belong to a different recording. Import an LRC file when you have your own timed lyrics.",
       ],
@@ -55,21 +79,46 @@ export const setupArticle: Article = {
     },
     {
       id: "troubleshooting",
-      title: "When something is missing.",
+      title: "Troubleshooting",
       items: [
-        "No music detected: confirm playback is active and your music app exposes playback information through Android. Recheck notification access. If your installed version offers Not detecting active music player?, use it to re-enable notification access.",
-        "No lyrics window: recheck display-over-other-apps permission. Open Window Configs and choose Show, then switch to another app.",
-        "Wrong or missing lyrics: check the detected title and artist, then try a matching LRC file. Lyric availability and player compatibility vary; every track and music app is not guaranteed to work.",
-        "Lyrics ahead or behind: check that the file matches the exact recording, including live versions, remasters and introductory silence. Timestamps for a different recording will not align reliably.",
-        "Stops in the background: review your phone’s battery and background-app restrictions. Manufacturer customizations can interrupt music detection even after permissions are granted. Settings differ by phone.",
+        [
+          { emphasis: "No music detected:" },
+          " confirm playback is active and your music app exposes playback information through Android. Recheck notification access. If your installed version offers ",
+          { emphasis: "Not detecting active music player?" },
+          ", use it to re-enable notification access.",
+        ],
+        [
+          { emphasis: "No lyrics window:" },
+          " recheck display-over-other-apps permission. Open ",
+          { emphasis: "Window Configs" },
+          " and choose ",
+          { emphasis: "Show" },
+          ", then switch to another app.",
+        ],
+        [
+          { emphasis: "Wrong or missing lyrics:" },
+          " check the detected title and artist, then try a matching LRC file. Lyric availability and player compatibility vary; every track and music app is not guaranteed to work.",
+        ],
+        [
+          { emphasis: "Lyrics ahead or behind:" },
+          " check that the file matches the exact recording, including live versions, remasters and introductory silence. Timestamps for a different recording will not align reliably.",
+        ],
+        [
+          { emphasis: "Stops in the background:" },
+          " review your phone’s battery and background-app restrictions. Manufacturer customizations can interrupt music detection even after permissions are granted. Settings differ by phone.",
+        ],
       ],
       links: [{ label: "Get help with your setup", href: "/support" }],
     },
     {
       id: "appearance",
-      title: "Make room for the words.",
+      title: "Appearance",
       paragraphs: [
-        "Open Window Configs in versions that offer it to adjust lyric colour and background transparency. Choose a readable contrast against the apps you use, then check the window while music is playing.",
+        [
+          "Open ",
+          { emphasis: "Window Configs" },
+          " in versions that offer it to adjust lyric colour and background transparency. Choose a readable contrast against the apps you use, then check the window while music is playing.",
+        ],
       ],
       links: [{ label: "Back to Floating Lyrics", href: "/" }],
     },
@@ -92,7 +141,7 @@ export const lrcArticle: Article = {
   sections: [
     {
       id: "format",
-      title: "A small file with a sense of timing.",
+      title: "LRC format",
       paragraphs: [
         "An LRC file is a text file that pairs lyric lines with timestamps. A timestamp such as [00:04.000] means four seconds into the recording. Floating Lyrics uses these times alongside your music app’s playback position to choose the current line.",
         "Keep the .lrc extension and use title and artist tags to describe the song. You can also name the file Title - Artist.lrc or Artist - Title.lrc. Match the spelling and artist information reported by your music app.",
@@ -100,7 +149,7 @@ export const lrcArticle: Article = {
     },
     {
       id: "example",
-      title: "Start with a few lines.",
+      title: "LRC example",
       paragraphs: [
         "This short example contains original lyrics written for this website. You may copy, edit and reuse them. It is a format example; no audio recording is included, so it will not automatically match a song in your music library.",
       ],
@@ -115,18 +164,26 @@ export const lrcArticle: Article = {
     },
     {
       id: "import",
-      title: "Bring the file into Floating Lyrics.",
+      title: "Import LRC files",
       steps: [
         "Save your .lrc file somewhere you can find on your Android phone, such as Downloads.",
-        "Open Floating Lyrics and choose Import Lyrics. Review the title and artist shown in the import guidance while your song is playing.",
-        "Choose Import, then select your .lrc file in the Android file picker. Wait for importing to finish.",
+        [
+          "Open Floating Lyrics and choose ",
+          { emphasis: "Import Lyrics" },
+          ". Review the title and artist shown in the import guidance while your song is playing.",
+        ],
+        [
+          "Choose ",
+          { emphasis: "Import" },
+          ", then select your .lrc file in the Android file picker. Wait for importing to finish.",
+        ],
         "Play the matching song in your music app. Check the detected title and artist, then check that the lyrics window follows playback.",
       ],
       links: [{ label: "Check Android permissions", href: "/setup" }],
     },
     {
       id: "matching",
-      title: "The right words need the right recording.",
+      title: "Match lyrics to a recording",
       paragraphs: [
         "Use timestamps made for the exact recording you are playing. A live performance, radio edit or remaster can have a different opening or arrangement, even when the title and artist are the same.",
         "If the file does not import, check that it is a plain-text .lrc file with valid timestamps and actual lyric lines. Renaming a PDF or a web page to .lrc does not convert it.",

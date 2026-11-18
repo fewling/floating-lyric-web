@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { home } from "@/content/home";
 import { SITE } from "@/content/site";
-import { Arrow, AppIcon, Download } from "@/components/SiteChrome";
+import { Arrow, AppIcon, Download, QrHandoff } from "@/components/SiteChrome";
 import { ProductScene } from "@/components/ProductScene";
 export default function Home() {
   return (
@@ -18,6 +17,10 @@ export default function Home() {
           <p className="hero-intro">{home.intro}</p>
           <div className="hero-actions">
             <Download />
+            <details className="phone-install" aria-label="Install on your phone">
+              <summary>Install on your phone</summary>
+              <QrHandoff />
+            </details>
             <a className="text-link" href="#experience">
               {home.explore}
               <span aria-hidden="true">↓</span>
@@ -150,16 +153,7 @@ export default function Home() {
         <h2>{home.final.title}</h2>
         <p>{home.final.text}</p>
         <Download />
-        <div className="qr-handoff">
-          <Image src="/google-play-qr.png" width={112} height={112} alt={home.final.qrAlt} />
-          <div>
-            <strong>{home.final.scan}</strong>
-            <p>{home.final.scanText}</p>
-            <a href={SITE.play}>
-              {home.final.direct} <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
+        <QrHandoff />
       </section>
       <script
         type="application/ld+json"

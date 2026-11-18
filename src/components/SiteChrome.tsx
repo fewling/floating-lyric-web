@@ -70,3 +70,18 @@ export function Download({ className = "" }: { className?: string }) {
     </a>
   );
 }
+
+export function QrHandoff() {
+  return (
+    <div className="qr-handoff">
+      <Image src="/google-play-qr.png" width={144} height={144} alt={home.final.qrAlt} />
+      <div>
+        <strong>{home.final.scan}</strong>
+        <p>{home.final.scanText}</p>
+        <a href={SITE.play}>
+          {home.final.direct} <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  );
+}

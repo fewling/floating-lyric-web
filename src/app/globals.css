@@ -254,6 +254,31 @@ h1 span {
   gap: 27px;
   margin-top: 30px;
 }
+.phone-install {
+  position: relative;
+  font-size: 0.8125rem;
+  color: #353539;
+}
+.phone-install summary {
+  cursor: pointer;
+  padding-block: 14px;
+  min-height: 44px;
+}
+.phone-install > .qr-handoff {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  max-width: calc(100vw - 48px);
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #deded8;
+  border-radius: 18px;
+  box-shadow: 0 12px 36px #00000012;
+}
 .download-button {
   display: inline-flex;
   align-items: center;
@@ -1183,6 +1208,17 @@ h1 span {
   padding-left: 20px;
   color: #616169;
 }
+.article-section ol {
+  list-style: decimal outside;
+}
+.article-section li::marker {
+  font-weight: 600;
+  color: var(--ink);
+}
+.article-section strong {
+  font-weight: 600;
+  color: var(--ink);
+}
 .article-section li {
   margin: 10px 0;
 }
@@ -1651,7 +1687,8 @@ h1 span {
     font-size: 1rem;
     margin-top: 18px;
   }
-  .qr-handoff {
+  .qr-handoff,
+  .phone-install {
     display: none;
   }
   .site-footer {
