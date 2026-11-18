@@ -1,77 +1,88 @@
 import type { FaqItem, Feature, Step } from "@/types/content";
 
 export const hero = {
-  headlineLead: "Lyrics that float over",
-  headlineAccent: "any app.",
+  headlineLead: "Keep lyrics visible",
+  headlineAccent: "while using another app.",
   subhead:
-    "Synced to whatever's playing, translated by AI. Spotify, YouTube Music, games: the words follow you everywhere.",
+    "Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.",
   secondary: { label: "How it works", href: "#how" },
+} as const;
+
+export const howItWorks = {
+  eyebrow: "Before you install",
+  title: "Your music app, with lyrics in view",
 } as const;
 
 export const steps: Step[] = [
   {
     n: 1,
-    title: "Install & open",
-    body: "Grab Floating Lyrics from Google Play and open it.",
+    title: "Connect to playback",
+    body: "Notification access lets Floating Lyrics detect the music app’s media session. Synchronization depends on the track information and playback position that app shares; compatibility varies.",
   },
   {
     n: 2,
-    title: "Allow the overlay",
-    body: "One tap grants the “display over other apps” permission.",
+    title: "Allow the lyrics window",
+    body: "Android’s “display over other apps” permission lets the lyrics window stay visible while you use another app. Enable it in Android settings during setup.",
   },
   {
     n: 3,
-    title: "Play any music",
-    body: "Lyrics appear on top and sync automatically. Tap to translate.",
+    title: "Find matching lyrics",
+    body: "Lyrics are not available for every track. Matching depends on track details and the recording; synchronized lyrics need timestamps that fit your version of the song.",
   },
 ];
+
+export const featureIntro = {
+  title: "More ways to read your lyrics",
+  subtitle:
+    "Bring your collection, choose your reading style, and explore lyric translation where available.",
+} as const;
 
 export const features: Feature[] = [
   {
     icon: "sync",
-    title: "Auto-sync with any player",
-    body: "Reads Android’s media session, so it follows whatever’s playing without signing into anything.",
+    title: "Follow the current line",
+    body: "Synchronized lyrics use line timestamps and the music app’s playback position. Timing depends on the lyrics matching the recording you play.",
   },
   {
     icon: "search",
-    title: "Find or bring your lyrics",
-    body: "Search online for the track you’re hearing, or import your own .LRC files and keep them offline.",
+    title: "Bring your LRC collection",
+    body: "LRC files pair lyric lines with timestamps. Use your own synchronized lyrics alongside the audio playing in your music app.",
   },
   {
     icon: "sparkles",
-    title: "AI translation",
-    body: "Turn any line into your language, instantly.",
+    title: "Lyric translation",
+    body: "Translation renders lyric text in another language; it does not change the interface language. It requires sign-in with a verified account, a supported app version, and service availability. Check availability in the app.",
   },
   {
     icon: "sliders",
-    title: "Make it yours",
-    body: "Customize fonts, colors, transparency, and alignment.",
+    title: "Customize your reading view",
+    body: "Explore the appearance options in your installed app to choose how the lyrics window looks while you listen.",
   },
 ];
 
 export const faq: FaqItem[] = [
   {
-    q: "Is it free?",
-    a: "Yes. The lyric overlay, auto-sync, search, and local LRC import are free forever. Unlimited AI translation is an optional one-time Pro unlock, no subscription.",
+    q: "Does Floating Lyrics play music?",
+    a: "Your music app plays the audio. Floating Lyrics is a companion that displays a lyrics window while you use another app.",
   },
   {
-    q: "Does it work with Spotify or YouTube Music?",
-    a: "Yes. It reads Android’s media session, so it syncs with virtually any music or video app without you logging into them.",
+    q: "Will it work with my music app?",
+    a: "It depends on the Android media session your music app exposes, including track details and playback position. Compatibility varies by music app and device; every player and track cannot be guaranteed.",
   },
   {
-    q: "Do I need an account?",
-    a: "No for everything core. The overlay, auto-sync, search, and LRC import work without sign-up. A free account is only needed for AI translation.",
+    q: "Why might lyrics be missing or out of time?",
+    a: "A matching lyric file may be unavailable, or its timestamps may fit a different recording. Track details shared by your music app also affect matching. Live versions, remixes, and alternate releases can differ.",
   },
   {
-    q: "Which languages can it translate?",
-    a: "A wide range, powered by AI. Great for K-pop, J-pop, Latin, anime, C-pop, Bollywood and more.",
+    q: "What does lyric translation require?",
+    a: "Where available, lyric translation requires sign-in with a verified account, a supported app version, and service availability. It translates lyric text rather than the app’s interface. Check the app for current access conditions.",
   },
   {
-    q: "Why does it need the overlay permission?",
-    a: "Android requires the “display over other apps” permission to draw lyrics on top of your music app. It’s the only way an overlay can float.",
+    q: "Why are Android permissions needed?",
+    a: "Notification access connects Floating Lyrics to music playback information. Display over other apps allows the lyrics window to appear over another app. Android presents these permissions in settings during setup.",
   },
   {
-    q: "Is my data private?",
-    a: "Your imported LRC files stay on your device. Translation requests are processed securely to return results, and the app doesn’t build a profile of you.",
+    q: "Where can I check privacy and get help?",
+    a: "Read the privacy policy for app and website practices, and visit Support for help and account-deletion information. Those pages are linked below.",
   },
 ];
