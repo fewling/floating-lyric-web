@@ -22,17 +22,6 @@ export interface FaqItem {
   a: string;
 }
 
-export type DemoLang = "EN" | "ES" | "JA" | "ZH";
-
-export interface DemoLine {
-  /** Original (Korean) lyric line — INVENTED text, never from a real song. */
-  source: string;
-  /** Pre-baked translations per target language. */
-  translations: Record<DemoLang, string>;
-  /** How long this line stays active, in ms. */
-  durationMs: number;
-}
-
 export interface ProseLink {
   label: string;
   href: string; // internal ("/..."), mailto:, or https:
@@ -49,4 +38,12 @@ export interface ProsePage {
   title: string;
   updated?: string;
   sections: ProseSection[];
+}
+
+/** Verified local Android capture, never synthetic footage. */
+export interface DemoMedia {
+  video: string;
+  poster: string;
+  width: number;
+  height: number;
 }

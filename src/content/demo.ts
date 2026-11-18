@@ -1,43 +1,28 @@
-import type { DemoLang, DemoLine } from "@/types/content";
+import type { DemoMedia } from "@/types/content";
 
-export const demoLangs: readonly DemoLang[] = ["EN", "ES", "JA", "ZH"];
+/** Set only after real public-release footage and its poster are verified. */
+export const demoMedia: DemoMedia | undefined = undefined;
 
-/** Invented lyric — written in-house for this demo. Do NOT replace with real song lines. */
-export const demoLines: readonly DemoLine[] = [
-  {
-    source: "별빛처럼 내려와 줘",
-    translations: {
-      EN: "Come down to me like starlight",
-      ES: "Baja hacia mí como la luz de las estrellas",
-      JA: "星明かりのように降りてきて",
-      ZH: "像星光一样降临到我身边",
-    },
-    durationMs: 4000,
+export const demo = {
+  label: "Floating Lyrics Android demonstration",
+  illustrationLabel: "Illustration of a lyrics window over another app",
+  illustrationNotice: "Illustration — not app footage",
+  caption: "A lyrics window, over another app",
+  description:
+    "The highlighted lyric line follows the music app’s playback position while the lyrics window stays visible over another app. Your music app plays the audio.",
+  controls:
+    "Play when you’re ready. The demonstration starts muted and stays still until you choose to play it.",
+  stillImage: "View the still image",
+  fallback: "Video unavailable? The description below explains the same experience.",
+  illustration: {
+    app: "Your music app",
+    track: "Morning Window",
+    artist: "Original demo lyrics",
+    window: "Lyrics window",
+    lines: [
+      "Morning light across the room",
+      "Open windows welcome the day",
+      "Words beside the things we do",
+    ],
   },
-  {
-    source: "네 목소리가 내 하루를 채워",
-    translations: {
-      EN: "Your voice fills up my day",
-      ES: "Tu voz llena todo mi día",
-      JA: "君の声が僕の一日を満たす",
-      ZH: "你的声音填满我的一天",
-    },
-    durationMs: 4000,
-  },
-  {
-    source: "이 노래만은 잊지 말아 줘",
-    translations: {
-      EN: "Just don't forget this song",
-      ES: "Al menos, no olvides esta canción",
-      JA: "この歌だけは忘れないで",
-      ZH: "唯独别忘了这首歌",
-    },
-    durationMs: 4000,
-  },
-];
-
-export const demoTrack = {
-  title: "Starlight (별빛)",
-  artist: "Mirae",
-  caption: "Synced via media session",
 } as const;

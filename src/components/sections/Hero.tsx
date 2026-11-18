@@ -4,7 +4,7 @@ import { Download } from "@/components/sections/Download";
 import { hero } from "@/content/landing";
 
 /**
- * Demo-led hero (spec §3): the live overlay demo IS the pitch. Server
+ * Demo-led hero: labeled static illustration until verified footage is available. Server
  * component — HeroDemo is the only client island inside.
  *
  * Layout: two columns on lg (text left, demo right). On mobile the grid
@@ -35,9 +35,7 @@ export function Hero() {
               aria-hidden
               className="bg-accent-soft pointer-events-none absolute top-1/2 left-1/2 size-[26rem] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
             />
-            <div className="hero-float">
-              <HeroDemo />
-            </div>
+            <HeroDemo />
           </div>
           <div className="reveal-load flex flex-wrap items-center gap-x-6 gap-y-4 lg:col-start-1 lg:row-start-2 lg:self-start">
             <Download />

@@ -87,20 +87,3 @@ summary::-webkit-details-marker {
     animation: reveal-in 0.5s ease-out both;
   }
 }
-
-/* ── Hero phone float: gentle idle drift, motion-safe only ────────────── */
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .hero-float {
-    animation: hero-float 7s ease-in-out infinite;
-  }
-}
