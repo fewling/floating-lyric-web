@@ -8,13 +8,12 @@ import type { NavLink } from "@/types/content";
 export const siteConfig = {
   name: "Floating Lyrics",
   url: "https://floatinglyrics.app",
-  tagline: "Lyrics that float over any app.",
+  tagline: "Keep lyrics visible while using another app.",
   description:
-    "See synced, AI-translated song lyrics in a floating overlay on top of any app on Android: Spotify, YouTube Music, games, anything. Free core, no sign-up needed for the overlay. Optional Pro for unlimited AI translation.",
-  playStoreUrl:
-    "https://play.google.com/store/apps/details?id=com.floating.lyrics&utm_source=website&utm_medium=landing",
+    "Keep synchronized lyrics visible in a lyrics window while using another Android app. Learn about permissions, compatibility, and bringing your LRC collection.",
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.floating.lyrics",
   github: "https://github.com/fewling/flutter-floating-lyric",
-  supportEmail: "blueinnotaiwan@gmail.com",
+  supportEmail: "floatinglyricsapp@gmail.com",
   nav: [
     { label: "How it works", href: "/#how" },
     { label: "Features", href: "/#features" },
