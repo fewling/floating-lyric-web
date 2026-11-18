@@ -2,59 +2,47 @@ import { siteConfig } from "./site";
 import type { ProsePage } from "@/types/content";
 
 export const privacyContent: ProsePage = {
-  title: "Privacy Policy",
-  updated: "2026-06-12",
+  title: "Privacy",
+  updated: "2026-11-18",
   sections: [
     {
-      heading: "Accounts are optional",
+      heading: "Floating Lyrics app",
       paragraphs: [
-        "The core app (floating overlay, auto-sync, lyric search, and LRC import) works without sign-up. Creating an account (email and password) is only needed for AI translation; we store your email for sign-in and a per-account usage counter for rate limiting. We don't build advertising or interest profiles.",
+        "The Android app has its own privacy policy. Read the app privacy policy linked from the Floating Lyrics Google Play listing for information about personal data, usage data, retention, and your deletion rights. That policy was last updated on October 10, 2022.",
+        "This website's privacy information describes this website. It does not replace the app privacy policy or mean that the app's online features process no data.",
       ],
-    },
-    {
-      heading: "Your lyrics stay on your device",
-      paragraphs: [
-        "Imported .LRC files are stored locally on your device and never uploaded.",
-        "To detect what's playing, the app reads Android's media session on-device. When no matching local lyric exists, the app automatically queries the public LRCLIB service (lrclib.net) with the track's title, artist and album to find synced lyrics.",
-      ],
-    },
-    {
-      heading: "AI translation requests",
-      paragraphs: [
-        "When you translate a lyric line, the line text is sent securely to our AI providers (Google Cloud services via Firebase, and DeepSeek) to return the result. We keep a per-account usage counter for rate limiting, not the lyrics you translate. Translation requests aren't used to build a profile of you.",
-      ],
-    },
-    {
-      heading: "Diagnostics",
-      paragraphs: [
-        "The app uses Firebase Crashlytics to receive crash reports and Firebase Analytics for aggregate usage statistics. These reports include device information and never include your lyrics or music library.",
+      links: [
+        {
+          label: "Read the app privacy policy",
+          href: "https://www.freeprivacypolicy.com/live/07b620af-c36c-429e-85ab-f2e666a94135",
+        },
+        { label: "Floating Lyrics on Google Play", href: siteConfig.playStoreUrl },
       ],
     },
     {
       heading: "This website",
       paragraphs: [
-        "This site serves static pages, sets no tracking cookies, and runs no analytics scripts.",
+        "This website serves static pages. It has no analytics scripts, advertising trackers, or tracking cookies.",
+        "When you choose a light or dark theme, your browser saves that theme preference in local storage on your device. This lets the site remember your choice when you return. You can remove it by clearing this site's browser data.",
+        "Your browser connects to the website's hosting service to load its pages and files. The absence of website analytics does not mean those network requests contain no technical information, such as your IP address.",
       ],
     },
     {
-      heading: "Children",
+      heading: "External links and email",
       paragraphs: [
-        "Floating Lyrics is not directed at children under 13 and we do not knowingly collect their data.",
+        "Google Play, GitHub, and the app privacy policy open on other websites. Their own privacy practices apply when you visit them.",
+        "If you email support, your email address and the information you choose to send are included in your message. Avoid sending passwords or unrelated personal information.",
       ],
     },
     {
-      heading: "Changes to this policy",
+      heading: "Privacy questions and deletion requests",
       paragraphs: [
-        "We'll update this page when the policy changes and revise the 'Last updated' date above.",
+        "Contact support with questions about your information. To request deletion of an app account or associated personal data, follow the instructions on the support page.",
       ],
-    },
-    {
-      heading: "Contact",
-      paragraphs: [
-        "Questions about this policy? Email us:",
-        "You can also ask us to delete your account and its data.",
+      links: [
+        { label: `Email ${siteConfig.supportEmail}`, href: `mailto:${siteConfig.supportEmail}` },
+        { label: "Account and data deletion instructions", href: "/support/" },
       ],
-      links: [{ label: siteConfig.supportEmail, href: `mailto:${siteConfig.supportEmail}` }],
     },
   ],
 };
