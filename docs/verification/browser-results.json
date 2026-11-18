@@ -1,0 +1,678 @@
+{
+  "date": "2026-11-18T08:37:32.573Z",
+  "base": "http://127.0.0.1:4173",
+  "browser": "157.0.8103.79",
+  "routes": [
+    {
+      "route": "/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": ["h1"],
+              "html": "<h1 class=\"font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl\">Keep lyrics visible<!-- --> <span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span></h1>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".\\[text-shadow\\:0_0_28px_var\\(--glow\\)\\]"],
+              "html": "<span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".mt-6"],
+              "html": "<p class=\"text-fg-muted mt-6 max-w-md text-lg text-pretty\">Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".leading-relaxed > .font-semibold"],
+              "html": "<p class=\"font-semibold\">Illustration — not app footage</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 54,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 39,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 33,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 28,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 320,
+      "colorScheme": "dark",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 29,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": ["h1"],
+              "html": "<h1 class=\"font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl\">Keep lyrics visible<!-- --> <span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span></h1>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".\\[text-shadow\\:0_0_28px_var\\(--glow\\)\\]"],
+              "html": "<span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".mt-6"],
+              "html": "<p class=\"text-fg-muted mt-6 max-w-md text-lg text-pretty\">Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".leading-relaxed > .font-semibold"],
+              "html": "<p class=\"font-semibold\">Illustration — not app footage</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 54,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 39,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 33,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 28,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 320,
+      "colorScheme": "light",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 29,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "colorScheme": "dark",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": ["h1"],
+              "html": "<h1 class=\"font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl\">Keep lyrics visible<!-- --> <span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span></h1>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".\\[text-shadow\\:0_0_28px_var\\(--glow\\)\\]"],
+              "html": "<span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".mt-6"],
+              "html": "<p class=\"text-fg-muted mt-6 max-w-md text-lg text-pretty\">Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 55,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 360,
+      "colorScheme": "dark",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 39,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 360,
+      "colorScheme": "dark",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 33,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 360,
+      "colorScheme": "dark",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 28,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 360,
+      "colorScheme": "dark",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 29,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "colorScheme": "light",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": ["h1"],
+              "html": "<h1 class=\"font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl\">Keep lyrics visible<!-- --> <span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span></h1>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".\\[text-shadow\\:0_0_28px_var\\(--glow\\)\\]"],
+              "html": "<span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".mt-6"],
+              "html": "<p class=\"text-fg-muted mt-6 max-w-md text-lg text-pretty\">Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 55,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 360,
+      "colorScheme": "light",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 39,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 360,
+      "colorScheme": "light",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 33,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 360,
+      "colorScheme": "light",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 28,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 360,
+      "colorScheme": "light",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 29,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "colorScheme": "dark",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": ["h1"],
+              "html": "<h1 class=\"font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl\">Keep lyrics visible<!-- --> <span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span></h1>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".\\[text-shadow\\:0_0_28px_var\\(--glow\\)\\]"],
+              "html": "<span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".mt-6"],
+              "html": "<p class=\"text-fg-muted mt-6 max-w-md text-lg text-pretty\">Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 58,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 768,
+      "colorScheme": "dark",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 39,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 768,
+      "colorScheme": "dark",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 33,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 768,
+      "colorScheme": "dark",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 28,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 768,
+      "colorScheme": "dark",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 29,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "colorScheme": "light",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": ["h1"],
+              "html": "<h1 class=\"font-display text-4xl leading-[1.05] font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl\">Keep lyrics visible<!-- --> <span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span></h1>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".\\[text-shadow\\:0_0_28px_var\\(--glow\\)\\]"],
+              "html": "<span class=\"text-accent [text-shadow:0_0_28px_var(--glow)]\">while using another app.</span>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".mt-6"],
+              "html": "<p class=\"text-fg-muted mt-6 max-w-md text-lg text-pretty\">Floating Lyrics is an Android companion: your music app plays the audio, while a lyrics window keeps the words in view. The current lyric line follows the music app’s playback position, not word-by-word karaoke.</p>",
+              "reason": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 58,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 768,
+      "colorScheme": "light",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 39,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 768,
+      "colorScheme": "light",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 33,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 768,
+      "colorScheme": "light",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 28,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 768,
+      "colorScheme": "light",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 29,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 64,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 42,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 36,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 31,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 1440,
+      "colorScheme": "dark",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 32,
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": "Keep lyrics visible while using another app.",
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [".size-14"],
+              "html": "<div class=\"bg-accent-soft mx-auto grid size-14 place-items-center rounded-2xl text-3xl\">♪</div>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [".gap-1\\.5 > span"],
+              "html": "<span aria-hidden=\"true\">↓</span>",
+              "reason": "Fix any of the following:\n  Element content contains only non-text characters"
+            }
+          ]
+        }
+      ],
+      "contrastPassedNodes": 64,
+      "violations": []
+    },
+    {
+      "route": "/setup/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": "Setup & troubleshooting",
+      "incomplete": [],
+      "contrastPassedNodes": 42,
+      "violations": []
+    },
+    {
+      "route": "/lrc/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": "LRC import guide",
+      "incomplete": [],
+      "contrastPassedNodes": 36,
+      "violations": []
+    },
+    {
+      "route": "/privacy/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": "Privacy",
+      "incomplete": [],
+      "contrastPassedNodes": 31,
+      "violations": []
+    },
+    {
+      "route": "/support/",
+      "width": 1440,
+      "colorScheme": "light",
+      "h1": "Support and account deletion",
+      "incomplete": [],
+      "contrastPassedNodes": 32,
+      "violations": []
+    }
+  ],
+  "journeys": [
+    "Keyboard skip, mobile menu, setup → LRC sample HTTP → support/deletion mailto → privacy",
+    "Mobile direct Play badge keyboard activation opens the correct intercepted external destination; FAQ Enter/Space toggles with visible focus ring",
+    "Reduced motion: no video/audio and no running animation",
+    "All four prose route skip links bypass header and next Tab reaches main content link",
+    "JavaScript disabled: all five explanations, footer help and desktop QR/direct Play link remain available"
+  ],
+  "requests": [
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/_next/static/media/36966cca54120369-s.p.woff2",
+    "http://127.0.0.1:4173/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+    "http://127.0.0.1:4173/google-play-badge.png",
+    "http://127.0.0.1:4173/google-play-qr.png",
+    "http://127.0.0.1:4173/_next/static/css/d016c6a7a07f3f56.css",
+    "http://127.0.0.1:4173/_next/static/chunks/webpack-4b7654b446cf232f.js",
+    "http://127.0.0.1:4173/_next/static/chunks/dc787ff5-47ede16639af1e7e.js",
+    "http://127.0.0.1:4173/_next/static/chunks/666-d760eb7376a14294.js",
+    "http://127.0.0.1:4173/_next/static/chunks/main-app-5a03292fa8a9ec32.js",
+    "http://127.0.0.1:4173/_next/static/chunks/440-5da937c4a658da82.js",
+    "http://127.0.0.1:4173/_next/static/chunks/app/page-40b34b1d0536cbe8.js",
+    "http://127.0.0.1:4173/__next._head.txt?_rsc=7h4NYy5eoyMcNlUN",
+    "http://127.0.0.1:4173/__next._index.txt?_rsc=yIp22O3xgPPxC28X",
+    "http://127.0.0.1:4173/__next.__PAGE__.txt?_rsc=8nTjltbQWvg6NcbE",
+    "http://127.0.0.1:4173/favicon.ico?603d046c9a6fdfbb",
+    "http://127.0.0.1:4173/setup/",
+    "http://127.0.0.1:4173/_next/static/chunks/app/setup/page-df9e908f0ba0e40e.js",
+    "http://127.0.0.1:4173/__next._tree.txt?_rsc=8GS-JCuSzIFeC4bZ",
+    "http://127.0.0.1:4173/__next._head.txt?_rsc=f0J8b6Tz2oiNmb5O",
+    "http://127.0.0.1:4173/__next._index.txt?_rsc=gTFs8FFJrWT-DVDk",
+    "http://127.0.0.1:4173/__next.__PAGE__.txt?_rsc=UEUDU7PGdP35cj0w",
+    "http://127.0.0.1:4173/lrc/",
+    "http://127.0.0.1:4173/_next/static/chunks/app/lrc/page-df9e908f0ba0e40e.js",
+    "http://127.0.0.1:4173/__next._tree.txt?_rsc=XC--oYapfR2sVcOj",
+    "http://127.0.0.1:4173/__next._head.txt?_rsc=Q_Xe1miREI5h9TMP",
+    "http://127.0.0.1:4173/__next._index.txt?_rsc=bW29xqXgTY9RrhPw",
+    "http://127.0.0.1:4173/__next.__PAGE__.txt?_rsc=qb_ZbR4yJu2LsIGJ",
+    "http://127.0.0.1:4173/privacy/",
+    "http://127.0.0.1:4173/_next/static/chunks/app/privacy/page-df9e908f0ba0e40e.js",
+    "http://127.0.0.1:4173/__next._tree.txt?_rsc=WzUDN3am5ctH078F",
+    "http://127.0.0.1:4173/__next._head.txt?_rsc=vjiQsSnpiQgq9i4-",
+    "http://127.0.0.1:4173/__next._index.txt?_rsc=majeX_Osra860OK4",
+    "http://127.0.0.1:4173/__next.__PAGE__.txt?_rsc=rR8GAgW4UQkijrlg",
+    "http://127.0.0.1:4173/support/",
+    "http://127.0.0.1:4173/_next/static/chunks/app/support/page-df9e908f0ba0e40e.js",
+    "http://127.0.0.1:4173/__next._tree.txt?_rsc=cPJYfKRFJD4qVAbK",
+    "http://127.0.0.1:4173/__next._head.txt?_rsc=uUQ2K-YNFRw9bsrz",
+    "http://127.0.0.1:4173/__next._index.txt?_rsc=SHX5P20J7phyXeuY",
+    "http://127.0.0.1:4173/__next.__PAGE__.txt?_rsc=TIu-uJ2zHcj1H8ti",
+    "http://127.0.0.1:4173/support/__next._tree.txt?_rsc=WzUDN3am5ctH078F",
+    "http://127.0.0.1:4173/support/__next._head.txt?_rsc=vjiQsSnpiQgq9i4-",
+    "http://127.0.0.1:4173/support/__next.support.txt?_rsc=I1XrQdhX8-h2T195",
+    "http://127.0.0.1:4173/support/__next.support.__PAGE__.txt?_rsc=WUBViTMCqgWd-SvA",
+    "http://127.0.0.1:4173/privacy/__next._tree.txt?_rsc=cPJYfKRFJD4qVAbK",
+    "http://127.0.0.1:4173/privacy/__next._head.txt?_rsc=uUQ2K-YNFRw9bsrz",
+    "http://127.0.0.1:4173/privacy/__next._index.txt?_rsc=SHX5P20J7phyXeuY",
+    "http://127.0.0.1:4173/privacy/__next.privacy.txt?_rsc=cyE99vAse8bAi9vB",
+    "http://127.0.0.1:4173/privacy/__next.privacy.__PAGE__.txt?_rsc=57Jyt3t7pdHk42uD"
+  ],
+  "errors": [],
+  "keyboardFocus": {
+    "outline": "none",
+    "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(245, 244, 239) 0px 0px 0px 2px, rgb(11, 125, 77) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+    "faqRing": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 2px, rgb(11, 125, 77) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+  },
+  "skipNext": {
+    "name": "Get Floating Lyrics on Google Play",
+    "inMain": true
+  },
+  "sampleClick": {
+    "urlAfterClick": "http://127.0.0.1:4173/lrc/",
+    "download": {
+      "filename": "First Light - Floating Lyrics.lrc",
+      "failure": null
+    }
+  },
+  "storage": {
+    "cookies": "",
+    "localStorage": {
+      "theme": "dark"
+    },
+    "sessionStorage": {}
+  },
+  "externalRequests": []
+}

@@ -26,7 +26,9 @@ src/
 │   ├── globals.css       # Design tokens (@theme) + base styles + reveal anim
 │   ├── sitemap.ts        # Static sitemap.xml
 │   ├── robots.ts         # Static robots.txt
-│   ├── privacy/page.tsx  # Privacy policy prose route
+│   ├── setup/page.tsx    # Setup and troubleshooting guide
+│   ├── lrc/page.tsx      # Synchronized LRC import guide
+│   ├── privacy/page.tsx  # App-policy link + website privacy
 │   └── support/page.tsx  # Support & account-deletion prose route
 ├── components/
 │   ├── hero-demo/        # Static illustration; optional verified Android footage
@@ -36,11 +38,14 @@ src/
 │   │    GooglePlayBadge, ThemeToggle, Prose, icons)
 │   └── sections/         # Page sections, composed from ui/ + content
 │       (SiteHeader, Hero, HowItWorks, Features,
-│        Faq, SiteFooter, StickyMobileCta)
+│        Faq, Download, SiteFooter, StickyMobileCta)
 ├── content/              # ALL copy lives here as typed data
 │   ├── site.ts           # Global config (name, url, CTA links, nav)
 │   ├── landing.ts        # Page copy (hero, steps, features, faq, …)
 │   ├── demo.ts           # Demo media paths + accessible description
+│   ├── download.ts       # Android/desktop QR handoff copy
+│   ├── setup.ts          # Candidate setup/troubleshooting steps
+│   ├── lrc.ts            # Candidate LRC import guide
 │   ├── privacy.ts        # Privacy policy sections
 │   └── support.ts        # Support page sections
 ├── types/                # Shared content interfaces
@@ -57,9 +62,8 @@ A `StickyMobileCta` floats above the fold after the hero scrolls out of view.
 
 - `/setup/` — Setup and troubleshooting; `src/content/setup.ts`.
 - `/lrc/` — Synchronized lyric import; `src/content/lrc.ts`.
-
-- `/privacy` — Privacy policy; content in `src/content/privacy.ts`.
-- `/support` — Support & account-deletion; content in `src/content/support.ts`.
+- `/privacy/` — Linked app policy and separate website privacy; `src/content/privacy.ts`.
+- `/support/` — Support, alternative download and deletion request instructions; `src/content/support.ts`.
 
 These routes use the `Prose` UI primitive for consistent typography.
 
@@ -128,37 +132,36 @@ pnpm format       # prettier --write .
 
 ## Before launch
 
-- [ ] Owner confirms final origin. `src/content/site.ts` proposes the verified existing
-      Firebase origin `https://floating-lyrics.web.app` (currently 404); `SITE_ORIGIN`
-      overrides it at build time. No deployment is claimed.
-- [ ] Verify Play URL is the real listing `com.floating.lyrics` (NOT name-collision
-      `com.ai.lyrics.floating`).
-- [x] `public/og.png` 1200×630 original typographic social card, with editable
-      `public/design/social-card.svg`. Inspect previews live after deployment.
-- [ ] Replace the labeled illustration with verified real Android footage and a
-      matching poster; record public-release version and original lyric provenance.
-      Manually review native controls with
-      keyboard and screen reader, reduced motion, and blocked video. Playback is
-      always opt-in; the original static illustration is visibly labeled.
-- [ ] Official Google Play badge asset (current `public/google-play-badge.png` —
-      verify it's the official artwork + usage rules).
-- [ ] Privacy policy (`/privacy`) reviewed and signed off by the owner — it now
-      makes specific factual claims (optional Firebase Auth accounts for AI
-      translation, automatic LRCLIB queries with title/artist/album, Google Cloud +
-      DeepSeek as AI providers, Crashlytics + Firebase Analytics diagnostics,
-      account deletion by email). Verify each remains true at launch, then set the
-      URL in Play Console.
-- [ ] Decide on Firebase Analytics in the app: keep (disclosed in the policy) or
-      disable collection — align the Play Data Safety form either way.
-- [ ] Set `/support` as the Play Console support URL; it doubles as the public
-      account-deletion link Play requires.
-- [ ] Manual Lighthouse run against the LIVE Firebase URL (mobile):
-      Performance/Accessibility/SEO ≥95. (Local pre-launch run already at
-      100/100/100 a11y/BP/SEO, LCP 136 ms, CLS 0.)
-- [ ] Post-launch sweep candidate: `icons.tsx` retains glyphs only deleted
-      sections used (`layers`, `languages`, `shield`, `file`, `check`, `github`).
+The criterion-level evidence, reproducible checks and unresolved gates are maintained
+in [`docs/verification/launch-review.md`](docs/verification/launch-review.md).
+
+- Obtain owner approval of factual content and public-release behavior. Setup and
+  LRC steps are source-guided candidates until observed on a licensed public release.
+  The official v6.9.0 build 64 APK installed successfully in the isolated emulator,
+  but its launch licensing check redirected to Play and exited; source inspection
+  does not prove runtime behavior.
+- Replace the labeled static illustration with original/cleared real Android footage
+  and a poster. Verify synchronization fidelity, native controls, keyboard/screen
+  reader, reduced-motion and blocked-video alternatives after integration.
+- Keep Play package `com.floating.lyrics`. QR software decoding and public listing
+  identity were checked; an actual phone-camera scan remains required.
+- Review the separate website privacy statement and linked app policy. Reconcile
+  actual release/backend collection with the older policy and Play Data Safety;
+  validate support ownership and the operational deletion procedure. No automated
+  deletion API or guaranteed retention/response time is implemented by this site.
+- Approve the final origin. `site.ts` proposes the confirmed existing Firebase origin
+  `https://floating-lyrics.web.app`, currently 404; `SITE_ORIGIN` overrides it at build
+  time. Social artwork exists (`public/og.png`, editable `public/design/social-card.svg`).
+  Neither metadata nor artwork establishes a working deployed preview/indexing.
+- Complete human accessibility review, including actual screen-reader operation,
+  and separately authorized live HTTPS/mobile/network smoke checks after deployment.
+  Local lab metrics do not establish 75th-percentile field Core Web Vitals.
+- Verify aggregate report access and follow the 30/90-day reporting procedure after
+  an actual launch. No tracking, new app instrumentation or scheduling is included.
 
 ## Deploy (Firebase Hosting)
+
+Only after separate owner authorization and the recorded launch gates are resolved:
 
 ```bash
 pnpm build                          # produces out/

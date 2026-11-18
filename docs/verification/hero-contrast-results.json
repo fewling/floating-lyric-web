@@ -1,0 +1,130 @@
+[
+  {
+    "width": 320,
+    "colorScheme": "dark",
+    "label": "heading",
+    "colors": ["rgb(243, 245, 244)", "rgb(21, 224, 133)"],
+    "file": "heading-320-dark.png",
+    "minimumRatios": [13.18, 8.27]
+  },
+  {
+    "width": 320,
+    "colorScheme": "dark",
+    "label": "subhead",
+    "colors": ["rgb(154, 164, 178)"],
+    "file": "subhead-320-dark.png",
+    "minimumRatios": [5.72]
+  },
+  {
+    "width": 320,
+    "colorScheme": "light",
+    "label": "heading",
+    "colors": ["rgb(19, 21, 15)", "rgb(11, 125, 77)"],
+    "file": "heading-320-light.png",
+    "minimumRatios": [13.91, 3.92]
+  },
+  {
+    "width": 320,
+    "colorScheme": "light",
+    "label": "subhead",
+    "colors": ["rgb(93, 97, 87)"],
+    "file": "subhead-320-light.png",
+    "minimumRatios": [4.8]
+  },
+  {
+    "width": 360,
+    "colorScheme": "dark",
+    "label": "heading",
+    "colors": ["rgb(243, 245, 244)", "rgb(21, 224, 133)"],
+    "file": "heading-360-dark.png",
+    "minimumRatios": [13.18, 8.27]
+  },
+  {
+    "width": 360,
+    "colorScheme": "dark",
+    "label": "subhead",
+    "colors": ["rgb(154, 164, 178)"],
+    "file": "subhead-360-dark.png",
+    "minimumRatios": [5.72]
+  },
+  {
+    "width": 360,
+    "colorScheme": "light",
+    "label": "heading",
+    "colors": ["rgb(19, 21, 15)", "rgb(11, 125, 77)"],
+    "file": "heading-360-light.png",
+    "minimumRatios": [13.91, 3.92]
+  },
+  {
+    "width": 360,
+    "colorScheme": "light",
+    "label": "subhead",
+    "colors": ["rgb(93, 97, 87)"],
+    "file": "subhead-360-light.png",
+    "minimumRatios": [4.8]
+  },
+  {
+    "width": 768,
+    "colorScheme": "dark",
+    "label": "heading",
+    "colors": ["rgb(243, 245, 244)", "rgb(21, 224, 133)"],
+    "file": "heading-768-dark.png",
+    "minimumRatios": [13.18, 8.27]
+  },
+  {
+    "width": 768,
+    "colorScheme": "dark",
+    "label": "subhead",
+    "colors": ["rgb(154, 164, 178)"],
+    "file": "subhead-768-dark.png",
+    "minimumRatios": [5.72]
+  },
+  {
+    "width": 768,
+    "colorScheme": "light",
+    "label": "heading",
+    "colors": ["rgb(19, 21, 15)", "rgb(11, 125, 77)"],
+    "file": "heading-768-light.png",
+    "minimumRatios": [13.91, 3.92]
+  },
+  {
+    "width": 768,
+    "colorScheme": "light",
+    "label": "subhead",
+    "colors": ["rgb(93, 97, 87)"],
+    "file": "subhead-768-light.png",
+    "minimumRatios": [4.8]
+  },
+  {
+    "width": 1440,
+    "colorScheme": "dark",
+    "label": "heading",
+    "colors": ["rgb(243, 245, 244)", "rgb(21, 224, 133)"],
+    "file": "heading-1440-dark.png",
+    "minimumRatios": [13.18, 8.27]
+  },
+  {
+    "width": 1440,
+    "colorScheme": "dark",
+    "label": "subhead",
+    "colors": ["rgb(154, 164, 178)"],
+    "file": "subhead-1440-dark.png",
+    "minimumRatios": [6.11]
+  },
+  {
+    "width": 1440,
+    "colorScheme": "light",
+    "label": "heading",
+    "colors": ["rgb(19, 21, 15)", "rgb(11, 125, 77)"],
+    "file": "heading-1440-light.png",
+    "minimumRatios": [13.91, 3.92]
+  },
+  {
+    "width": 1440,
+    "colorScheme": "light",
+    "label": "subhead",
+    "colors": ["rgb(93, 97, 87)"],
+    "file": "subhead-1440-light.png",
+    "minimumRatios": [4.98]
+  }
+]
