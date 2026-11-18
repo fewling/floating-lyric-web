@@ -1,6 +1,6 @@
 import { HeroDemo } from "@/components/hero-demo/HeroDemo";
 import { Container } from "@/components/ui/Container";
-import { GooglePlayBadge } from "@/components/ui/GooglePlayBadge";
+import { Download } from "@/components/sections/Download";
 import { hero } from "@/content/landing";
 
 /**
@@ -40,7 +40,7 @@ export function Hero() {
             </div>
           </div>
           <div className="reveal-load flex flex-wrap items-center gap-x-6 gap-y-4 lg:col-start-1 lg:row-start-2 lg:self-start">
-            <GooglePlayBadge />
+            <Download />
             <a
               href={hero.secondary.href}
               className="text-fg-muted hover:text-fg focus-visible:ring-accent focus-visible:ring-offset-ink inline-flex items-center gap-1.5 rounded text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
