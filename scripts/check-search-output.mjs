@@ -3,7 +3,8 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { JSDOM } from "jsdom";
 
-const canonicalOrigin = process.env.SITE_ORIGIN || "https://floating-lyrics.web.app";
+const canonicalOrigin = new URL(process.env.SITE_ORIGIN || "https://floating-lyrics.web.app")
+  .origin;
 const previewOrigin = process.argv[2];
 const pages = [
   ["/", "Floating Lyrics - Keep lyrics visible while using another app.", /synchronized lyrics/i],
