@@ -7,7 +7,7 @@ it("closes mobile navigation on selection and Escape returns focus to its summar
   const summary = screen.getByLabelText("Navigation menu");
   const menu = summary.parentElement as HTMLDetailsElement;
   menu.open = true;
-  const link = screen.getAllByRole("link", { name: "Setup", exact: true })[1];
+  const link = screen.getAllByRole("link", { name: "Setup" })[1];
   link.addEventListener("click", (event) => event.preventDefault());
   fireEvent.click(link);
   expect(menu.open).toBe(false);

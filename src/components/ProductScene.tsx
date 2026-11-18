@@ -5,6 +5,9 @@ import { home } from "@/content/home";
 import { AppIcon } from "./SiteChrome";
 
 const copy = home.scene;
+function toolbarSpace(element: HTMLDivElement | null) {
+  return Math.max(82, (element?.getBoundingClientRect().height ?? 0) + 38);
+}
 export function ProductScene() {
   const [context, setContext] = useState(0);
   const [dark, setDark] = useState(true);
@@ -40,13 +43,7 @@ export function ProductScene() {
       x: Math.max(12 - left, Math.min(frame.width - panel.width - 12 - left, x)),
       y: Math.max(
         20 - top,
-        Math.min(
-          frame.height -
-            panel.height -
-            Math.max(82, (controls.current?.getBoundingClientRect().height ?? 0) + 38) -
-            top,
-          y,
-        ),
+        Math.min(frame.height - panel.height - toolbarSpace(controls.current) - top, y),
       ),
     };
   }
@@ -58,6 +55,10 @@ export function ProductScene() {
     const reclamp = () => {
       stop();
       drag.current = null;
+      if (stage.current && window.current) {
+        // Make room for enlarged text before clamping the window above the toolbar.
+        stage.current.style.minHeight = `${Math.ceil(window.current.getBoundingClientRect().height + 20 + toolbarSpace(controls.current))}px`;
+      }
       const next = bounds(offset.current.x, offset.current.y);
       paint(next.x, next.y);
     };

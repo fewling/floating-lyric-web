@@ -23,17 +23,14 @@ describe("Product experience", () => {
   });
   it("lets visitors change app context and window appearance without starting playback", () => {
     render(<Home />);
-    fireEvent.click(screen.getByRole("button", { name: "Browsing", exact: true }));
+    fireEvent.click(screen.getByRole("button", { name: "Browsing" }));
     expect(screen.getByRole("heading", { name: "Follow your curiosity." })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Browsing", exact: true })).toHaveAttribute(
+    expect(screen.getByRole("button", { name: "Browsing" })).toHaveAttribute(
       "aria-pressed",
       "true",
     );
-    fireEvent.click(screen.getByRole("button", { name: "Light", exact: true }));
-    expect(screen.getByRole("button", { name: "Light", exact: true })).toHaveAttribute(
-      "aria-pressed",
-      "true",
-    );
+    fireEvent.click(screen.getByRole("button", { name: "Light" }));
+    expect(screen.getByRole("button", { name: "Light" })).toHaveAttribute("aria-pressed", "true");
     expect(document.querySelector("audio,video")).toBeNull();
   });
   it("lets visitors move the window with taps and keeps it inside a resized stage", () => {
@@ -53,6 +50,11 @@ describe("Product experience", () => {
     const panel = handle.parentElement!;
     const stage = panel.parentElement!;
     let width = 800;
+    let panelHeight = 150;
+    let controlsHeight = 44;
+    vi.spyOn(stage.querySelector(".scene-controls")!, "getBoundingClientRect").mockImplementation(
+      () => ({ height: controlsHeight }) as DOMRect,
+    );
     vi.spyOn(stage, "getBoundingClientRect").mockImplementation(
       () => ({ left: 0, top: 0, width, height: 700 }) as DOMRect,
     );
@@ -62,7 +64,7 @@ describe("Product experience", () => {
           left: 200 + (parseFloat(panel.style.transform.slice(12)) || 0),
           top: 200,
           width: 250,
-          height: 150,
+          height: panelHeight,
         }) as DOMRect,
     );
     fireEvent.click(screen.getByText("Move without dragging"));
@@ -72,5 +74,13 @@ describe("Product experience", () => {
     width = 320;
     resized();
     expect(panel.style.transform).toBe("translate3d(-142px, 0px, 0)");
+    panelHeight = 445;
+    controlsHeight = 160;
+    resized();
+    expect(stage.style.minHeight).toBe("663px");
+    panelHeight = 150;
+    controlsHeight = 44;
+    resized();
+    expect(stage.style.minHeight).toBe("252px");
   });
 });
