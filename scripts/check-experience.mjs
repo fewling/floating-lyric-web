@@ -19,6 +19,35 @@ const browser = await chromium.launch({
 const dir = process.env.EVIDENCE_DIR || "/tmp/floating-apple-browser-check";
 await mkdir(dir, { recursive: true });
 const results = [];
+const guideExpectations = {
+  "/setup/": {
+    tasks: [
+      ["Permissions", "permissions"],
+      ["Show the lyrics window", "playback"],
+      ["Troubleshooting", "troubleshooting"],
+      ["Appearance", "appearance"],
+    ],
+    stepCount: 3,
+    controlLabels: [
+      "Grant Access",
+      "Allow notification access",
+      "Allow display over other apps",
+      "Done",
+      "Window Configs",
+      "Show",
+    ],
+  },
+  "/lrc/": {
+    tasks: [
+      ["LRC format", "format"],
+      ["LRC example", "example"],
+      ["Import LRC files", "import"],
+      ["Match lyrics to a recording", "matching"],
+    ],
+    stepCount: 4,
+    controlLabels: ["Import Lyrics", "Import"],
+  },
+};
 // Playwright's ARIA snapshot omits native DisclosureTriangle state. Read the
 // browser's accessibility tree so this checks what assistive technology receives.
 async function phoneInstallExpanded(page) {
@@ -128,20 +157,7 @@ try {
         }
       }
       if (route === "/setup/" || route === "/lrc/") {
-        const tasks =
-          route === "/setup/"
-            ? [
-                ["Permissions", "permissions"],
-                ["Show the lyrics window", "playback"],
-                ["Troubleshooting", "troubleshooting"],
-                ["Appearance", "appearance"],
-              ]
-            : [
-                ["LRC format", "format"],
-                ["LRC example", "example"],
-                ["Import LRC files", "import"],
-                ["Match lyrics to a recording", "matching"],
-              ];
+        const { tasks, stepCount, controlLabels } = guideExpectations[route];
         for (const [name, anchor] of tasks) {
           const link = page
             .getByRole("navigation", { name: "On this page" })
@@ -172,8 +188,7 @@ try {
         }
         await page.evaluate(() => scrollTo(0, 0));
         const sequence = page.locator("article ol");
-        const expectedCount = route === "/setup/" ? 3 : 4;
-        assert.equal(await sequence.getByRole("listitem").count(), expectedCount);
+        assert.equal(await sequence.getByRole("listitem").count(), stepCount);
         const markers = await sequence.getByRole("listitem").evaluateAll((items) =>
           items.map((item) => ({
             display: getComputedStyle(item).display,
@@ -188,18 +203,7 @@ try {
           assert.notEqual(marker.color, "rgba(0, 0, 0, 0)");
           assert.ok(marker.size >= 14, "Markers remain legible");
         }
-        const labels =
-          route === "/setup/"
-            ? [
-                "Grant Access",
-                "Allow notification access",
-                "Allow display over other apps",
-                "Done",
-                "Window Configs",
-                "Show",
-              ]
-            : ["Import Lyrics", "Import"];
-        for (const label of labels) {
+        for (const label of controlLabels) {
           const control = page
             .locator("article strong")
             .filter({ hasText: new RegExp(`^${label}$`) });
