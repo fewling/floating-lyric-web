@@ -29,8 +29,8 @@ src/
 │   ├── privacy/page.tsx  # Privacy policy prose route
 │   └── support/page.tsx  # Support & account-deletion prose route
 ├── components/
-│   ├── hero-demo/        # Code-built interactive demo (see §Hero-demo module)
-│   │   (useDemoTimeline, PhoneFrame, LyricOverlay, FakeAppScreen, HeroDemo)
+│   ├── hero-demo/        # Static illustration; optional verified Android footage
+│   │   (HeroDemo)
 │   ├── ui/               # Reusable, content-agnostic primitives
 │   │   (Container, Section, SectionHeading, Reveal,
 │   │    GooglePlayBadge, ThemeToggle, Prose, icons)
@@ -40,7 +40,7 @@ src/
 ├── content/              # ALL copy lives here as typed data
 │   ├── site.ts           # Global config (name, url, CTA links, nav)
 │   ├── landing.ts        # Page copy (hero, steps, features, faq, …)
-│   ├── demo.ts           # Demo timeline data (lines, translations, track)
+│   ├── demo.ts           # Demo media paths + accessible description
 │   ├── privacy.ts        # Privacy policy sections
 │   └── support.ts        # Support page sections
 ├── types/                # Shared content interfaces
@@ -49,7 +49,7 @@ src/
 
 ### Page section order (landing)
 
-`SiteHeader` → `Hero` (with code-built demo) → `HowItWorks` → `Features` → `Faq` → `SiteFooter`
+`SiteHeader` → `Hero` (with static illustration or verified media) → `HowItWorks` → `Features` → `Faq` → `SiteFooter`
 
 A `StickyMobileCta` floats above the fold after the hero scrolls out of view.
 
@@ -65,19 +65,17 @@ These routes use the `Prose` UI primitive for consistent typography.
 
 ### Hero-demo module (`src/components/hero-demo/`)
 
-A self-contained interactive demo that renders a simulated Android phone in the
-hero without any external media assets.
+The `HeroDemo` server component currently presents a static, clearly labeled
+illustration using original demo lyrics. It is not real app footage and does not
+satisfy the launch requirement for a representative public-release recording.
 
-| File              | Role                                                                                                                                                                                                      |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `useDemoTimeline` | Engine — cycles `activeIndex` through demo lines on per-line `durationMs`; respects `paused` flag (frozen when `prefers-reduced-motion` is set).                                                          |
-| `PhoneFrame`      | Shell — phone chrome with a swappable `screen` slot and optional `overlay` slot. Today the slots hold `FakeAppScreen` + `LyricOverlay`; the swap path for a real video is explicit in the source comment. |
-| `FakeAppScreen`   | Decorative background (`aria-hidden`) simulating a music player UI.                                                                                                                                       |
-| `LyricOverlay`    | Overlay — floating lyric card with the active source line, translated line, and target-language chip buttons. Chips are real interactive buttons that stay in the accessibility tree.                     |
-| `HeroDemo`        | Composition root — wires `useDemoTimeline` + `usePrefersReducedMotion` (via `useSyncExternalStore`) into `PhoneFrame`.                                                                                    |
-
-Demo content (invented lyric lines, translations, track metadata) lives in
-`src/content/demo.ts`; updating copy never touches JSX.
+An optional typed `DemoMedia` config in `src/content/demo.ts` can enable verified
+local video and poster assets after capture. Every visitor, including reduced-motion
+visitors, starts on the static poster. Playback is an explicit choice through native
+controls: muted, no autoplay or loop, `preload="none"`, and reserved media dimensions.
+The always-visible description conveys the essential experience without playback;
+a still-image link is available when real media is configured. No missing media
+paths are published. Native controls still need browser accessibility verification.
 
 ### Theming
 
@@ -137,17 +135,11 @@ pnpm format       # prettier --write .
       `com.ai.lyrics.floating`).
 - [x] `public/og.png` 1200×630 original typographic social card, with editable
       `public/design/social-card.svg`. Inspect previews live after deployment.
-- [ ] Record real overlay footage — portrait ≥1080×2340 (19.5:9, matching the
-      frame's aspect), 10–20 s loop-friendly, clean status bar,
-      recognizable-but-brandless underlying app, non-English lyric with visible
-      translation — and swap into `PhoneFrame`'s `screen` slot as a muted looping
-      `playsinline` video, removing the simulated overlay layer. (This also resolves
-      the WCAG 2.2.2 note below.)
-- [ ] WCAG 2.2.2 note: the code-built demo auto-cycles lyrics >5 s with no
-      in-page pause control; OS reduced-motion freezes it, but an explicit pause
-      affordance is the strict reading. Resolves itself when the video swap lands
-      (videos get native controls/pause) — if launching with the simulation,
-      consider a small pause button on the demo.
+- [ ] Replace the labeled illustration with verified real Android footage and a
+      matching poster; record public-release version and original lyric provenance.
+      Manually review native controls with
+      keyboard and screen reader, reduced motion, and blocked video. Playback is
+      always opt-in; the original static illustration is visibly labeled.
 - [ ] Official Google Play badge asset (current `public/google-play-badge.png` —
       verify it's the official artwork + usage rules).
 - [ ] Privacy policy (`/privacy`) reviewed and signed off by the owner — it now
