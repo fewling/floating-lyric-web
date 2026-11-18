@@ -5,6 +5,10 @@
    same fonts, layout, components. Runtime-switchable via [data-theme],
    so Tailwind tokens must resolve through CSS variables (`@theme inline`). */
 @theme inline {
+  /* Fixed illustration palette keeps appearance examples readable in both themes. */
+  --color-example-bg: #15171c;
+  --color-example-light: #f3f5f4;
+  --color-example-green: #72f0b8;
   --color-ink: var(--bg);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);

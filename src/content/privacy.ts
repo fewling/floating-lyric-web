@@ -1,6 +1,12 @@
 import { siteConfig } from "./site";
 import type { ProsePage } from "@/types/content";
 
+export const privacyMetadata = {
+  title: "Privacy Policy",
+  description:
+    "Read the Floating Lyrics app privacy policy, website storage information, and how to contact support about personal data.",
+} as const;
+
 export const privacyContent: ProsePage = {
   title: "Privacy",
   updated: "2026-11-18",

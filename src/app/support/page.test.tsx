@@ -24,6 +24,15 @@ describe("Support and deletion journey", () => {
       "/privacy",
     );
   });
+  it("helps visitors whose downloaded APK redirects to Google Play", () => {
+    render(<SupportPage />);
+    const main = screen.getByRole("main");
+    expect(main).toHaveTextContent(/downloaded APK opens Google Play instead/i);
+    expect(main).toHaveTextContent(/install from the store.*contact support/i);
+    expect(
+      within(main).getByRole("link", { name: /email floatinglyricsapp@gmail.com/i }),
+    ).toHaveAttribute("href", "mailto:floatinglyricsapp@gmail.com");
+  });
   it("keeps Google Play primary and offers an ordinary alternative release link", () => {
     render(<SupportPage />);
     const main = screen.getByRole("main");

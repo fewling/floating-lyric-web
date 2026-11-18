@@ -1,13 +1,20 @@
 import { siteConfig } from "./site";
 import type { ProsePage } from "@/types/content";
 
-export const supportContent: ProsePage = {
+export const supportMetadata = {
   title: "Support and account deletion",
+  description:
+    "Get help with Floating Lyrics, request account and personal data deletion by email, and find official download options.",
+} as const;
+
+export const supportContent: ProsePage = {
+  title: supportMetadata.title,
   sections: [
     {
       heading: "Download Floating Lyrics",
       paragraphs: [
         "Google Play is the primary way to install Floating Lyrics and receive updates. If you need an alternative download, the public GitHub releases page provides Android APK files and release notes.",
+        "If a downloaded APK opens Google Play instead of Floating Lyrics, try to install from the store or contact support if you cannot complete installation.",
       ],
       links: [
         { label: "Get Floating Lyrics on Google Play", href: siteConfig.playStoreUrl },

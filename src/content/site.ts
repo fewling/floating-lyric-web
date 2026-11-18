@@ -21,6 +21,8 @@ export const siteConfig = {
   tagline: "Keep lyrics visible while using another app.",
   description:
     "Keep synchronized lyrics visible in a lyrics window while using another Android app. Learn about permissions, compatibility, and bringing your LRC collection.",
+  socialImageAlt:
+    "Floating Lyrics. Keep lyrics visible while using another app. Android lyrics window and LRC import guides.",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.floating.lyrics",
   github: "https://github.com/fewling/flutter-floating-lyric",
   supportEmail: "floatinglyricsapp@gmail.com",

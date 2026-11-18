@@ -1,8 +1,14 @@
 import type { ProsePage } from "@/types/content";
 import { siteConfig } from "./site";
 
-export const setupContent: ProsePage = {
+export const setupMetadata = {
   title: "Setup & troubleshooting",
+  description:
+    "Set up Floating Lyrics on Android: notification access, display over other apps, music detection, missing lyrics, synchronization, and background help.",
+} as const;
+
+export const setupContent: ProsePage = {
+  title: setupMetadata.title,
   sections: [
     {
       heading: "Before you start",

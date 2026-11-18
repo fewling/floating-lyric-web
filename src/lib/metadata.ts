@@ -6,7 +6,7 @@ const images = [
     url: "/og.png",
     width: 1200,
     height: 630,
-    alt: "Floating Lyrics. Keep lyrics visible while using another app. Android lyrics window and LRC import guides.",
+    alt: siteConfig.socialImageAlt,
   },
 ];
 

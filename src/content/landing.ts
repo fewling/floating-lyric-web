@@ -56,7 +56,7 @@ export const features: Feature[] = [
   {
     icon: "sliders",
     title: "Customize your reading view",
-    body: "Explore the appearance options in your installed app to choose how the lyrics window looks while you listen.",
+    body: "Adjust lyric colours and background transparency to suit your reading view. For example, use light lyrics on an opaque background or green lyrics on a translucent background.",
   },
 ];
 
@@ -86,3 +86,14 @@ export const faq: FaqItem[] = [
     a: "Read the privacy policy for app and website practices, and visit Support for help and account-deletion information. Those pages are linked below.",
   },
 ];
+
+export const customization = {
+  title: "Choose a reading style",
+  description:
+    "Illustrations of lyric colour and background transparency, not app captures or settings screens. The words are original example lyrics; these are appearance examples, not preset names.",
+  lyric: "We carry the morning home",
+  examples: [
+    { title: "Light lyrics, opaque background", translucent: false },
+    { title: "Green lyrics, translucent background", translucent: true },
+  ],
+} as const;

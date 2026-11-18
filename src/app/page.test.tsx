@@ -33,6 +33,18 @@ describe("Homepage install decision", () => {
       /free forever|unlimited|Pro unlock|any player|virtually any/i,
     );
   });
+  it("shows clearly labeled examples of lyric colour and background transparency", () => {
+    render(<Home />);
+    const main = screen.getByRole("main");
+    expect(main).toHaveTextContent(/illustrations.*not app captures or settings screens/i);
+    const opaque = within(main).getByRole("figure", { name: "Light lyrics, opaque background" });
+    const translucent = within(main).getByRole("figure", {
+      name: "Green lyrics, translucent background",
+    });
+    expect(opaque).toHaveTextContent("We carry the morning home");
+    expect(translucent).toHaveTextContent("We carry the morning home");
+    expect(main).toHaveTextContent(/adjust lyric colours and background transparency/i);
+  });
   it("takes listeners to the intended Google Play package with no campaign parameters", () => {
     render(<Home />);
     const links = screen.getAllByRole("link", { name: /get floating lyrics on google play/i });

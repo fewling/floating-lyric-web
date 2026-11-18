@@ -1,8 +1,14 @@
 import type { ProsePage } from "@/types/content";
 import { siteConfig } from "./site";
 
-export const lrcContent: ProsePage = {
+export const lrcMetadata = {
   title: "LRC import guide",
+  description:
+    "Import synchronized LRC files into Floating Lyrics on Android. Match track titles and artists, understand line timestamps, and use your own lyric collection.",
+} as const;
+
+export const lrcContent: ProsePage = {
+  title: lrcMetadata.title,
   sections: [
     {
       heading: "What a synchronized LRC file does",
