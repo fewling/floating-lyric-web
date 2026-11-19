@@ -43,8 +43,18 @@ layout assertions run with the header present.
 - ESLint, TypeScript, formatting and all eight existing Vitest tests: passed.
 - New production browser layout regression: passed, 20 navigation and six
   appearance combinations. Visual previews inspected at all six appearance sizes.
-- Independent integration checks for no-JavaScript content/download/help routes,
-  preferences and automated accessibility: pending integration verification.
+- Independent checks against the fixed production export: all five routes at
+  320px and 390px retained essential content, skip links, native navigation and
+  the correct Google Play destination without JavaScript. Privacy-to-deletion,
+  setup and LRC help navigation worked; the browser-downloaded original LRC
+  matched its source byte for byte. Email destinations were inspected without
+  sending requests.
+- Reduced transparency and increased contrast retained opaque, unblurred main
+  surfaces; reduced motion retained immediate reset and non-smooth scrolling.
+- Existing production browser harness: passed all 20 route/viewport cases,
+  including axe checks, guide task navigation, LRC download, desktop phone
+  handoff, Android Play access and product interactions. Automated results do
+  not establish WCAG conformance.
 - Native Chrome UI zoom was attempted independently but automation failed before
   a zoom level was confirmed. It remains unverified.
 - No screen-reader session, physical device test, deployed-site review or WCAG
