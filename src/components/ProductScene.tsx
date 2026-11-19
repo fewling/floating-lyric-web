@@ -11,12 +11,14 @@ function toolbarSpace(element: HTMLDivElement | null) {
 export function ProductScene() {
   const [context, setContext] = useState(0);
   const [dark, setDark] = useState(true);
+  const [pressed, setPressed] = useState(false);
   const stage = useRef<HTMLDivElement>(null);
   const window = useRef<HTMLDivElement>(null);
   const controls = useRef<HTMLDivElement>(null);
   const offset = useRef({ x: 0, y: 0 });
   const drag = useRef<{
     pointer: number;
+    handle: HTMLButtonElement;
     x: number;
     y: number;
     startX: number;
@@ -29,6 +31,14 @@ export function ProductScene() {
     },
     [],
   );
+  function endDrag() {
+    const current = drag.current;
+    drag.current = null;
+    setPressed(false);
+    if (current?.handle.hasPointerCapture(current.pointer)) {
+      current.handle.releasePointerCapture(current.pointer);
+    }
+  }
   function paint(x: number, y: number) {
     offset.current = { x, y };
     if (window.current) window.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
@@ -54,7 +64,7 @@ export function ProductScene() {
   useEffect(() => {
     const reclamp = () => {
       stop();
-      drag.current = null;
+      endDrag();
       if (stage.current && window.current) {
         // Make room for enlarged text before clamping the window above the toolbar.
         stage.current.style.minHeight = `${Math.ceil(window.current.getBoundingClientRect().height + 20 + toolbarSpace(controls.current))}px`;
@@ -69,11 +79,14 @@ export function ProductScene() {
     return () => observer.disconnect();
   }, []);
   function shift(x: number, y: number) {
+    endDrag();
     stop();
     const next = bounds(offset.current.x + x, offset.current.y + y);
     paint(next.x, next.y);
   }
   function reset() {
+    // Home ends the held gesture; later pointer movement needs a fresh grab.
+    endDrag();
     if (animation.current !== null) return;
     const target = bounds(0, 0);
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -105,11 +118,13 @@ export function ProductScene() {
     animation.current = requestAnimationFrame(frame);
   }
   function down(e: PointerEvent<HTMLButtonElement>) {
-    if (e.button !== 0) return;
+    if (e.button !== 0 || !e.isPrimary || drag.current) return;
     stop();
+    setPressed(true);
     e.currentTarget.setPointerCapture(e.pointerId);
     drag.current = {
       pointer: e.pointerId,
+      handle: e.currentTarget,
       x: e.clientX,
       y: e.clientY,
       startX: offset.current.x,
@@ -123,7 +138,7 @@ export function ProductScene() {
     paint(p.x, p.y);
   }
   function release(e: PointerEvent<HTMLButtonElement>) {
-    if (drag.current?.pointer === e.pointerId) drag.current = null;
+    if (drag.current?.pointer === e.pointerId) endDrag();
   }
   function keys(e: KeyboardEvent<HTMLButtonElement>) {
     const delta: Record<string, [number, number]> = {
@@ -203,15 +218,14 @@ export function ProductScene() {
         <div className={`floating-window ${dark ? "window-dark" : "window-light"}`} ref={window}>
           <button
             className="window-drag"
+            data-pressed={pressed || undefined}
             aria-label={copy.move}
             aria-describedby="window-instructions"
             onPointerDown={down}
             onPointerMove={move}
             onPointerUp={release}
             onPointerCancel={release}
-            onLostPointerCapture={() => {
-              drag.current = null;
-            }}
+            onLostPointerCapture={release}
             onKeyDown={keys}
           >
             <span className="window-brand">
