@@ -1,4 +1,11 @@
-import type { Article } from "@/content/articles";
+import type { Article, ArticleText } from "@/content/articles";
+
+function InlineText({ text }: { text: ArticleText }) {
+  if (typeof text === "string") return text;
+  return text.map((part, index) =>
+    typeof part === "string" ? part : <strong key={index}>{part.emphasis}</strong>,
+  );
+}
 
 export function ArticlePage({ article }: { article: Article }) {
   return (
@@ -33,20 +40,26 @@ export function ArticlePage({ article }: { article: Article }) {
               aria-labelledby={`${section.id}-title`}
             >
               <h2 id={`${section.id}-title`}>{section.title}</h2>
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+              {section.paragraphs?.map((paragraph, index) => (
+                <p key={index}>
+                  <InlineText text={paragraph} />
+                </p>
               ))}
               {section.steps && (
                 <ol>
-                  {section.steps.map((step) => (
-                    <li key={step}>{step}</li>
+                  {section.steps.map((step, index) => (
+                    <li key={index}>
+                      <InlineText text={step} />
+                    </li>
                   ))}
                 </ol>
               )}
               {section.items && (
                 <ul>
-                  {section.items.map((item) => (
-                    <li key={item}>{item}</li>
+                  {section.items.map((item, index) => (
+                    <li key={index}>
+                      <InlineText text={item} />
+                    </li>
                   ))}
                 </ul>
               )}
