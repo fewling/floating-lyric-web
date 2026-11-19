@@ -551,6 +551,13 @@ h1 span {
 .window-drag:active {
   cursor: grabbing;
 }
+.window-drag[data-pressed] {
+  background: #ffffff1f;
+  cursor: grabbing;
+}
+.window-light .window-drag[data-pressed] {
+  background: #1d1d1f14;
+}
 .window-brand {
   display: flex;
   gap: 7px;

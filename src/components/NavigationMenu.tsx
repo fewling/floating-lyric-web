@@ -14,18 +14,32 @@ export function NavigationMenu() {
   function close() {
     if (menu.current) menu.current.open = false;
   }
+  useEffect(() => {
+    function dismissOutside(event: Event) {
+      const disclosure = menu.current;
+      if (disclosure?.open && event.target instanceof Node && !disclosure.contains(event.target)) {
+        disclosure.open = false;
+      }
+    }
+    function escape(event: globalThis.KeyboardEvent) {
+      if (event.key === "Escape" && menu.current?.open) {
+        event.preventDefault();
+        close();
+        menu.current.querySelector("summary")?.focus();
+      }
+    }
+    document.addEventListener("pointerdown", dismissOutside);
+    // Also cover keyboard/assistive-technology activation without a pointer.
+    document.addEventListener("click", dismissOutside);
+    document.addEventListener("keydown", escape);
+    return () => {
+      document.removeEventListener("pointerdown", dismissOutside);
+      document.removeEventListener("click", dismissOutside);
+      document.removeEventListener("keydown", escape);
+    };
+  }, []);
   return (
-    <details
-      ref={menu}
-      className="mobile-nav"
-      onKeyDown={(event) => {
-        if (event.key === "Escape" && menu.current?.open) {
-          event.preventDefault();
-          close();
-          menu.current.querySelector("summary")?.focus();
-        }
-      }}
-    >
+    <details ref={menu} className="mobile-nav">
       <summary aria-label={SITE.navigationLabel}>
         <span />
         <span />
