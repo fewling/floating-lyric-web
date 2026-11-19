@@ -90,6 +90,156 @@ try {
       await page.close();
     }
   });
+  // These are green preservation guards for behavior already working on the baseline.
+  await journey("preservation", async () => {
+    for (const width of [320, 390]) {
+      const page = await browser.newPage({
+        viewport: { width, height: 844 },
+        reducedMotion: "reduce",
+      });
+      await page.goto(base);
+      const trigger = page.getByLabel("Navigation menu", { exact: true });
+      const menu = page.getByRole("navigation", { name: "Mobile", exact: true });
+      const visibleFocus = async (control) => {
+        const focus = await control.evaluate((element) => {
+          const style = getComputedStyle(element);
+          return {
+            active: element === document.activeElement,
+            style: style.outlineStyle,
+            width: parseFloat(style.outlineWidth),
+            color: style.outlineColor,
+          };
+        });
+        assert.equal(focus.active, true, "Keyboard focus reaches the control");
+        assert.notEqual(focus.style, "none", "Focused control has a visible outline");
+        assert.ok(focus.width >= 2, "Focus outline is discernible");
+        assert.notEqual(focus.color, "rgba(0, 0, 0, 0)", "Focus outline is not transparent");
+      };
+      await page.keyboard.press("Tab");
+      await trigger.focus();
+      await visibleFocus(trigger);
+      await page.keyboard.press("Enter");
+      await page.keyboard.press("Tab");
+      await visibleFocus(menu.getByRole("link", { name: "Overview", exact: true }));
+      await page.keyboard.press("Escape");
+      assert.equal(await menu.isVisible(), false);
+      await visibleFocus(trigger);
+      await page.keyboard.press("Enter");
+      await page.keyboard.press("Shift+Tab");
+      assert.equal(await trigger.evaluate((n) => n === document.activeElement), false);
+      await page.keyboard.press("Escape");
+      await visibleFocus(trigger);
+      await page.keyboard.press("Enter");
+      const setup = menu.getByRole("link", { name: "Setup", exact: true });
+      await setup.focus();
+      await visibleFocus(setup);
+      await page.keyboard.press("Enter");
+      await page.waitForURL("**/setup/");
+      await page.waitForFunction(() => document.activeElement?.tagName === "MAIN");
+      assert.equal(await menu.isVisible(), false, "Keyboard route selection closes menu");
+      await page.close();
+    }
+
+    for (const reducedMotion of ["reduce", "no-preference"]) {
+      const page = await browser.newPage({
+        viewport: { width: 1440, height: 1000 },
+        reducedMotion,
+      });
+      await page.goto(base);
+      const handle = page.getByRole("button", { name: "Move Floating Lyrics window" });
+      // Layout selectors measure the rendered panel, stage and toolbar, not private state.
+      const panel = page.locator(".floating-window");
+      const stage = page.locator(".product-stage");
+      const toolbar = page.locator(".scene-controls");
+      await handle.scrollIntoViewIfNeeded();
+      await handle.focus();
+      await page.keyboard.press("ArrowLeft");
+      await page.waitForTimeout(1100);
+      const position = async () => {
+        const panelBox = await panel.boundingBox();
+        const stageBox = await stage.boundingBox();
+        return { x: panelBox.x - stageBox.x, y: panelBox.y - stageBox.y };
+      };
+      const before = await position();
+      const contexts = ["Reading", "Browsing", "Listening"];
+      const themes = ["Light", "Dark"];
+      for (let repeat = 0; repeat < 4; repeat++) {
+        for (const choices of [contexts, themes]) {
+          for (const selected of choices) {
+            await page.getByRole("button", { name: selected, exact: true }).click();
+            for (const choice of choices) {
+              assert.equal(
+                await page
+                  .getByRole("button", { name: choice, exact: true })
+                  .getAttribute("aria-pressed"),
+                String(choice === selected),
+                `${selected} is the sole selected option`,
+              );
+            }
+          }
+        }
+      }
+      const after = await position();
+      assert.ok(
+        Math.abs(after.x - before.x) < 1 && Math.abs(after.y - before.y) < 1,
+        "Rapid context and style changes retain window position",
+      );
+      assert.equal(
+        await page.locator("audio, video").count(),
+        0,
+        "Illustration adds no media playback",
+      );
+      await page.waitForTimeout(1100);
+      assert.equal(
+        await page.evaluate(
+          () => document.getAnimations().filter((a) => a.playState === "running").length,
+        ),
+        0,
+        "Illustration settles without decorative motion",
+      );
+
+      const withinStage = async () => {
+        const windowBox = await panel.boundingBox();
+        const stageBox = await stage.boundingBox();
+        const toolbarBox = await toolbar.boundingBox();
+        const tolerance = 1;
+        assert.ok(
+          windowBox.x >= stageBox.x - tolerance &&
+            windowBox.y >= stageBox.y - tolerance &&
+            windowBox.x + windowBox.width <= stageBox.x + stageBox.width + tolerance &&
+            windowBox.y + windowBox.height <= stageBox.y + stageBox.height + tolerance,
+          "The entire window remains within the stage",
+        );
+        assert.ok(
+          windowBox.y + windowBox.height < toolbarBox.y,
+          "The window has positive clearance above the toolbar",
+        );
+        assert.equal(
+          await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),
+          false,
+          "Resize does not introduce horizontal page overflow",
+        );
+      };
+      // Leave the window at the bottom-right edge before the next resize.
+      for (const size of [
+        { width: 390, height: 844 },
+        { width: 320, height: 640 },
+        { width: 844, height: 390 },
+        { width: 1440, height: 1000 },
+      ]) {
+        await page.setViewportSize(size);
+        await page.waitForTimeout(1100);
+        await withinStage();
+        await handle.focus();
+        for (const key of ["ArrowRight", "ArrowDown"]) {
+          for (let repeat = 0; repeat < 35; repeat++) await page.keyboard.press(key);
+        }
+        await page.waitForTimeout(1100);
+        await withinStage();
+      }
+      await page.close();
+    }
+  });
   await journey("reset", async () => {
     for (const reducedMotion of ["reduce", "no-preference"]) {
       const page = await browser.newPage({

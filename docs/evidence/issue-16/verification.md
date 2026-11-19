@@ -16,8 +16,8 @@ BASE_URL=http://localhost:4197 EVIDENCE_DIR=docs/evidence/issue-16 node scripts/
 ```
 
 `BROWSER_TOOLS` overrides `/tmp/floating-web-browser`; `CHROME_PATH` overrides the
-local Google Chrome executable. `CHECK=navigation`, `reset`, `mixed-movement` or
-`touch` runs one journey. No browser dependency is required for the site build.
+local Google Chrome executable. `CHECK=navigation`, `preservation`, `reset`,
+`mixed-movement` or `touch` runs one journey. No browser dependency is required for the site build.
 
 Before each implementation slice, its new browser test failed on the previous
 behavior: outside navigation stayed open; held movement after Home restored the
@@ -25,7 +25,7 @@ old displacement; touch-down left the rendered handle unchanged. A fourth test
 reproduced the same stale-origin problem after an arrow key during a held drag.
 Red logs are retained in `/tmp/fl16-evidence` during this review session.
 
-The production static export passed all four journeys. Navigation covers 320px and
+The production static export passed all five journeys. Navigation covers 320px and
 390px, outside link/button action, preserved button focus, keyboard outside
 activation, Escape after Tab leaves the disclosure, Escape inside, trigger toggle,
 and route selection with destination main focus. Drag journeys cover normal and
@@ -45,8 +45,27 @@ active drag. The static tint has no added transition; light and dark treatments
 are shown by the six compact handle captures beside this record.
 
 Project validation passed: 8 existing Vitest tests, TypeScript, ESLint, Prettier,
-and the production static export build. Existing broader experience checks are
-run separately during integration review.
+and the production static export build. Final integration validation also passed
+the canonical production build and the existing `check-experience.mjs` harness across 20 route/width combinations with
+zero axe violations. Independent baseline-versus-fixed verification reproduced
+the baseline held-reset failure and passed normal and reduced-motion grab offset,
+held Home reset, and reset regrab on the fixed build. The standards review reported zero findings; the spec review found no code or scope mismatch.
+
+The remaining spec-review coverage gaps are now durable `CHECK=preservation`
+guards in `check-interactions.mjs`. At 320px and 390px they check visible keyboard
+focus through menu opening, Escape dismissal from inside/outside, and route
+selection with destination main focus. Under normal and reduced motion they cycle
+Reading/Browsing/Listening and Light/Dark repeatedly, check exclusive selected
+states and retained window position, and verify settled motion with no media
+playback elements. The resize sequence 390×844 → 320×640 → 844×390 → 1440×1000
+checks full-panel stage containment, reclamping and edge movement, positive
+clearance above the toolbar, and no horizontal page overflow. Positive clearance
+is the requirement; no arbitrary minimum gap is imposed.
+
+These preservation checks were green when added: they protect existing behavior,
+not new fixes, and have no claimed red phase. The focused preservation journey
+and complete interaction harness passed against the integration production export
+at `http://127.0.0.1:3191`, with identical production source code.
 
 This is desktop Chromium touch emulation. Physical touch-device acceptance is
 pending; no device-level or assistive-technology acceptance is claimed.
