@@ -1,5 +1,5 @@
 export const home = {
-  seoTitle: "Floating Lyrics — Stay in the song",
+  seoTitle: "Floating Lyrics for Android — Synced Lyrics Over Other Apps",
   seoDescription:
     "Keep synchronized lyrics visible while using another Android app. Bring LRC files, explore window styles, and learn how to get started.",
   helpLink: "Get more help",
