@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-20T14:17:14.159Z",
+  "crop": {
+    "expanded": {
+      "x": 1092,
+      "y": 700,
+      "width": 336,
+      "height": 168
+    },
+    "cropped": {
+      "x": 1092,
+      "y": 700,
+      "width": 336,
+      "height": 168
+    },
+    "reflowed": {
+      "y": 656,
+      "height": 260
+    },
+    "recommendation": "Crop measured chrome rather than removing it from layout: the lyric area retains its exact screen rectangle."
+  },
+  "seeking": {
+    "releaseCommit": {
+      "during": 0,
+      "after": 1
+    },
+    "continuousCommit": {
+      "during": 9,
+      "after": 10
+    },
+    "recommendation": "Preview while dragging and seek once on release; keyboard changes seek immediately. This avoids repeatedly interrupting media decoding."
+  },
+  "gestureSlop": {
+    "jitterPixels": 3,
+    "jitterPaused": true,
+    "dragPixels": 12,
+    "dragPaused": false,
+    "recommendation": "Use a small movement threshold before capturing the pointer: minor tap jitter activates controls; a deliberate button drag moves without activating."
+  },
+  "hardNavigation": {
+    "paused": true,
+    "overlayCount": 0,
+    "recommendation": "Keep the one audio element in the shared root layout and use Next Link. A document navigation intentionally starts a new inactive session."
+  }
+}

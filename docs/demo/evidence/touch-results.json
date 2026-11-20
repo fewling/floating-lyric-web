@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-20T16:26:17.843Z",
+  "checks": [
+    "CDP touch body drag moves without scrolling page or hiding controls",
+    "Touch cancellation, capture loss, and viewport interruption leave a usable card",
+    "Touch tap crops/reveals; left-corner touch resize preserves opposite edge",
+    "Touch seeking changes audio time without moving the card",
+    "Touch swipe outside card scrolls page normally",
+    "Settings and navigation Escape restore focus independently",
+    "320px viewport and maximum lyric size fit within the resized card",
+    "Blocked audio gives visible error; explicit retry succeeds; Close pauses",
+    "iPhone WebKit emulation: actual emulated touch taps start, crop, reveal and pause"
+  ],
+  "geometry": [
+    {
+      "available": 132,
+      "content": 130,
+      "font": "21px",
+      "width": 256
+    }
+  ],
+  "limitations": [
+    "Engine emulation on macOS, not physical Android/iPhone hardware. WebKit touch swipes and continuous touch drags unavailable in the public Playwright API; Chrome CDP touch drag/swipe tested."
+  ]
+}

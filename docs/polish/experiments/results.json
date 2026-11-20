@@ -1,0 +1,345 @@
+{
+  "date": "2026-11-20T14:50:16.884Z",
+  "reading": [
+    {
+      "variant": "centered current+next",
+      "width": 336,
+      "topRange": 13.75,
+      "samples": [
+        {
+          "top": 598.625,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 598.625,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 598.625,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        }
+      ]
+    },
+    {
+      "variant": "track-fitted reserved slots",
+      "width": 336,
+      "topRange": 0,
+      "samples": [
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        }
+      ]
+    },
+    {
+      "variant": "centered current+next",
+      "width": 296,
+      "topRange": 13.75,
+      "samples": [
+        {
+          "top": 598.625,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        }
+      ]
+    },
+    {
+      "variant": "track-fitted reserved slots",
+      "width": 296,
+      "topRange": 0,
+      "samples": [
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        },
+        {
+          "top": 587,
+          "font": "22px"
+        }
+      ]
+    },
+    {
+      "variant": "centered current+next",
+      "width": 240,
+      "topRange": 9.625,
+      "samples": [
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 575.25,
+          "font": "22px"
+        },
+        {
+          "top": 584.875,
+          "font": "22px"
+        }
+      ]
+    },
+    {
+      "variant": "track-fitted reserved slots",
+      "width": 240,
+      "topRange": 0,
+      "samples": [
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        },
+        {
+          "top": 577,
+          "font": "22px"
+        }
+      ]
+    }
+  ],
+  "drag": [
+    {
+      "threshold": 6,
+      "jitter": 3,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 6,
+      "jitter": 5,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 6,
+      "jitter": 7,
+      "clicks": 0,
+      "moves": 1
+    },
+    {
+      "threshold": 6,
+      "jitter": 12,
+      "clicks": 0,
+      "moves": 1
+    },
+    {
+      "threshold": 8,
+      "jitter": 3,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 8,
+      "jitter": 5,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 8,
+      "jitter": 7,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 8,
+      "jitter": 12,
+      "clicks": 0,
+      "moves": 1
+    },
+    {
+      "threshold": 12,
+      "jitter": 3,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 12,
+      "jitter": 5,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 12,
+      "jitter": 7,
+      "clicks": 1,
+      "moves": 0
+    },
+    {
+      "threshold": 12,
+      "jitter": 12,
+      "clicks": 0,
+      "moves": 1
+    }
+  ],
+  "motion": [
+    {
+      "name": "native-distance",
+      "distance": 48,
+      "duration": 300,
+      "samples": [
+        {
+          "at": 60,
+          "transform": "matrix(1, 0, 0, 1, 0, 19.3319)"
+        },
+        {
+          "at": 180,
+          "transform": "matrix(1, 0, 0, 1, 0, 1.16711)"
+        }
+      ]
+    },
+    {
+      "name": "short-settle",
+      "distance": 8,
+      "duration": 160,
+      "samples": [
+        {
+          "at": 60,
+          "transform": "matrix(1, 0, 0, 1, 0, 2.47568)"
+        },
+        {
+          "at": 180,
+          "transform": "matrix(1, 0, 0, 1, 0, 0.000298794)"
+        }
+      ]
+    }
+  ]
+}

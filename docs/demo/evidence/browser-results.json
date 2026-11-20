@@ -1,0 +1,1600 @@
+{
+  "date": "2026-11-20T16:29:41.886Z",
+  "base": "http://127.0.0.1:4197",
+  "results": [
+    {
+      "name": "chrome-desktop",
+      "checks": [
+        "No autoplay or audio download before action",
+        "All five routes retain the same playing audio and geometry",
+        "Pause freezes time; keyboard seeking and resume follow real audio",
+        "Body drag moves card without toggling controls; button drag does not pause",
+        "Timeline drag previews and commits without moving the card",
+        "Crop and reveal preserve lyric bounds and remove hidden controls from focus",
+        "Both corner resizing and keyboard movement stay bounded",
+        "Settings and the timeline persist across navigation",
+        "Bubble restores original geometry and keeps playback",
+        "Wheel scrolling and mobile menus remain operable",
+        "End and replay; close pauses; restart is explicit"
+      ],
+      "continuity": [
+        {
+          "route": "/setup/",
+          "time": 1.320084,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 2.077697,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 2.613253,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 3.205611,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 3.871379,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "sync": [
+        {
+          "route": "/setup/",
+          "time": 1.320084,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 2.077697,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 2.613253,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 3.205611,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 3.871379,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 18.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 3.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 41.667115,
+          "paused": false,
+          "duration": 68,
+          "cue": 10,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 0.18612,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "errors": [],
+      "events": [
+        {
+          "event": "pause",
+          "time": 4.772034,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "play",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.5,
+          "route": "/"
+        },
+        {
+          "event": "waiting",
+          "time": 41.5,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 41.512041,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "waiting",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeked",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "pause",
+          "time": 68,
+          "route": "/privacy/"
+        },
+        {
+          "event": "ended",
+          "time": 68,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeking",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "play",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "waiting",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeked",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "pause",
+          "time": 1.452406,
+          "route": "/privacy/"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "firefox-desktop",
+      "checks": [
+        "No autoplay or audio download before action",
+        "All five routes retain the same playing audio and geometry",
+        "Pause freezes time; keyboard seeking and resume follow real audio",
+        "Body drag moves card without toggling controls; button drag does not pause",
+        "Timeline drag previews and commits without moving the card",
+        "Crop and reveal preserve lyric bounds and remove hidden controls from focus",
+        "Both corner resizing and keyboard movement stay bounded",
+        "Settings and the timeline persist across navigation",
+        "Bubble restores original geometry and keeps playback",
+        "Wheel scrolling and mobile menus remain operable",
+        "End and replay; close pauses; restart is explicit"
+      ],
+      "continuity": [
+        {
+          "route": "/setup/",
+          "time": 5.157041,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 9.490104,
+          "paused": false,
+          "duration": 68,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 12.561416,
+          "paused": false,
+          "duration": 68,
+          "cue": 3,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 16.00427,
+          "paused": false,
+          "duration": 68,
+          "cue": 4,
+          "text": "And keep the quiet in our sight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 19.043208,
+          "paused": false,
+          "duration": 68,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "sync": [
+        {
+          "route": "/setup/",
+          "time": 5.157041,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 9.490104,
+          "paused": false,
+          "duration": 68,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 12.561416,
+          "paused": false,
+          "duration": 68,
+          "cue": 3,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 16.00427,
+          "paused": false,
+          "duration": 68,
+          "cue": 4,
+          "text": "And keep the quiet in our sight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 19.043208,
+          "paused": false,
+          "duration": 68,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 18.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 3.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 41.305728,
+          "paused": false,
+          "duration": 68,
+          "cue": 10,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 0.143854,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "errors": [],
+      "events": [
+        {
+          "event": "pause",
+          "time": 23.467625,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "play",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.01,
+          "route": "/"
+        },
+        {
+          "event": "waiting",
+          "time": 41.01,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.01,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 41.01,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "waiting",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeked",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "pause",
+          "time": 68,
+          "route": "/privacy/"
+        },
+        {
+          "event": "ended",
+          "time": 68,
+          "route": "/privacy/"
+        },
+        {
+          "event": "play",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "waiting",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeking",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "waiting",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeked",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "pause",
+          "time": 0.587645,
+          "route": "/privacy/"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "webkit-desktop",
+      "checks": [
+        "No autoplay or audio download before action",
+        "All five routes retain the same playing audio and geometry",
+        "Pause freezes time; keyboard seeking and resume follow real audio",
+        "Body drag moves card without toggling controls; button drag does not pause",
+        "Timeline drag previews and commits without moving the card",
+        "Crop and reveal preserve lyric bounds and remove hidden controls from focus",
+        "Both corner resizing and keyboard movement stay bounded",
+        "Settings and the timeline persist across navigation",
+        "Bubble restores original geometry and keeps playback",
+        "Wheel scrolling and mobile menus remain operable",
+        "End and replay; close pauses; restart is explicit"
+      ],
+      "continuity": [
+        {
+          "route": "/setup/",
+          "time": 1.2220254049993142,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 1.9314766963334895,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 3.14302123766765,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 3.502920655333085,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 4.0184018213334065,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "sync": [
+        {
+          "route": "/setup/",
+          "time": 1.2220254049993142,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 1.9314766963334895,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 3.14302123766765,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 3.502920655333085,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 4.0184018213334065,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 18.25,
+          "paused": true,
+          "duration": 68.07510204081633,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 3.25,
+          "paused": true,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 41.340789999999544,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 10,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 0.13953016666710027,
+          "paused": false,
+          "duration": 68.075102041,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "errors": [],
+      "events": [
+        {
+          "event": "pause",
+          "time": 4.6089039889989785,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "play",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.28,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 41.28357925000026,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 67.8,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeked",
+          "time": 67.81540512499923,
+          "route": "/privacy/"
+        },
+        {
+          "event": "pause",
+          "time": 68.075102041,
+          "route": "/privacy/"
+        },
+        {
+          "event": "ended",
+          "time": 68.075102041,
+          "route": "/privacy/"
+        },
+        {
+          "event": "play",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeking",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "seeked",
+          "time": 0,
+          "route": "/privacy/"
+        },
+        {
+          "event": "pause",
+          "time": 0.48221616666705813,
+          "route": "/privacy/"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "chrome-mobile-emulation",
+      "checks": [
+        "No autoplay or audio download before action",
+        "All five routes retain the same playing audio and geometry",
+        "Pause freezes time; keyboard seeking and resume follow real audio",
+        "Body drag moves card without toggling controls; button drag does not pause",
+        "Timeline drag previews and commits without moving the card",
+        "Crop and reveal preserve lyric bounds and remove hidden controls from focus",
+        "Both corner resizing and keyboard movement stay bounded",
+        "Settings and the timeline persist across navigation",
+        "Bubble restores original geometry and keeps playback",
+        "Wheel scrolling and mobile menus remain operable",
+        "End and replay; close pauses; restart is explicit"
+      ],
+      "continuity": [
+        {
+          "route": "/setup/",
+          "time": 1.177799,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 1.708264,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 2.389235,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 2.884811,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 3.32273,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "sync": [
+        {
+          "route": "/setup/",
+          "time": 1.177799,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 1.708264,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 2.389235,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 2.884811,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 3.32273,
+          "paused": false,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 18.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 3.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 41.965228,
+          "paused": false,
+          "duration": 68,
+          "cue": 10,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/setup/",
+          "time": 0.569243,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "errors": [],
+      "events": [
+        {
+          "event": "pause",
+          "time": 4.166936,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "play",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.49,
+          "route": "/"
+        },
+        {
+          "event": "waiting",
+          "time": 41.49,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 41.49,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "waiting",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeked",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "pause",
+          "time": 68,
+          "route": "/setup/"
+        },
+        {
+          "event": "ended",
+          "time": 68,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeking",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "play",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "waiting",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeked",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "pause",
+          "time": 1.479824,
+          "route": "/setup/"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "webkit-iphone-emulation",
+      "checks": [
+        "No autoplay or audio download before action",
+        "All five routes retain the same playing audio and geometry",
+        "Pause freezes time; keyboard seeking and resume follow real audio",
+        "Body drag moves card without toggling controls; button drag does not pause",
+        "Timeline drag previews and commits without moving the card",
+        "Crop and reveal preserve lyric bounds and remove hidden controls from focus",
+        "Both corner resizing and keyboard movement stay bounded",
+        "Settings and the timeline persist across navigation",
+        "Bubble restores original geometry and keeps playback",
+        "Wheel scrolling and mobile menus remain operable",
+        "End and replay; close pauses; restart is explicit"
+      ],
+      "continuity": [
+        {
+          "route": "/setup/",
+          "time": 0.8316751013339728,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 2.6211828513345186,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 3.6985073099996417,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 4.450496934000117,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 6.633929184333178,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "sync": [
+        {
+          "route": "/setup/",
+          "time": 0.8316751013339728,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 2.6211828513345186,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 3.6985073099996417,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 4.450496934000117,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 6.633929184333178,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 18.25,
+          "paused": true,
+          "duration": 68.07510204081633,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 3.25,
+          "paused": true,
+          "duration": 68.07510204081633,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 42.056624374999956,
+          "paused": false,
+          "duration": 68.07510204081633,
+          "cue": 11,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/setup/",
+          "time": 0.19881170833468786,
+          "paused": false,
+          "duration": 68.075102041,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "errors": [],
+      "events": [
+        {
+          "event": "pause",
+          "time": 7.30675697566619,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "play",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.5,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 41.50209208333399,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeked",
+          "time": 67.8043593333321,
+          "route": "/setup/"
+        },
+        {
+          "event": "pause",
+          "time": 68.075102041,
+          "route": "/setup/"
+        },
+        {
+          "event": "ended",
+          "time": 68.075102041,
+          "route": "/setup/"
+        },
+        {
+          "event": "play",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeking",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeked",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "pause",
+          "time": 0.5655068333344389,
+          "route": "/setup/"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "chrome-small-320",
+      "checks": [
+        "No autoplay or audio download before action",
+        "All five routes retain the same playing audio and geometry",
+        "Pause freezes time; keyboard seeking and resume follow real audio",
+        "Body drag moves card without toggling controls; button drag does not pause",
+        "Timeline drag previews and commits without moving the card",
+        "Crop and reveal preserve lyric bounds and remove hidden controls from focus",
+        "Both corner resizing and keyboard movement stay bounded",
+        "Settings and the timeline persist across navigation",
+        "Bubble restores original geometry and keeps playback",
+        "Wheel scrolling and mobile menus remain operable",
+        "End and replay; close pauses; restart is explicit"
+      ],
+      "continuity": [
+        {
+          "route": "/setup/",
+          "time": 6.681482,
+          "paused": false,
+          "duration": 68,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 9.428164,
+          "paused": false,
+          "duration": 68,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 11.433858,
+          "paused": false,
+          "duration": 68,
+          "cue": 3,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 12.870819,
+          "paused": false,
+          "duration": 68,
+          "cue": 3,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 15.166837,
+          "paused": false,
+          "duration": 68,
+          "cue": 4,
+          "text": "And keep the quiet in our sight",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "sync": [
+        {
+          "route": "/setup/",
+          "time": 6.681482,
+          "paused": false,
+          "duration": 68,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/lrc/",
+          "time": 9.428164,
+          "paused": false,
+          "duration": 68,
+          "cue": 2,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/privacy/",
+          "time": 11.433858,
+          "paused": false,
+          "duration": 68,
+          "cue": 3,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/support/",
+          "time": 12.870819,
+          "paused": false,
+          "duration": 68,
+          "cue": 3,
+          "text": "We take the long way home tonight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 15.166837,
+          "paused": false,
+          "duration": 68,
+          "cue": 4,
+          "text": "And keep the quiet in our sight",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/",
+          "time": 18.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 5,
+          "text": "The pages turn, the music stays",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 3.25,
+          "paused": true,
+          "duration": 68,
+          "cue": 1,
+          "text": "The city settles into blue",
+          "sameAudio": true,
+          "playback": "paused"
+        },
+        {
+          "route": "/",
+          "time": 41.958326,
+          "paused": false,
+          "duration": 68,
+          "cue": 10,
+          "text": "A little light comes drifting through",
+          "sameAudio": true,
+          "playback": "playing"
+        },
+        {
+          "route": "/setup/",
+          "time": 0.383685,
+          "paused": false,
+          "duration": 68,
+          "cue": 0,
+          "text": "♪ Small Hours · instrumental intro",
+          "sameAudio": true,
+          "playback": "playing"
+        }
+      ],
+      "errors": [],
+      "events": [
+        {
+          "event": "pause",
+          "time": 16.957011,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 18.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.25,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 3.26,
+          "route": "/"
+        },
+        {
+          "event": "play",
+          "time": 3.260802,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 41.77,
+          "route": "/"
+        },
+        {
+          "event": "waiting",
+          "time": 41.77,
+          "route": "/"
+        },
+        {
+          "event": "seeked",
+          "time": 41.77,
+          "route": "/"
+        },
+        {
+          "event": "seeking",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "waiting",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeked",
+          "time": 67.8,
+          "route": "/setup/"
+        },
+        {
+          "event": "pause",
+          "time": 68,
+          "route": "/setup/"
+        },
+        {
+          "event": "ended",
+          "time": 68,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeking",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "play",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "waiting",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "seeked",
+          "time": 0,
+          "route": "/setup/"
+        },
+        {
+          "event": "pause",
+          "time": 0.958044,
+          "route": "/setup/"
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}

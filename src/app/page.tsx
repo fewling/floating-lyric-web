@@ -3,6 +3,8 @@ import { home } from "@/content/home";
 import { SITE } from "@/content/site";
 import { Arrow, AppIcon, Download, QrHandoff } from "@/components/SiteChrome";
 import { ProductScene } from "@/components/ProductScene";
+import { DemoStart } from "@/components/LyricsDemo";
+
 export default function Home() {
   return (
     <main id="main" tabIndex={-1}>
@@ -14,33 +16,18 @@ export default function Home() {
             <br />
             <span>{home.title[1]}</span>
           </h1>
-          <p className="hero-intro">{home.intro}</p>
           <div className="hero-actions">
-            <Download />
-            <details className="phone-install" aria-label="Install on your phone">
-              <summary>Install on your phone</summary>
-              <QrHandoff />
-            </details>
-            <a className="text-link" href="#experience">
-              {home.explore}
-              <span aria-hidden="true">↓</span>
-            </a>
+            <div className="journey-action">
+              <DemoStart descriptionId="demo-audio-source" />
+              <p id="demo-audio-source">Website demo audio</p>
+            </div>
+            <div className="journey-action">
+              <Download descriptionId="app-audio-source" />
+              <p id="app-audio-source">Uses your music player</p>
+            </div>
           </div>
-          <p className="permission-note">
-            {home.requirements} <Link href="/setup/">{home.requirementsLink}</Link>
-          </p>
         </div>
         <ProductScene />
-      </section>
-      <section className="story section-wrap">
-        <p className="eyebrow">{home.story.eyebrow}</p>
-        <div className="story-grid">
-          <h2>{home.story.title}</h2>
-          <div>
-            <p className="large-body">{home.story.text}</p>
-            <p className="fine-print">{home.story.note}</p>
-          </div>
-        </div>
       </section>
       <section className="library-band section-wrap">
         <div className="library-copy">
@@ -55,7 +42,9 @@ export default function Home() {
         <div className="file-stage" role="img" aria-label={home.library.label}>
           <div className="file-paper">
             <div className="file-title">
-              <span className="file-icon">♫</span>
+              <span className="file-icon" aria-hidden="true">
+                ♫
+              </span>
               {home.library.filename}
               <span className="file-type">LRC</span>
             </div>
@@ -69,77 +58,31 @@ export default function Home() {
             </div>
             <div className="file-bottom">
               <span>{home.library.footer}</span>
-              <span aria-hidden="true">↗</span>
             </div>
           </div>
         </div>
       </section>
-      <section className="personal-band section-wrap">
-        <div className="personal-art" role="img" aria-label={home.personal.label}>
-          <div className="sample-window sample-light">
-            <span className="sample-label">{home.personal.light}</span>
-            <p>
-              {home.personal.lines[0]}
-              <br />
-              {home.personal.lines[1]}
-            </p>
-          </div>
-          <div className="sample-window sample-dark">
-            <span className="sample-label">{home.personal.dark}</span>
-            <p>
-              {home.personal.lines[0]}
-              <br />
-              {home.personal.lines[1]}
-            </p>
-          </div>
-          <span className="art-caption">{home.personal.caption}</span>
-        </div>
-        <div className="personal-copy">
-          <p className="eyebrow">{home.personal.eyebrow}</p>
-          <h2>{home.personal.title}</h2>
-          <p>{home.personal.text}</p>
-          <a className="text-link" href="#experience">
-            {home.personal.link}
-            <Arrow />
-          </a>
-          <div className="translation-note">
-            <h3>{home.translation.title}</h3>
-            <p>{home.translation.text}</p>
-            <a href="#questions">
-              {home.translation.link} <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section className="setup-section section-wrap">
-        <div className="section-heading">
-          <p className="eyebrow">{home.setup.eyebrow}</p>
-          <h2>{home.setup.title}</h2>
-          <Link className="text-link" href="/setup/">
-            {home.setup.link}
+      <nav className="journey-guides section-wrap" aria-label="App guides">
+        {home.guides.map((guide) => (
+          <Link key={guide.href} href={guide.href}>
+            <div>
+              <h2>{guide.title}</h2>
+              <p>{guide.detail}</p>
+            </div>
             <Arrow />
           </Link>
-        </div>
-        <ol className="setup-steps">
-          {home.setup.steps.map((step, i) => (
-            <li key={step.title}>
-              <span className="step-number">0{i + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+        ))}
+      </nav>
       <section className="faq-section section-wrap" id="questions">
         <h2>{home.faqTitle}</h2>
         <div className="faq-list">
-          {home.faqs.map((f) => (
-            <details key={f.q}>
+          {home.faqs.map((faq) => (
+            <details key={faq.q}>
               <summary>
-                {f.q}
+                {faq.q}
                 <span aria-hidden="true">+</span>
               </summary>
-              <p>{f.a}</p>
+              <p>{faq.a}</p>
             </details>
           ))}
           <Link href="/support/" className="text-link">
@@ -149,11 +92,13 @@ export default function Home() {
         </div>
       </section>
       <section className="final-download" id="download">
-        <AppIcon size={72} />
+        <AppIcon size={64} />
         <h2>{home.final.title}</h2>
-        <p>{home.final.text}</p>
         <Download />
-        <QrHandoff />
+        <details className="download-handoff">
+          <summary>Scan for your phone</summary>
+          <QrHandoff />
+        </details>
       </section>
       <script
         type="application/ld+json"

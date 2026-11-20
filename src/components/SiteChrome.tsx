@@ -52,14 +52,24 @@ export function Footer() {
           ))}
         </nav>
         <p>© {new Date().getFullYear()} Floating Lyrics</p>
-        <p className="footer-note">{SITE.footerNote}</p>
       </div>
     </footer>
   );
 }
-export function Download({ className = "" }: { className?: string }) {
+export function Download({
+  className = "",
+  descriptionId,
+}: {
+  className?: string;
+  descriptionId?: string;
+}) {
   return (
-    <a className={`download-button pressable ${className}`} href={SITE.play}>
+    <a
+      className={`download-button pressable ${className}`}
+      href={SITE.play}
+      aria-label="Get the app on Google Play"
+      aria-describedby={descriptionId}
+    >
       <svg viewBox="0 0 20 22" aria-hidden="true">
         <path fill="#59a8fb" d="M2 1.4 11.8 11 2 20.6Z" />
         <path fill="#72d9a1" d="m2 1.4 12.4 7.2-2.6 2.4Z" />
@@ -77,10 +87,6 @@ export function QrHandoff() {
       <Image src="/google-play-qr.png" width={144} height={144} alt={home.final.qrAlt} />
       <div>
         <strong>{home.final.scan}</strong>
-        <p>{home.final.scanText}</p>
-        <a href={SITE.play}>
-          {home.final.direct} <span aria-hidden="true">↗</span>
-        </a>
       </div>
     </div>
   );

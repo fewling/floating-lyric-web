@@ -1,0 +1,44 @@
+[
+  {
+    "width": 1440,
+    "label": "♫\nShow lyrics demo",
+    "initialBounds": {
+      "x": 730,
+      "y": 1015.65625,
+      "width": 169.71875,
+      "height": 44
+    },
+    "afterOneClick": {
+      "time": 0,
+      "paused": true
+    }
+  },
+  {
+    "width": 390,
+    "label": "♫\nShow lyrics demo",
+    "initialBounds": {
+      "x": 95,
+      "y": 840.875,
+      "width": 169.71875,
+      "height": 44
+    },
+    "afterOneClick": {
+      "time": 0,
+      "paused": true
+    }
+  },
+  {
+    "width": 320,
+    "label": "♫\nShow lyrics demo",
+    "initialBounds": {
+      "x": 46,
+      "y": 940.21875,
+      "width": 169.71875,
+      "height": 44
+    },
+    "afterOneClick": {
+      "time": 0,
+      "paused": true
+    }
+  }
+]

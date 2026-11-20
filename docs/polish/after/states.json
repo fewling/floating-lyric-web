@@ -1,0 +1,635 @@
+[
+  {
+    "name": "desktop",
+    "state": "idle",
+    "time": 0,
+    "paused": true,
+    "route": "/setup/",
+    "font": null
+  },
+  {
+    "name": "desktop",
+    "state": "paused",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 1092,
+      "y": 656,
+      "width": 336,
+      "height": 260,
+      "top": 656,
+      "right": 1428,
+      "bottom": 916,
+      "left": 1092
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 1112,
+      "y": 741.5,
+      "width": 296,
+      "height": 55,
+      "top": 741.5,
+      "right": 1408,
+      "bottom": 796.5,
+      "left": 1112
+    },
+    "font": "22px"
+  },
+  {
+    "name": "desktop",
+    "state": "playing",
+    "time": 8.615955,
+    "paused": false,
+    "route": "/setup/",
+    "card": {
+      "x": 1092,
+      "y": 656,
+      "width": 336,
+      "height": 260,
+      "top": 656,
+      "right": 1428,
+      "bottom": 916,
+      "left": 1092
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 1112,
+      "y": 741.5,
+      "width": 296,
+      "height": 55,
+      "top": 741.5,
+      "right": 1408,
+      "bottom": 796.5,
+      "left": 1112
+    },
+    "font": "22px"
+  },
+  {
+    "name": "desktop",
+    "state": "seeking",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 1092,
+      "y": 656,
+      "width": 336,
+      "height": 260,
+      "top": 656,
+      "right": 1428,
+      "bottom": 916,
+      "left": 1092
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 1112,
+      "y": 741.5,
+      "width": 296,
+      "height": 55,
+      "top": 741.5,
+      "right": 1408,
+      "bottom": 796.5,
+      "left": 1112
+    },
+    "font": "22px"
+  },
+  {
+    "name": "desktop",
+    "state": "dragging",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 1068,
+      "y": 638,
+      "width": 336,
+      "height": 260,
+      "top": 638,
+      "right": 1404,
+      "bottom": 898,
+      "left": 1068
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 1088,
+      "y": 723.5,
+      "width": 296,
+      "height": 55,
+      "top": 723.5,
+      "right": 1384,
+      "bottom": 778.5,
+      "left": 1088
+    },
+    "font": "22px"
+  },
+  {
+    "name": "desktop",
+    "state": "line-change",
+    "time": 10.218817,
+    "paused": false,
+    "route": "/setup/",
+    "card": {
+      "x": 1092,
+      "y": 656,
+      "width": 336,
+      "height": 260,
+      "top": 656,
+      "right": 1428,
+      "bottom": 916,
+      "left": 1092
+    },
+    "lyric": "We take the long way home tonight",
+    "lyricRect": {
+      "x": 1112,
+      "y": 741.5,
+      "width": 296,
+      "height": 55,
+      "top": 741.5,
+      "right": 1408,
+      "bottom": 796.5,
+      "left": 1112
+    },
+    "font": "22px"
+  },
+  {
+    "name": "desktop",
+    "state": "navigation",
+    "time": 8.5,
+    "paused": true,
+    "route": "/privacy/",
+    "card": {
+      "x": 1092,
+      "y": 656,
+      "width": 336,
+      "height": 260,
+      "top": 656,
+      "right": 1428,
+      "bottom": 916,
+      "left": 1092
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 1112,
+      "y": 741.5,
+      "width": 296,
+      "height": 55,
+      "top": 741.5,
+      "right": 1408,
+      "bottom": 796.5,
+      "left": 1112
+    },
+    "font": "22px"
+  },
+  {
+    "name": "desktop",
+    "state": "light",
+    "time": 8.5,
+    "paused": true,
+    "route": "/privacy/",
+    "card": {
+      "x": 1092,
+      "y": 656,
+      "width": 336,
+      "height": 260,
+      "top": 656,
+      "right": 1428,
+      "bottom": 916,
+      "left": 1092
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 1112,
+      "y": 741.5,
+      "width": 296,
+      "height": 55,
+      "top": 741.5,
+      "right": 1408,
+      "bottom": 796.5,
+      "left": 1112
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "idle",
+    "time": 0,
+    "paused": true,
+    "route": "/setup/",
+    "font": null
+  },
+  {
+    "name": "mobile-390",
+    "state": "paused",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 42,
+      "y": 500,
+      "width": 336,
+      "height": 260,
+      "top": 500,
+      "right": 378,
+      "bottom": 760,
+      "left": 42
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 62,
+      "y": 585.5,
+      "width": 296,
+      "height": 55,
+      "top": 585.5,
+      "right": 358,
+      "bottom": 640.5,
+      "left": 62
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "playing",
+    "time": 8.581217,
+    "paused": false,
+    "route": "/setup/",
+    "card": {
+      "x": 42,
+      "y": 500,
+      "width": 336,
+      "height": 260,
+      "top": 500,
+      "right": 378,
+      "bottom": 760,
+      "left": 42
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 62,
+      "y": 585.5,
+      "width": 296,
+      "height": 55,
+      "top": 585.5,
+      "right": 358,
+      "bottom": 640.5,
+      "left": 62
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "seeking",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 42,
+      "y": 500,
+      "width": 336,
+      "height": 260,
+      "top": 500,
+      "right": 378,
+      "bottom": 760,
+      "left": 42
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 62,
+      "y": 585.5,
+      "width": 296,
+      "height": 55,
+      "top": 585.5,
+      "right": 358,
+      "bottom": 640.5,
+      "left": 62
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "dragging",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 18,
+      "y": 482,
+      "width": 336,
+      "height": 260,
+      "top": 482,
+      "right": 354,
+      "bottom": 742,
+      "left": 18
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 38,
+      "y": 567.5,
+      "width": 296,
+      "height": 55,
+      "top": 567.5,
+      "right": 334,
+      "bottom": 622.5,
+      "left": 38
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "line-change",
+    "time": 10.174266,
+    "paused": false,
+    "route": "/setup/",
+    "card": {
+      "x": 42,
+      "y": 500,
+      "width": 336,
+      "height": 260,
+      "top": 500,
+      "right": 378,
+      "bottom": 760,
+      "left": 42
+    },
+    "lyric": "We take the long way home tonight",
+    "lyricRect": {
+      "x": 62,
+      "y": 585.5003051757812,
+      "width": 296,
+      "height": 55,
+      "top": 585.5003051757812,
+      "right": 358,
+      "bottom": 640.5003051757812,
+      "left": 62
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "navigation",
+    "time": 8.5,
+    "paused": true,
+    "route": "/privacy/",
+    "card": {
+      "x": 42,
+      "y": 500,
+      "width": 336,
+      "height": 260,
+      "top": 500,
+      "right": 378,
+      "bottom": 760,
+      "left": 42
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 62,
+      "y": 585.5,
+      "width": 296,
+      "height": 55,
+      "top": 585.5,
+      "right": 358,
+      "bottom": 640.5,
+      "left": 62
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-390",
+    "state": "light",
+    "time": 8.5,
+    "paused": true,
+    "route": "/privacy/",
+    "card": {
+      "x": 42,
+      "y": 500,
+      "width": 336,
+      "height": 260,
+      "top": 500,
+      "right": 378,
+      "bottom": 760,
+      "left": 42
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 62,
+      "y": 585.5,
+      "width": 296,
+      "height": 55,
+      "top": 585.5,
+      "right": 358,
+      "bottom": 640.5,
+      "left": 62
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "idle",
+    "time": 0,
+    "paused": true,
+    "route": "/setup/",
+    "font": null
+  },
+  {
+    "name": "mobile-320",
+    "state": "paused",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 12,
+      "y": 224,
+      "width": 296,
+      "height": 260,
+      "top": 224,
+      "right": 308,
+      "bottom": 484,
+      "left": 12
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 32,
+      "y": 309.5,
+      "width": 256,
+      "height": 55,
+      "top": 309.5,
+      "right": 288,
+      "bottom": 364.5,
+      "left": 32
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "playing",
+    "time": 8.583807,
+    "paused": false,
+    "route": "/setup/",
+    "card": {
+      "x": 12,
+      "y": 224,
+      "width": 296,
+      "height": 260,
+      "top": 224,
+      "right": 308,
+      "bottom": 484,
+      "left": 12
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 32,
+      "y": 309.5,
+      "width": 256,
+      "height": 55,
+      "top": 309.5,
+      "right": 288,
+      "bottom": 364.5,
+      "left": 32
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "seeking",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 12,
+      "y": 224,
+      "width": 296,
+      "height": 260,
+      "top": 224,
+      "right": 308,
+      "bottom": 484,
+      "left": 12
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 32,
+      "y": 309.5,
+      "width": 256,
+      "height": 55,
+      "top": 309.5,
+      "right": 288,
+      "bottom": 364.5,
+      "left": 32
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "dragging",
+    "time": 8.5,
+    "paused": true,
+    "route": "/setup/",
+    "card": {
+      "x": 12,
+      "y": 206,
+      "width": 296,
+      "height": 260,
+      "top": 206,
+      "right": 308,
+      "bottom": 466,
+      "left": 12
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 32,
+      "y": 291.5,
+      "width": 256,
+      "height": 55,
+      "top": 291.5,
+      "right": 288,
+      "bottom": 346.5,
+      "left": 32
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "line-change",
+    "time": 10.150217,
+    "paused": false,
+    "route": "/setup/",
+    "card": {
+      "x": 12,
+      "y": 224,
+      "width": 296,
+      "height": 260,
+      "top": 224,
+      "right": 308,
+      "bottom": 484,
+      "left": 12
+    },
+    "lyric": "We take the long way home tonight",
+    "lyricRect": {
+      "x": 32,
+      "y": 309.5064697265625,
+      "width": 256,
+      "height": 55,
+      "top": 309.5064697265625,
+      "right": 288,
+      "bottom": 364.5064697265625,
+      "left": 32
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "navigation",
+    "time": 8.5,
+    "paused": true,
+    "route": "/privacy/",
+    "card": {
+      "x": 12,
+      "y": 224,
+      "width": 296,
+      "height": 260,
+      "top": 224,
+      "right": 308,
+      "bottom": 484,
+      "left": 12
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 32,
+      "y": 309.5,
+      "width": 256,
+      "height": 55,
+      "top": 309.5,
+      "right": 288,
+      "bottom": 364.5,
+      "left": 32
+    },
+    "font": "22px"
+  },
+  {
+    "name": "mobile-320",
+    "state": "light",
+    "time": 8.5,
+    "paused": true,
+    "route": "/privacy/",
+    "card": {
+      "x": 12,
+      "y": 224,
+      "width": 296,
+      "height": 260,
+      "top": 224,
+      "right": 308,
+      "bottom": 484,
+      "left": 12
+    },
+    "lyric": "A little light comes drifting through",
+    "lyricRect": {
+      "x": 32,
+      "y": 309.5,
+      "width": 256,
+      "height": 55,
+      "top": 309.5,
+      "right": 288,
+      "bottom": 364.5,
+      "left": 32
+    },
+    "font": "22px"
+  }
+]

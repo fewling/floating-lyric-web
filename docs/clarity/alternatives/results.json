@@ -1,0 +1,866 @@
+[
+  {
+    "variant": "centered",
+    "width": 1440,
+    "height": 1000,
+    "heroPlay": {
+      "bounds": {
+        "x": 555.140625,
+        "y": 347.59375,
+        "width": 138.03125,
+        "height": 48,
+        "top": 347.59375,
+        "right": 693.171875,
+        "bottom": 395.59375,
+        "left": 555.140625
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 709.171875,
+        "y": 347.59375,
+        "width": 175.671875,
+        "height": 48,
+        "top": 347.59375,
+        "right": 884.84375,
+        "bottom": 395.59375,
+        "left": 709.171875
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 599.46875,
+        "y": 464.59375,
+        "width": 241.046875,
+        "height": 38,
+        "top": 464.59375,
+        "right": 840.515625,
+        "bottom": 502.59375,
+        "left": 599.46875
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "illustration": {
+      "bounds": {
+        "x": 116,
+        "y": 525.59375,
+        "width": 1208,
+        "height": 480,
+        "top": 525.59375,
+        "right": 1324,
+        "bottom": 1005.59375,
+        "left": 116
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 116,
+        "y": 1017.59375,
+        "width": 1208,
+        "height": 16.5,
+        "top": 1017.59375,
+        "right": 1324,
+        "bottom": 1034.09375,
+        "left": 116
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 566.5625,
+          "y": 403.59375,
+          "width": 115.1875,
+          "height": 18,
+          "top": 403.59375,
+          "right": 681.75,
+          "bottom": 421.59375,
+          "left": 566.5625
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 731.40625,
+          "y": 403.59375,
+          "width": 131.203125,
+          "height": 18,
+          "top": 403.59375,
+          "right": 862.609375,
+          "bottom": 421.59375,
+          "left": 731.40625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 0.972491
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "centered",
+    "width": 1366,
+    "height": 900,
+    "heroPlay": {
+      "bounds": {
+        "x": 518.140625,
+        "y": 347.59375,
+        "width": 138.03125,
+        "height": 48,
+        "top": 347.59375,
+        "right": 656.171875,
+        "bottom": 395.59375,
+        "left": 518.140625
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 672.171875,
+        "y": 347.59375,
+        "width": 175.671875,
+        "height": 48,
+        "top": 347.59375,
+        "right": 847.84375,
+        "bottom": 395.59375,
+        "left": 672.171875
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 562.46875,
+        "y": 464.59375,
+        "width": 241.046875,
+        "height": 38,
+        "top": 464.59375,
+        "right": 803.515625,
+        "bottom": 502.59375,
+        "left": 562.46875
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "illustration": {
+      "bounds": {
+        "x": 79,
+        "y": 525.59375,
+        "width": 1208,
+        "height": 480,
+        "top": 525.59375,
+        "right": 1287,
+        "bottom": 1005.59375,
+        "left": 79
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 79,
+        "y": 1017.59375,
+        "width": 1208,
+        "height": 16.5,
+        "top": 1017.59375,
+        "right": 1287,
+        "bottom": 1034.09375,
+        "left": 79
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 529.5625,
+          "y": 403.59375,
+          "width": 115.1875,
+          "height": 18,
+          "top": 403.59375,
+          "right": 644.75,
+          "bottom": 421.59375,
+          "left": 529.5625
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 694.40625,
+          "y": 403.59375,
+          "width": 131.203125,
+          "height": 18,
+          "top": 403.59375,
+          "right": 825.609375,
+          "bottom": 421.59375,
+          "left": 694.40625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 1.680536
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "centered",
+    "width": 390,
+    "height": 844,
+    "heroPlay": {
+      "bounds": {
+        "x": 20,
+        "y": 216.15625,
+        "width": 170,
+        "height": 44,
+        "top": 216.15625,
+        "right": 190,
+        "bottom": 260.15625,
+        "left": 20
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 200,
+        "y": 216.15625,
+        "width": 170,
+        "height": 44,
+        "top": 216.15625,
+        "right": 370,
+        "bottom": 260.15625,
+        "left": 200
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 97.484375,
+        "y": 318.65625,
+        "width": 195.015625,
+        "height": 35,
+        "top": 318.65625,
+        "right": 292.5,
+        "bottom": 353.65625,
+        "left": 97.484375
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "illustration": {
+      "bounds": {
+        "x": 16,
+        "y": 375.65625,
+        "width": 358,
+        "height": 410,
+        "top": 375.65625,
+        "right": 374,
+        "bottom": 785.65625,
+        "left": 16
+      },
+      "inFirstViewport": true,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 16,
+        "y": 797.65625,
+        "width": 358,
+        "height": 16.5,
+        "top": 797.65625,
+        "right": 374,
+        "bottom": 814.15625,
+        "left": 16
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 51.625,
+          "y": 268.15625,
+          "width": 106.75,
+          "height": 16.5,
+          "top": 268.15625,
+          "right": 158.375,
+          "bottom": 284.65625,
+          "left": 51.625
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 224.15625,
+          "y": 268.15625,
+          "width": 121.6875,
+          "height": 16.5,
+          "top": 268.15625,
+          "right": 345.84375,
+          "bottom": 284.65625,
+          "left": 224.15625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 0.665448
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "centered",
+    "width": 320,
+    "height": 568,
+    "heroPlay": {
+      "bounds": {
+        "x": 20,
+        "y": 215.59375,
+        "width": 135,
+        "height": 44,
+        "top": 215.59375,
+        "right": 155,
+        "bottom": 259.59375,
+        "left": 20
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 165,
+        "y": 215.59375,
+        "width": 135,
+        "height": 44,
+        "top": 215.59375,
+        "right": 300,
+        "bottom": 259.59375,
+        "left": 165
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 68.484375,
+        "y": 318.09375,
+        "width": 183.015625,
+        "height": 33,
+        "top": 318.09375,
+        "right": 251.5,
+        "bottom": 351.09375,
+        "left": 68.484375
+      },
+      "inFirstViewport": true,
+      "hit": false
+    },
+    "illustration": {
+      "bounds": {
+        "x": 16,
+        "y": 373.09375,
+        "width": 288,
+        "height": 410,
+        "top": 373.09375,
+        "right": 304,
+        "bottom": 783.09375,
+        "left": 16
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 16,
+        "y": 795.09375,
+        "width": 288,
+        "height": 16.5,
+        "top": 795.09375,
+        "right": 304,
+        "bottom": 811.59375,
+        "left": 16
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 34.125,
+          "y": 267.59375,
+          "width": 106.75,
+          "height": 16.5,
+          "top": 267.59375,
+          "right": 140.875,
+          "bottom": 284.09375,
+          "left": 34.125
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 171.65625,
+          "y": 267.59375,
+          "width": 121.6875,
+          "height": 16.5,
+          "top": 267.59375,
+          "right": 293.34375,
+          "bottom": 284.09375,
+          "left": 171.65625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 1.189791
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "alongside",
+    "width": 1440,
+    "height": 1000,
+    "heroPlay": {
+      "bounds": {
+        "x": 116,
+        "y": 508.75,
+        "width": 138.03125,
+        "height": 48,
+        "top": 508.75,
+        "right": 254.03125,
+        "bottom": 556.75,
+        "left": 116
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 270.03125,
+        "y": 508.75,
+        "width": 175.671875,
+        "height": 48,
+        "top": 508.75,
+        "right": 445.703125,
+        "bottom": 556.75,
+        "left": 270.03125
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 904.34375,
+        "y": 127,
+        "width": 241.046875,
+        "height": 38,
+        "top": 127,
+        "right": 1145.390625,
+        "bottom": 165,
+        "left": 904.34375
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "illustration": {
+      "bounds": {
+        "x": 725.75,
+        "y": 188,
+        "width": 598.25,
+        "height": 560,
+        "top": 188,
+        "right": 1324,
+        "bottom": 748,
+        "left": 725.75
+      },
+      "inFirstViewport": true,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 725.75,
+        "y": 760,
+        "width": 598.25,
+        "height": 16.5,
+        "top": 760,
+        "right": 1324,
+        "bottom": 776.5,
+        "left": 725.75
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 127.421875,
+          "y": 564.75,
+          "width": 115.1875,
+          "height": 18,
+          "top": 564.75,
+          "right": 242.609375,
+          "bottom": 582.75,
+          "left": 127.421875
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 292.265625,
+          "y": 564.75,
+          "width": 131.203125,
+          "height": 18,
+          "top": 564.75,
+          "right": 423.46875,
+          "bottom": 582.75,
+          "left": 292.265625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 1.060389
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "alongside",
+    "width": 1366,
+    "height": 900,
+    "heroPlay": {
+      "bounds": {
+        "x": 79,
+        "y": 505.484375,
+        "width": 138.03125,
+        "height": 48,
+        "top": 505.484375,
+        "right": 217.03125,
+        "bottom": 553.484375,
+        "left": 79
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 233.03125,
+        "y": 505.484375,
+        "width": 175.671875,
+        "height": 48,
+        "top": 505.484375,
+        "right": 408.703125,
+        "bottom": 553.484375,
+        "left": 233.03125
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 867.34375,
+        "y": 127,
+        "width": 241.046875,
+        "height": 38,
+        "top": 127,
+        "right": 1108.390625,
+        "bottom": 165,
+        "left": 867.34375
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "illustration": {
+      "bounds": {
+        "x": 688.75,
+        "y": 188,
+        "width": 598.25,
+        "height": 560,
+        "top": 188,
+        "right": 1287,
+        "bottom": 748,
+        "left": 688.75
+      },
+      "inFirstViewport": true,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 688.75,
+        "y": 760,
+        "width": 598.25,
+        "height": 16.5,
+        "top": 760,
+        "right": 1287,
+        "bottom": 776.5,
+        "left": 688.75
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 90.421875,
+          "y": 561.484375,
+          "width": 115.1875,
+          "height": 18,
+          "top": 561.484375,
+          "right": 205.609375,
+          "bottom": 579.484375,
+          "left": 90.421875
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 255.265625,
+          "y": 561.484375,
+          "width": 131.203125,
+          "height": 18,
+          "top": 561.484375,
+          "right": 386.46875,
+          "bottom": 579.484375,
+          "left": 255.265625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 0.523124
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "alongside",
+    "width": 390,
+    "height": 844,
+    "heroPlay": {
+      "bounds": {
+        "x": 20,
+        "y": 216.15625,
+        "width": 170,
+        "height": 44,
+        "top": 216.15625,
+        "right": 190,
+        "bottom": 260.15625,
+        "left": 20
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 200,
+        "y": 216.15625,
+        "width": 170,
+        "height": 44,
+        "top": 216.15625,
+        "right": 370,
+        "bottom": 260.15625,
+        "left": 200
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 97.484375,
+        "y": 318.65625,
+        "width": 195.015625,
+        "height": 35,
+        "top": 318.65625,
+        "right": 292.5,
+        "bottom": 353.65625,
+        "left": 97.484375
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "illustration": {
+      "bounds": {
+        "x": 16,
+        "y": 375.65625,
+        "width": 358,
+        "height": 410,
+        "top": 375.65625,
+        "right": 374,
+        "bottom": 785.65625,
+        "left": 16
+      },
+      "inFirstViewport": true,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 16,
+        "y": 797.65625,
+        "width": 358,
+        "height": 16.5,
+        "top": 797.65625,
+        "right": 374,
+        "bottom": 814.15625,
+        "left": 16
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 51.625,
+          "y": 268.15625,
+          "width": 106.75,
+          "height": 16.5,
+          "top": 268.15625,
+          "right": 158.375,
+          "bottom": 284.65625,
+          "left": 51.625
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 224.15625,
+          "y": 268.15625,
+          "width": 121.6875,
+          "height": 16.5,
+          "top": 268.15625,
+          "right": 345.84375,
+          "bottom": 284.65625,
+          "left": 224.15625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 0.973306
+    },
+    "visiblePauseFeedback": true
+  },
+  {
+    "variant": "alongside",
+    "width": 320,
+    "height": 568,
+    "heroPlay": {
+      "bounds": {
+        "x": 20,
+        "y": 215.59375,
+        "width": 135,
+        "height": 44,
+        "top": 215.59375,
+        "right": 155,
+        "bottom": 259.59375,
+        "left": 20
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "app": {
+      "bounds": {
+        "x": 165,
+        "y": 215.59375,
+        "width": 135,
+        "height": 44,
+        "top": 215.59375,
+        "right": 300,
+        "bottom": 259.59375,
+        "left": 165
+      },
+      "inFirstViewport": true,
+      "hit": true
+    },
+    "contexts": {
+      "bounds": {
+        "x": 68.484375,
+        "y": 318.09375,
+        "width": 183.015625,
+        "height": 33,
+        "top": 318.09375,
+        "right": 251.5,
+        "bottom": 351.09375,
+        "left": 68.484375
+      },
+      "inFirstViewport": true,
+      "hit": false
+    },
+    "illustration": {
+      "bounds": {
+        "x": 16,
+        "y": 373.09375,
+        "width": 288,
+        "height": 410,
+        "top": 373.09375,
+        "right": 304,
+        "bottom": 783.09375,
+        "left": 16
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "illustrationLabel": {
+      "bounds": {
+        "x": 16,
+        "y": 795.09375,
+        "width": 288,
+        "height": 16.5,
+        "top": 795.09375,
+        "right": 304,
+        "bottom": 811.59375,
+        "left": 16
+      },
+      "inFirstViewport": false,
+      "hit": false
+    },
+    "sourceCaptions": [
+      {
+        "text": "Website demo audio",
+        "bounds": {
+          "x": 34.125,
+          "y": 267.59375,
+          "width": 106.75,
+          "height": 16.5,
+          "top": 267.59375,
+          "right": 140.875,
+          "bottom": 284.09375,
+          "left": 34.125
+        }
+      },
+      {
+        "text": "Uses your music player",
+        "bounds": {
+          "x": 171.65625,
+          "y": 267.59375,
+          "width": 121.6875,
+          "height": 16.5,
+          "top": 267.59375,
+          "right": 293.34375,
+          "bottom": 284.09375,
+          "left": 171.65625
+        }
+      }
+    ],
+    "oneClickAudio": {
+      "paused": false,
+      "time": 0.620007
+    },
+    "visiblePauseFeedback": true
+  }
+]

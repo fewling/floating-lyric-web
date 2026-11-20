@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-20T16:26:05.683Z",
+  "evidenceType": "Scripted tasks and interface inspection; no visitor participants",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "height": 1000,
+      "checks": [
+        "One visible live window; no audio request before activation",
+        "Play, app link and both source captions are visible and unobscured in the initial viewport",
+        "Keyboard Play/Pause works from the same focused control with visible label feedback",
+        "Changing the illustrated activity leaves the same audio playing",
+        "Labeled Settings opens inline; keyboard sliders update actual state",
+        "Guide navigation retains playback; close and keyboard reopen remain available",
+        "Whole-page scoped WCAG A/AA automated scan has no violations"
+      ],
+      "sourceCaptions": [
+        {
+          "text": "Website demo audio",
+          "inView": true,
+          "hit": true
+        },
+        {
+          "text": "Uses your music player",
+          "inView": true,
+          "hit": true
+        }
+      ],
+      "axe": [],
+      "status": "passed"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "One visible live window; no audio request before activation",
+        "Play, app link and both source captions are visible and unobscured in the initial viewport",
+        "Keyboard Play/Pause works from the same focused control with visible label feedback",
+        "Changing the illustrated activity leaves the same audio playing",
+        "Labeled Settings opens inline; keyboard sliders update actual state",
+        "Guide navigation retains playback; close and keyboard reopen remain available",
+        "Whole-page scoped WCAG A/AA automated scan has no violations"
+      ],
+      "sourceCaptions": [
+        {
+          "text": "Website demo audio",
+          "inView": true,
+          "hit": true
+        },
+        {
+          "text": "Uses your music player",
+          "inView": true,
+          "hit": true
+        }
+      ],
+      "axe": [],
+      "status": "passed"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "checks": [
+        "One visible live window; no audio request before activation",
+        "Play, app link and both source captions are visible and unobscured in the initial viewport",
+        "Keyboard Play/Pause works from the same focused control with visible label feedback",
+        "Changing the illustrated activity leaves the same audio playing",
+        "Labeled Settings opens inline; keyboard sliders update actual state",
+        "Guide navigation retains playback; close and keyboard reopen remain available",
+        "Whole-page scoped WCAG A/AA automated scan has no violations"
+      ],
+      "sourceCaptions": [
+        {
+          "text": "Website demo audio",
+          "inView": true,
+          "hit": true
+        },
+        {
+          "text": "Uses your music player",
+          "inView": true,
+          "hit": true
+        }
+      ],
+      "axe": [],
+      "status": "passed"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "checks": [
+        "One visible live window; no audio request before activation",
+        "Play, app link and both source captions are visible and unobscured in the initial viewport",
+        "Keyboard Play/Pause works from the same focused control with visible label feedback",
+        "Changing the illustrated activity leaves the same audio playing",
+        "Labeled Settings opens inline; keyboard sliders update actual state",
+        "Guide navigation retains playback; close and keyboard reopen remain available"
+      ],
+      "sourceCaptions": [
+        {
+          "text": "Website demo audio",
+          "inView": true,
+          "hit": true
+        },
+        {
+          "text": "Uses your music player",
+          "inView": true,
+          "hit": true
+        }
+      ],
+      "status": "passed"
+    }
+  ]
+}

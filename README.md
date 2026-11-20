@@ -16,36 +16,64 @@ pnpm format:check
 ```
 
 Product and guide copy lives in `src/content/`. The five routes are `/`, `/setup/`,
-`/lrc/`, `/privacy/` and `/support/`. The main experience is an explicitly labeled
-interactive illustration, not a recording of the Android app.
+`/lrc/`, `/privacy/` and `/support/`. The interactive illustration now starts a site-wide audio and lyrics demo. The lyric window appears by default on every route. Press Play to start music. Drag the card, tap lyrics to crop/reveal controls,
+or edit minimizing, opacity, lyric size and timing inside the window. The playback timeline
+is always enabled. Dragging and keyboard movement/resizing remain available. The demo
+is a browser adaptation, not a recording or exact replica of the Android app.
 
 See [architecture](ARCHITECTURE.md) and [the Apple design rework](docs/apple-redesign.md)
 for the current implementation and release checks.
 
-## Enlarged-text browser regressions
+## Working demo and verification
 
-The optional browser harness exercises the production export through its public
-routes. Install its tools outside the project, build, and serve the export:
+```sh
+pnpm build
+pnpm preview
+```
+
+Open http://127.0.0.1:4197 . Use this preview server for the exported site: it
+supports the byte-range responses required for reliable audio seeking. `pnpm dev`
+also works. A basic server without byte-range support may play but fail to seek.
+
+Optional browser tools stay outside the repository:
 
 ```sh
 npm install --prefix /tmp/floating-web-browser playwright
-npx --prefix /tmp/floating-web-browser playwright install chromium
-pnpm build
-python3 -m http.server 4198 --directory out
+node /tmp/floating-web-browser/node_modules/playwright/cli.js install webkit firefox
+node scripts/check-demo.mjs
+node scripts/check-demo-touch.mjs
+node scripts/check-demo-experiments.mjs
 ```
 
-In another terminal, run with the installed browser executable:
+The harness uses installed Google Chrome on macOS plus Playwright Firefox/WebKit.
+`BROWSER_TOOLS` and `BASE_URL` override the tool directory and preview origin.
+Results and screenshots are in `docs/demo/evidence/`. Mobile profiles emulate browser
+engines on macOS; they do not establish physical Android/iPhone compatibility.
+See [verification and differences](docs/demo/verification.md) and the
+[Android source checklist](docs/demo/android-contract.md).
 
-```sh
-BROWSER_TOOLS=/tmp/floating-web-browser \
-CHROME_PATH=/absolute/path/to/chromium \
-BASE_URL=http://127.0.0.1:4198 \
-EVIDENCE_DIR=/tmp/floating-enlarged-text \
-node scripts/check-enlarged-text.mjs
-```
+Music, theme, opacity and invitation text are reversible defaults in
+`src/content/demo.ts`; cues are in `src/content/demo-cues.json`. The bundled original
+spoken-word track and matching LRC have a [provenance record](public/demo/README.md).
+No deployment has been performed. Previous `check-experience`, `check-interactions`
+and enlarged-text hero movement results are historical: their stage-bounded drag
+handle was replaced by this site-wide card. Their unchanged page/menu checks may
+still be useful, but the demo harnesses above are the current interaction checks.
 
-`CHROME_PATH` defaults to Google Chrome on macOS. `CHECK=navigation` or
-`CHECK=appearance` selects one regression. The harness uses 100% and 200% root
-font sizes to reproduce text enlargement; it does not simulate native device font
-settings or establish browser zoom, screen-reader or physical-device compatibility.
-See [the verification record](docs/enlarged-text-verification.md).
+## Overlay refinement review
+
+[Matching before/after review](docs/polish/index.html) and
+[observations, experiments and remaining style choices](docs/polish/report.md).
+Run `node scripts/check-polish.mjs` against the preview for stable lyric slots,
+natural versus seek/reduced-motion transitions, touch slop and surface checks.
+The HTML review includes full-page context, motion clips and three material choices.
+Serve it locally with `python3 -m http.server 4198 --bind 127.0.0.1 --directory docs/polish`.
+
+## First-visit clarity review
+
+[Matching before/after views](docs/clarity/index.html) ·
+[Message decisions and evidence](docs/clarity/report.md). Run `pnpm test:clarity`
+against the preview for source captions, keyboard/touch actions and guide continuity.
+Serve the review with `python3 -m http.server 4199 --bind 127.0.0.1 --directory docs/clarity`.
+The review distinguishes scripted tasks from visitor testing; no recruited visitor
+participants were available. Earlier review captures are historical.

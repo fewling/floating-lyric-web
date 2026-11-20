@@ -1,0 +1,401 @@
+[
+  {
+    "name": "desktop",
+    "state": "hero",
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "audioTime": 0,
+    "paused": true,
+    "window": {
+      "x": 1014.875,
+      "y": 308,
+      "width": 336,
+      "height": 260,
+      "top": 308,
+      "right": 1350.875,
+      "bottom": 568,
+      "left": 1014.875
+    }
+  },
+  {
+    "name": "desktop",
+    "state": "copy-audit",
+    "visibleMainWords": 143,
+    "text": "Floating Lyrics for Android\n\nYour lyrics.\nOver your apps.\nPlay demo\n\nWebsite demo audio\n\nGet the app\n\nUses your music player\n\nReading\nBrowsing\nListening\n9:41\n▴ ▴ ▰\nJournal\n◌\n\nTODAY\n\nRoom to breathe.\n\nA slower morning.\n\nAndroid illustration\n\nTimed lyrics\n\nBring your own words.\n\nImport an LRC timed for your recording.\n\nLRC import guide\n♫\nSmall Hours.lrc\nLRC\n\n[00:02.00] The city settles into blue\n\n[00:06.00] A little light comes drifting through\n\n[00:10.00] We take the long way home tonight\n\nSmall Hours · matching demo timestamps\nSet up on Android\n\nPermissions, players & lyric matching\n\nGet help\n\nSupport & account requests\n\nBefore you install\nDoes the app play music?\n+\nWill it work with my player?\n+\nMissing lyrics or wrong timing?\n+\nIs lyric translation available?\n+\nSupport & account deletion\nTake it to Android.\nGet the app\nScan for your phone",
+    "pageHeight": 2398
+  },
+  {
+    "name": "desktop",
+    "state": "playing",
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "audioTime": 1.357136,
+    "paused": false,
+    "window": {
+      "x": 1014.875,
+      "y": 308,
+      "width": 336,
+      "height": 260,
+      "top": 308,
+      "right": 1350.875,
+      "bottom": 568,
+      "left": 1014.875
+    }
+  },
+  {
+    "name": "desktop",
+    "state": "experience",
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "audioTime": 1.680448,
+    "paused": true,
+    "window": {
+      "x": 1014.875,
+      "y": 308,
+      "width": 336,
+      "height": 260,
+      "top": 308,
+      "right": 1350.875,
+      "bottom": 568,
+      "left": 1014.875
+    }
+  },
+  {
+    "name": "desktop",
+    "state": "lyrics-file",
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "audioTime": 1.680448,
+    "paused": true,
+    "window": {
+      "x": 1014.875,
+      "y": 308,
+      "width": 336,
+      "height": 260,
+      "top": 308,
+      "right": 1350.875,
+      "bottom": 568,
+      "left": 1014.875
+    }
+  },
+  {
+    "name": "desktop",
+    "state": "settings",
+    "route": "/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "audioTime": 1.680448,
+    "paused": true,
+    "window": {
+      "x": 1014.875,
+      "y": 308,
+      "width": 336,
+      "height": 260,
+      "top": 308,
+      "right": 1350.875,
+      "bottom": 568,
+      "left": 1014.875
+    }
+  },
+  {
+    "name": "desktop",
+    "state": "setup",
+    "route": "/setup/",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "audioTime": 1.680448,
+    "paused": true,
+    "window": {
+      "x": 1014.875,
+      "y": 308,
+      "width": 336,
+      "height": 260,
+      "top": 308,
+      "right": 1350.875,
+      "bottom": 568,
+      "left": 1014.875
+    }
+  },
+  {
+    "name": "mobile-390",
+    "state": "hero",
+    "route": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audioTime": 0,
+    "paused": true,
+    "window": {
+      "x": 42,
+      "y": 495.65625,
+      "width": 336,
+      "height": 260,
+      "top": 495.65625,
+      "right": 378,
+      "bottom": 755.65625,
+      "left": 42
+    }
+  },
+  {
+    "name": "mobile-390",
+    "state": "copy-audit",
+    "visibleMainWords": 143,
+    "text": "Floating Lyrics for Android\n\nYour lyrics.\nOver your apps.\nPlay demo\n\nWebsite demo audio\n\nGet the app\n\nUses your music player\n\nReading\nBrowsing\nListening\n9:41\n▴ ▴ ▰\nJournal\n◌\n\nTODAY\n\nRoom to breathe.\n\nA slower morning.\n\nAndroid illustration\n\nTimed lyrics\n\nBring your own words.\n\nImport an LRC timed for your recording.\n\nLRC import guide\n♫\nSmall Hours.lrc\nLRC\n\n[00:02.00] The city settles into blue\n\n[00:06.00] A little light comes drifting through\n\n[00:10.00] We take the long way home tonight\n\nSmall Hours · matching demo timestamps\nSet up on Android\n\nPermissions, players & lyric matching\n\nGet help\n\nSupport & account requests\n\nBefore you install\nDoes the app play music?\n+\nWill it work with my player?\n+\nMissing lyrics or wrong timing?\n+\nIs lyric translation available?\n+\nSupport & account deletion\nTake it to Android.\nGet the app\nScan for your phone",
+    "pageHeight": 2864
+  },
+  {
+    "name": "mobile-390",
+    "state": "playing",
+    "route": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audioTime": 1.361971,
+    "paused": false,
+    "window": {
+      "x": 42,
+      "y": 495.65625,
+      "width": 336,
+      "height": 260,
+      "top": 495.65625,
+      "right": 378,
+      "bottom": 755.65625,
+      "left": 42
+    }
+  },
+  {
+    "name": "mobile-390",
+    "state": "experience",
+    "route": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audioTime": 1.735541,
+    "paused": true,
+    "window": {
+      "x": 42,
+      "y": 495.65625,
+      "width": 336,
+      "height": 260,
+      "top": 495.65625,
+      "right": 378,
+      "bottom": 755.65625,
+      "left": 42
+    }
+  },
+  {
+    "name": "mobile-390",
+    "state": "lyrics-file",
+    "route": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audioTime": 1.735541,
+    "paused": true,
+    "window": {
+      "x": 42,
+      "y": 495.65625,
+      "width": 336,
+      "height": 260,
+      "top": 495.65625,
+      "right": 378,
+      "bottom": 755.65625,
+      "left": 42
+    }
+  },
+  {
+    "name": "mobile-390",
+    "state": "settings",
+    "route": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audioTime": 1.735541,
+    "paused": true,
+    "window": {
+      "x": 42,
+      "y": 495.65625,
+      "width": 336,
+      "height": 260,
+      "top": 495.65625,
+      "right": 378,
+      "bottom": 755.65625,
+      "left": 42
+    }
+  },
+  {
+    "name": "mobile-390",
+    "state": "setup",
+    "route": "/setup/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "audioTime": 1.735541,
+    "paused": true,
+    "window": {
+      "x": 42,
+      "y": 495.65625,
+      "width": 336,
+      "height": 260,
+      "top": 495.65625,
+      "right": 378,
+      "bottom": 755.65625,
+      "left": 42
+    }
+  },
+  {
+    "name": "mobile-320",
+    "state": "hero",
+    "route": "/",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "audioTime": 0,
+    "paused": true,
+    "window": {
+      "x": 12,
+      "y": 296,
+      "width": 296,
+      "height": 260,
+      "top": 296,
+      "right": 308,
+      "bottom": 556,
+      "left": 12
+    }
+  },
+  {
+    "name": "mobile-320",
+    "state": "copy-audit",
+    "visibleMainWords": 143,
+    "text": "Floating Lyrics for Android\n\nYour lyrics.\nOver your apps.\nPlay demo\n\nWebsite demo audio\n\nGet the app\n\nUses your music player\n\nReading\nBrowsing\nListening\n9:41\n▴ ▴ ▰\nJournal\n◌\n\nTODAY\n\nRoom to breathe.\n\nA slower morning.\n\nAndroid illustration\n\nTimed lyrics\n\nBring your own words.\n\nImport an LRC timed for your recording.\n\nLRC import guide\n♫\nSmall Hours.lrc\nLRC\n\n[00:02.00] The city settles into blue\n\n[00:06.00] A little light comes drifting through\n\n[00:10.00] We take the long way home tonight\n\nSmall Hours · matching demo timestamps\nSet up on Android\n\nPermissions, players & lyric matching\n\nGet help\n\nSupport & account requests\n\nBefore you install\nDoes the app play music?\n+\nWill it work with my player?\n+\nMissing lyrics or wrong timing?\n+\nIs lyric translation available?\n+\nSupport & account deletion\nTake it to Android.\nGet the app\nScan for your phone",
+    "pageHeight": 3035
+  },
+  {
+    "name": "mobile-320",
+    "state": "playing",
+    "route": "/",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "audioTime": 1.135394,
+    "paused": false,
+    "window": {
+      "x": 12,
+      "y": 296,
+      "width": 296,
+      "height": 260,
+      "top": 296,
+      "right": 308,
+      "bottom": 556,
+      "left": 12
+    }
+  },
+  {
+    "name": "mobile-320",
+    "state": "experience",
+    "route": "/",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "audioTime": 1.298196,
+    "paused": true,
+    "window": {
+      "x": 12,
+      "y": 296,
+      "width": 296,
+      "height": 260,
+      "top": 296,
+      "right": 308,
+      "bottom": 556,
+      "left": 12
+    }
+  },
+  {
+    "name": "mobile-320",
+    "state": "lyrics-file",
+    "route": "/",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "audioTime": 1.298196,
+    "paused": true,
+    "window": {
+      "x": 12,
+      "y": 296,
+      "width": 296,
+      "height": 260,
+      "top": 296,
+      "right": 308,
+      "bottom": 556,
+      "left": 12
+    }
+  },
+  {
+    "name": "mobile-320",
+    "state": "settings",
+    "route": "/",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "audioTime": 1.298196,
+    "paused": true,
+    "window": {
+      "x": 12,
+      "y": 296,
+      "width": 296,
+      "height": 260,
+      "top": 296,
+      "right": 308,
+      "bottom": 556,
+      "left": 12
+    }
+  },
+  {
+    "name": "mobile-320",
+    "state": "setup",
+    "route": "/setup/",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "audioTime": 1.298196,
+    "paused": true,
+    "window": {
+      "x": 12,
+      "y": 296,
+      "width": 296,
+      "height": 260,
+      "top": 296,
+      "right": 308,
+      "bottom": 556,
+      "left": 12
+    }
+  }
+]

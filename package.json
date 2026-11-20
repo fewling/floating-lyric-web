@@ -11,7 +11,13 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "preview": "node scripts/preview-export.mjs",
+    "test:demo": "node scripts/check-demo.mjs",
+    "test:demo:touch": "node scripts/check-demo-touch.mjs",
+    "test:demo:experiments": "node scripts/check-demo-experiments.mjs",
+    "test:clarity": "node scripts/check-clarity.mjs",
+    "review:clarity": "node scripts/build-clarity-review.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
